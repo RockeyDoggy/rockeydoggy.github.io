@@ -124,7 +124,7 @@ function passConfirm(){
   passInput.value = pLtrIs;
   
 // GamePass  
-  if(passInput.value.match("wrong pass?")){
+  if(passInput.value.match("wrongpass?")){
     //passAll.style.display = "none";
     passCheck.value = 2;
     warning.style.display = "initial";
@@ -139,7 +139,7 @@ function passConfirm(){
       pasScreen.style.opacity = 1;
     }, 5000)
   } 
-  if(passInput.value.match("WRONG PASS?")){
+  if(passInput.value.match("WRONGPASS?")){
     //passAll.style.display = "none";
     passCheck.value = 2;
     warning.style.display = "initial";
@@ -167,7 +167,7 @@ function passConfirm(){
     warning.style.opacity = 0;
   },4000);
   
-  if(passInput.value.match("yin-yang e weebo")){
+  if(passInput.value.match("yin-yangeweebo")){
     for(i = 0; i <letters.length; i++){
       letters[i].value = null;
     }
@@ -175,7 +175,7 @@ function passConfirm(){
     lineSecret.value= 1;
     localStorage.setItem("lineSecret", lineSecret.value)
   }
-  if(passInput.value.match("YIN-YANG E WEEBO")){
+  if(passInput.value.match("YIN-YANGEWEEBO")){
     for(i = 0; i <letters.length; i++){
       letters[i].value = null;
     }
