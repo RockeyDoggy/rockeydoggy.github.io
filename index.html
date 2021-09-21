@@ -1,0 +1,447 @@
+<head>
+	<link rel="stylesheet" href="https://rockeydoggy.github.io/boss/css/style.css">
+  	<link rel="stylesheet" href="https://rockeydoggy.github.io/boss/css/Animations%20Of%20Style.css">
+	<link rel="icon" href="https://i.imgur.com/pv8rDm5.png" type="image/png" sizes="16x16">
+	<title>Bosses</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="RockeyDoggy">
+	<meta property='og:image' content='https://i.imgur.com/7GBtYo8.png'/>
+  	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<!--  ~~Todos os donators~~  -->
+<div class="corpo">
+  <div class="todo">
+    
+    <div id="header">
+      Cardapio
+    </div>
+    
+    <div id="content">
+      <!--Linha 01-->
+      <button disabled class="charbox inact" id="char1"></button>
+      
+      <button disabled class="charbox inact" id="char2"></button>
+      
+       <button class="charbox" id="char3" onclick="fools()"><p>Fools113</p></button>
+      
+       <button class="charbox" id="char4" onClick="junin()"><p>rgreque</p></button>
+      
+      <button disabled class="charbox inact" id="char5"></button>
+      
+      <button disabled class="charbox inact" id="char6"></button>
+      
+      
+      <!--Linha 02-->
+       <button disabled class="charbox inact" id="char7"></button>
+      
+      <button class="charbox um" id="char8" onClick="steve()"><p>Sbevee_</p></button>
+      
+      <button class="charbox um" id="char9"  onClick="rafa()"><p>RafaaSmile</p></button>
+      
+      <button class="charbox um" id="char10" onClick="mandrax()"><p>Draaaxxy</p></button>
+      
+      <button class="charbox um" id="char11" onClick="girl()"><p>GirlStranger</p></button>
+      
+       <button disabled class="charbox inact" id="char12"></button>
+      
+      <!--Linha 03-->
+       <button disabled class="charbox" id="char13"></button>
+      
+       <button disabled class="charbox" id="char14"></button>
+      
+       <button disabled class="charbox" id="char15"></button>
+      
+       <button disabled class="charbox" id="char16"></button>
+      
+       <button disabled class="charbox" id="char17"></button>
+      
+       <button disabled class="charbox" id="char18"></button>
+      
+      <!--Linha 000-->
+      <div id="secat">
+        <button disabled class="charbox sc inact" id="sChar1"></button>
+        
+        <button disabled class="charbox sc" id="sChar2"></button>
+        
+        <button disabled class="charbox sc" id="sChar3"></button>
+        
+        <button disabled class="charbox sc" id="sChar4"></button>
+        
+        <button disabled class="charbox sc" id="sChar5"></button>
+        
+        <button disabled class="charbox sc inact" id="sChar6"></button>
+      </div>
+      
+      <!--Linha 04-->
+       <button disabled class="charbox" id="char19"></button>
+      
+       <button disabled class="charbox" id="char20"></button>
+      
+       <button disabled class="charbox" id="char21"></button>
+      
+       <button disabled class="charbox" id="char22"></button>
+      
+       <button disabled class="charbox" id="char23"></button>
+      
+       <button disabled class="charbox" id="char24"></button>
+      
+      <!--Linha 05-->
+       <button disabled class="charbox inact" id="char25"></button>
+      
+       <button disabled class="charbox" id="char26"></button>
+      
+       <button disabled class="charbox" id="char27"></button>
+      
+       <button disabled class="charbox" id="char28"></button>
+      
+       <button disabled class="charbox" id="char29"></button>
+      
+       <button disabled class="charbox inact" id="char30"></button>
+      
+      <!--Linha 06-->
+       <button disabled class="charbox inact" id="char31"></button>
+      
+       <button disabled class="charbox inact" id="char32"></button>
+      
+       <button disabled class="charbox" id="char33"></button>
+      
+       <button disabled class="charbox" id="char34"></button>
+      
+       <button disabled class="charbox inact" id="char35"></button>
+      
+       <button disabled class="charbox inact" id="char36"></button>
+      
+    </div>
+    
+    <div id="footer">
+      
+    </div>
+    
+  </div>
+</div>
+
+<!--  ////Profile//// -->
+<div class="ProfileTab" id="ProfileTab">
+  <div id="brackground" onclick="encerrar()"></div>
+  <div class="pTabBody" id="pTabBody" draggable="false">
+    <div class="pTabHeader">
+      <div id="bannerTab"></div></div>
+    
+    <div class="pTabCenter" id="pTabCenter">
+      <!--//  Titulos  //-->
+      <div class="pTabTitulos">
+        <h1 id="nome">✬</h1>
+        <h2 id="nick">✬</h2>
+        <div class="like" id="like"></div>
+      </div>
+    </div>
+      
+      <div id="pChar"></div>
+      
+      <div class="pStatus">
+        <h3>INFO:</h3>
+        
+        <h6>VIDA:</h6>
+        <div class="barSize">
+          <div class="barFormat" id="vida1">
+            <div class="imgDefault" id="vBar">
+              <img draggable="false" src="https://i.imgur.com/ctSiXox.png"/>
+            </div>
+            <div class="sidelight" id="sd1"></div>
+          </div>
+        </div>
+        
+        <h6>DIFICULDADE:</h6>
+        <div class="barSize">
+          <div class="barFormat" id="dificuldade">
+            <div class="imgDefault" id="dBar">
+              <img draggable="false" src="https://i.imgur.com/nMd7MJq.png"/>
+            </div>
+            <div class="sidelight" id="sd2"></div>
+          </div>
+        </div>
+        
+        <h6>FORÇA:</h6>
+        <div class="barSize">
+          <div class="barFormat" id="forca">
+            <div class="imgDefault" id="fBar">
+              <img draggable="false" src="https://i.imgur.com/p1vh8hB.png"/>
+            </div>
+            <div class="sidelight" id="sd3"></div>
+          </div>
+        </div>
+        
+        <h6 id="resTxt" onClick="cara()">RESISTENCIA:</h6>
+        <div class="barSize">
+          <div class="barFormat" id="resistencia">
+            <div class="imgDefault" id="rBar">
+              <img draggable="false" src="https://i.imgur.com/mXFvqff.png"/>
+            </div>
+            <div class="sidelight" id="sd4"></div>
+          </div>
+        </div>
+        
+        <div class="pStory" id="pStory">
+          
+        </div>
+      </div>
+     <div class="pTabFooter" id="pTabFooter"></div>
+    </div>
+  </div>  
+</div>
+</div>
+
+<!--  ~~ Cartão de boss ~~  -->
+
+<div class="openProfile" id="opnProfile">
+  <div class="cardBody">
+    <div class="lefProfile" id="leftProfile">
+      <div class="avatarPrf" id="avatarPrf"></div>
+    </div>
+    
+    <div class="centProfile" id="centProfile">
+      <div class="pName" id="pName">Fools113</div>
+    </div>
+    
+    <div class="rigProfile" id="rigProfile"></div>
+    <div class="cardBorder"></div>
+      
+  </div>
+</div>
+
+<div id="blackground" onClick="encerrarSpec()"></div>
+
+<div class="inspecPos" id="inspecPos">
+  <div id="blackground" onClick="encerrarSpec()"></div>
+  <div class="inspecionar" id="inspecionar">
+    <div class="itemName" id="itemName">Inspecionar</div>
+    <div class="conteudoItem" id="conteudoItem">
+      
+      <div class="embedItem" id="embedItem">
+      </div>
+      
+    </div>
+    <div class="rodapeItem" id="rodapeItem"></div>
+  </div>
+  <div class="expandBtn" id="expandBtn"><div id="expBtn" onClick="expand()">﹀</div></div>
+</div>
+
+<!-- Minimenu -->
+<div class="butoes" id="butoes">
+  <div class="bLine" id="bLine">
+    <button id="menu" onclick="openMenu()"></button>
+    <button class="btnOn" id="muteB" value="1" onClick="saveMute()"></button>
+  </div>
+</div>
+
+<!--      //MENU//      -->
+<div id="menuPos">
+  <div id="menuBox">
+    <!--<div class="menuTitulo"> Menu </div>-->
+    <div id="menuList">
+      <p><button class="btn off" disabled id="menuBTN1">SCORE</button></p>
+      <p><button class="btn off" disabled id="menuBTN2">LIVE</button></p>
+      <p><button onClick="custom()" class="btn off" id="menuBTN4">CUSTOMIZAÇÃO</button></p>
+      <p><button onclick="passOpen()" class="btn off" id="menuBTN5"><p>PASSWORD</p>🔒</button></p>
+      <p><a href="https://discord.gg/dXZA6sd" target="_blank">
+        <button class="btn on" id="menuBTN6">DISCORD</button>
+        </a></p>
+      <!--<p><a href="https://twitch.tv/rockeydoggy" target="_blank">
+        <button class="btn on" id="menuBTN7">TWITCH</button>
+        </a></p>-->
+      <p><a href="https://youtube.com/RockeyDoggy" target="_blank">
+        <button class="btn on" id="menuBTN8">YOUTUBE</button>
+      </a></p>
+      
+      <p><a href="https://twitter.com/RockeyDoggy" target="_top">
+        <button class="btn on" id="menuBTN9">TWITTER</button>
+       </a></p>
+      <p>
+        <button class="btn on" onclick="menuClose()" id="menuBTN10">SAIR</button>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="muteBtn">
+  <!--<button class="btnOn" id="muteB" value="1" onClick="saveMute()"</button>-->
+</div>
+<input id="aVolume" value="1">
+
+<!--  ???????  -->
+<div class="centerScreen" id="centerScreen">
+  <div id="passScreen">
+    <h1>PASSWORD</h1>
+    
+    <div class="passKeys">
+      <div class="letterBox">
+        <input id="lett1" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett2" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett3" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett4" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett5" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett6" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett7" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett8" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett9" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett10" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett11" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett12" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett13" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett14" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett15" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett16" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett17" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett18" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett19" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett20" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett21" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett22" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett23" class="ltrs" maxlength="1" value=""/>
+      </div>
+      <div class="letterBox">
+        <input id="lett24" class="ltrs" maxlength="1" value=""/>
+      </div>
+    </div>
+    
+    <div class="passButtons">
+      <div class="passVert">
+        <!--<div class="borderBtn" id="eraseDiv">
+          <button id="erasePass">⌫</button>
+        </div>-->
+        <div class="borderBtn" id="bgBtn1">
+          <button id="cancelPass" onclick="passClose(), audioFade()">✘</button>
+        </div>
+        <div class="borderBtn" id="bgBtn2">
+          <button id="okPass" onclick="passConfirm()">✔</button>
+        </div>
+      </div>
+      <input id="passIs" value="">
+      <input id="volNum" value="300">
+      <input id="passCck" value="1">
+    </div>
+  </div>
+
+  <audio id="passBGM" loop>
+    <source src="https://dl.dropboxusercontent.com/s/0ae5ja7iryp0iv6/The%20Middle%20of%20Her%20Nebula%20%28Menu%29.mp3" type="audio/mp3">
+  </audio>
+  
+  <audio id="ImageAsDesign" loop>
+    <source src="https://dl.dropboxusercontent.com/s/pv2c7heixa7texh/Image%20As%20Designed%201%20Looped.mp3" type="audio/mp3">
+  </audio>
+  
+  <div id="warnBox">
+  </div>
+</div>
+
+<div id="centerDesign">
+  <div id="designScreen">
+    <h1>Image As Design</h1>
+    <div class="selDesign">
+      <h2>Backgrounds</h2>
+      <button class="itemBox"></button>
+      <button class="itemBox disp"></button>
+      <h2>Desbloqueados</h2>
+      <button class="itemBox disp" title="Sbeeker" id="sbkUnlocked"></button>
+      <button class="itemBox disp" id="locked"></button>
+      <button class="itemBox disp" id="locked"></button>
+      <button class="itemBox disp" id="locked"></button>
+      <button class="itemBox disp" id="locked"></button>
+      <button class="itemBox disp" id="locked"></button>
+    </div>
+    <div class="alignBtnSave">
+      <button onclick="closeDesign()">Fechar</button>
+      <button onclick="saveDesign()">Salvar</button>
+    </div>
+  </div>
+  
+  <!-- Chunck -->
+  <div class="desChunk">
+    <h1>Chunk Mode</h1>
+    <h2>Backgrounds</h2>
+    <p><h3>Principal:</h3>
+    <input id="bgPrincipal" disabled type="number" value="0"></p>
+    <p><h3>Menu:</h3>
+    <input id="bgMenu" disabled type="number" value="0"></p>
+    
+    <h2>Seleção</h2>
+    <p><h3>Cores:</h3>
+    <input id="selCores" disabled type="number" value="0"></p>
+    <p><h3>Bordas:</h3>
+    <input id="selBord" disabled type="number" value="0"></p>
+    
+    <h2>Bordas</h2>
+    <p><h3>Principal:</h3>
+    <input id="mainBord" disabled type="number" value="0"></p>
+    <p><h3>Menu:</h3>
+    <input id="menuBord" disabled type="number" value="0"></p>
+    
+    <h2>Textos</h2>
+    <p><h3>Cores:</h3>
+       <input id="textCor" disabled type="number" value="0"></p>
+    <p><h3>Fontes:</h3>
+       <input id="textFont" disabled type="number" value="0"></p>
+    
+    <h2>Desbloqueados</h2>
+    <p><h3>Linha Secreta:</h3>
+    <input id="unlockLine3" disabled type="number" value="0"></p>
+    <p><h3>Sbekeer:</h3>
+    <input id="unlockSbee" disabled type="number" value="0"></p>
+  </div>
+</div>
+
+<!-- Mais Scripts-->
+<script src="https://rockeydoggy.github.io/boss/js/fools.js"></script>
+<script src="https://rockeydoggy.github.io/boss/js/junin.js"></script>
+<script src="https://rockeydoggy.github.io/boss/js/steven.js"></script>
+<script src="https://rockeydoggy.github.io/boss/js/rafaslime.js"></script>
+<script src="https://rockeydoggy.github.io/boss/js/mandrax.js"></script>
+<script src="https://rockeydoggy.github.io/boss/js/girl.js"></script>
+<script src="https://rockeydoggy.github.io/boss/js/sbeeker.js"></script>
+<script src="https://rockeydoggy.github.io/boss/js/script.js"></script>
+<script src="https://rockeydoggy.github.io/boss/js/passyst.js"></script>

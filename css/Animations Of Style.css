@@ -1,0 +1,12 @@
+﻿/*	Botões bloqueados	*/
+
+/*???????? Button*/
+#menuBTN5:active{
+  animation:shakebtn 0.15s ease-in-out;
+}
+
+@keyframes shakebtn{
+  25%{transform:translate(-40px); filter:blur(3px) saturate(0%) invert(100%) contrast(200%);}
+  50%{transform:translate(40px); filter:blur(3px) saturate(0%) invert(100%) contrast(200%);}
+  75%{transform:translate(-40px); filter:blur(3px) saturate(0%) invert(100%) contrast(200%);}
+}
