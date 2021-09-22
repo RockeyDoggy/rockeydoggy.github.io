@@ -1,4 +1,3 @@
-
 //     password     //
  //Variaveis//
 var passAll = document.getElementById("centerScreen");
@@ -15,6 +14,10 @@ var passBtn = document.getElementById("menuBTN5");
 var lineSec = document.getElementById("secat");
 var designScreen = document.getElementById('centerDesign');
 
+//Variavel De Audios
+var confSFX = document.getElementById('confirmSFX');
+var deniedSFX = document.getElementById('deniedSFX');
+
 //Loads
 var bgMain = document.getElementById('bgPrincipal');
 var bgMenu = document.getElementById('bgMenu');
@@ -26,6 +29,15 @@ var textCor = document.getElementById('textCor');
 var textFont = document.getElementById('textFont');
 var sbekCheck=document.getElementById('unlockSbee');
 var lineSecret=document.getElementById('unlockLine3');
+
+//Variaveis para Designs
+var cnlPass = document.getElementById('bgBtn1');
+var cnfPass = document.getElementById('bgBtn2');
+
+//Volumes Padrões
+confSFX.volume = 0.5;
+
+//   --Fim Das Variaveis --
 
 //Abrir
 function passOpen(){
