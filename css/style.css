@@ -1084,7 +1084,6 @@ body::-webkit-scrollbar-thumb{
   font-size:3vw;
   font-family:'EnterCommand';
   font-weight:bold;
-  color:#000;
   transform:rotate(-45deg);
   text-shadow:0 0 15px #000;
 }
@@ -1097,15 +1096,22 @@ body::-webkit-scrollbar-thumb{
   background:rgba(255,255,255,0.6);
   /*border:double 3px #333;*/
   border-radius:8px;
+  color:#000;
+  transition:all linear 0.2s;
 }
 #bgBtn1{
   border:double 3px #333;
   box-shadow:inset 0 0 10px 0px #FFF;
 }
+
 #bgBtn2{
   border:double 3px #333;
   box-shadow:inset 0 0 10px 0px #FFF;
 }
+#bgBtn1:hover{
+  background:#FF6;
+}
+
 #passIs{
   position:fixed;
   bottom:1%;
@@ -1125,6 +1131,13 @@ body::-webkit-scrollbar-thumb{
   top:0;
   right:0;
   display:none;
+}
+
+.den{
+  background:#F66;
+}
+.confim{
+  background:#6F6;
 }
 
 /*Warning Box*/
