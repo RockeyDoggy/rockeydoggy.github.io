@@ -293,6 +293,9 @@ var menuBtn = document.getElementById("menu");
 menuBtn.style.transform = "";
 }
 
+var tstInp = document.getElementById("locateTeste");
+
+tstInp.value = window.location.pathname;
 //open King
 if(window.location.pathname == "/#kingo"){
   kingo();
