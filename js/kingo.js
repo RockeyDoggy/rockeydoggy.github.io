@@ -74,5 +74,7 @@ function kingo(){
     
     //Projeção da Lista
     hBox.appendChild(killTab1);
+  
+  window.location.hash = "kingo";
 }
 //Kingo End
