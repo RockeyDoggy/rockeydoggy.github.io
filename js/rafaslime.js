@@ -29,6 +29,8 @@ function rafa(){
   banner.style.background = "url(https://i.imgur.com/kBZCmgi.png)";
   headNome.innerHTML = "Rafa";
   nick.innerHTML = "RafaaSmile";
+    nick.setAttribute("onclick", "rafoTwitch()");
+    nick.setAttribute('class', 'sbHover');
     
   //Inventory
     //Flora'eyes
@@ -76,4 +78,8 @@ function rafa(){
     //Projeção da Lista
     hBox.appendChild(killTab1);
   window.location.hash = "rafa";
+}
+
+function rafoTwitch(){
+  window.open('https://www.twitch.tv/RafaaSmile','_blank');
 }
