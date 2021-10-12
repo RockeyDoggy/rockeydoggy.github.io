@@ -297,12 +297,12 @@ var tstInp = document.getElementById("locateTeste");
 
 tstInp.value = window.location.hash;
 //open King
-if(window.location.pathname == "/#kingo"){
+if(window.location.hash == "#kingo"){
   kingo();
 }
-if(window.location.pathname == "/#king"){
-  kingo();
-}
-if(window.location.pathname == "/#King"){
-  kingo();
-}
+  if(window.location.pathname == "/#king"){
+    kingo();
+  }
+  if(window.location.pathname == "/#King"){
+    kingo();
+  }
