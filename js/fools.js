@@ -386,7 +386,7 @@ function stopSecret(){
 }
 
 function foolsTwitch(){
-  windows.open('https://www.twitch.tv/fools113');
+  window.open('https://www.twitch.tv/fools113', '_blank');
 }
 
 //    (FIM)       //
