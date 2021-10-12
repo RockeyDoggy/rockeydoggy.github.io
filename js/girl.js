@@ -29,6 +29,8 @@ function girl(){
   banner.style.background = "url(https://i.imgur.com/nWLUjQw.png)";
   headNome.innerHTML = "Girl";
   nick.innerHTML = "GirlStrangerFear";
+    nick.setAttribute("onclick", "girlTwitch()");
+    nick.setAttribute('class', 'sbHover');
     
   //Inventory
     //Flora'eyes
@@ -75,4 +77,8 @@ function girl(){
     //Projeção da Lista
     hBox.appendChild(killTab1);
   window.location.hash = "girl";
+}
+
+function girlTwitch(){
+  window.open('https://www.twitch.tv/little_bunbunny','_blank');
 }
