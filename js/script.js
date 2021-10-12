@@ -296,49 +296,89 @@ menuBtn.style.transform = "";
 var tstInp = document.getElementById("locateTeste");
 
 tstInp.value = window.location.hash;
-//open King
-if(tstInp.value == "#kingo"){
-  kingo();
-}
-  if(tstInp.value == "#king"){
+//Via Link
+  //open King
+  if(tstInp.value == "#kingo"){
     kingo();
   }
-  if(tstInp.value == "#King"){
-    kingo();
+    if(tstInp.value == "#king"){
+      kingo();
+    }
+    if(tstInp.value == "#King"){
+      kingo();
+    }
+  
+  //On Fools
+  if(tstInp.value == "#fools"){
+    fools();
   }
-
-//On Fools
-if(tstInp.value == "#fools"){
-  kingo();
-}
-  if(tstInp.value == "#Fools"){
-    kingo();
+    if(tstInp.value == "#Fools"){
+      fools();
+    }
+    if(tstInp.value == "#Fools113"){
+      fools();
+    }
+  
+  //On Junin
+  if(tstInp.value == "#Juninho"){
+    junin();
   }
-  if(tstInp.value == "#Fools113"){
-    kingo();
+    if(tstInp.value == "#juninho"){
+      junin();
+    }
+    if(tstInp.value == "#junin"){
+      junin();
+    }
+  
+  //On Fools
+  if(tstInp.value == "#sbeeker"){
+    sbeeker();
   }
-
-//On Junin
-if(tstInp.value == "#Juninho"){
-  kingo();
-}
-  if(tstInp.value == "#juninho"){
-    kingo();
+    if(tstInp.value == "#Sbeeker"){
+      sbeeker();
+    }
+  
+  //On Raffa
+  if(tstInp.value == "#rafa"){
+    rafa();
   }
-  if(tstInp.value == "#junin"){
-    kingo();
+    if(tstInp.value == "#Rafa"){
+      rafa();
+    }
+    if(tstInp.value == "#rafaasmile"){
+      rafa();
+    }
+  
+  //On Girl
+  if(tstInp.value == "#girl"){
+    girl();
   }
-
-//On Fools
-if(tstInp.value == "#sbeeker"){
-  kingo();
-}
-  if(tstInp.value == "#Sbeeker"){
-    kingo();
+    if(tstInp.value == "#Girl"){
+      girl();
+    }
+    if(tstInp.value == "#GirlStrangerFear"){
+      girl();
+    }
+  
+  //On Mandrax
+  if(tstInp.value == "#mandrax"){
+    mandrax();
   }
+    if(tstInp.value == "#Mandrax"){
+      mandrax();
+    }
+    if(tstInp.value == "#draaaxxy"){
+      mandrax();
+    }
+  
+  //On Steve
   if(tstInp.value == "#steve"){
-    kingo();
+    steve();
   }
-  if(tstInp.value == "#sneker"){
-    kingo();
-  }
+    if(tstInp.value == "#Steve"){
+      steve();
+    }
+    if(tstInp.value == "#sbevee_"){
+      steve();
+    }
+  
