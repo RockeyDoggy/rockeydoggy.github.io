@@ -129,11 +129,29 @@ var invent = document.getElementById("pChar");
   var act2 = document.createElement("DIV");
   act2.appendChild(hName2)+act2.appendChild(actName2)+act2.appendChild(wName2);
   act2.setAttribute("id", "killBar");
-  
-window.location.hash = "sbeeker"
+
+  //Historico 03
+    //Dados do Historico 03
+  var hName3 = document.createElement("DIV");
+  hName3.setAttribute("id", "leftName");
+  hName3.innerHTML =  "S1rking_";
+
+  var actName3 = document.createElement("DIV");
+  actName3.setAttribute("id", "centralName");
+  actName3.innerHTML ="-1.11HP";
+
+  var wName3 = document.createElement("DIV");
+  wName3.setAttribute("id", "rightName");
+  wName3.innerHTML = "Sbeeker";
+    //Escrita 03
+  var act3 = document.createElement("DIV");
+  act3.appendChild(hName3)+act3.appendChild(actName3)+act3.appendChild(wName3);
+  act3.setAttribute("id", "killBar");
 
   //Escrever Historico
-  story.appendChild(act2)+story.appendChild(act1);
+  story.appendChild(act3)+story.appendChild(act2)+story.appendChild(act1);
+  
+window.location.hash = "sbeeker"
             //Fim//
 }
 
