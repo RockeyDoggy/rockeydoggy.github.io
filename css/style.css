@@ -103,6 +103,10 @@ body::-webkit-scrollbar-thumb{
   line-height:80px;
 }
 
+.zero{
+  cursor:pointer;
+}
+
 .um{
   cursor:pointer;
 }
