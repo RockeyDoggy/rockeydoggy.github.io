@@ -292,3 +292,8 @@ function encerrar(){
 var menuBtn = document.getElementById("menu");
 menuBtn.style.transform = "";
 }
+
+//Who open
+if(window.location.pathname == "/#kingo"){
+  kingo();
+}
