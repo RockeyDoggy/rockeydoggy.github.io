@@ -26,7 +26,7 @@ function kingo(){
   invent.style.filter = "saturate(0%)";
   
   //(Informações)
-  banner.style.background = "url(https://i.imgur.com/9l5RWaB.png)";
+  banner.style.background = "url(https://i.imgur.com/F8n8QMS.png)";
   headNome.innerHTML = "Sir King";
   nick.innerHTML = "S1rKing_";
     
