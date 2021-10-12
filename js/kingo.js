@@ -82,5 +82,5 @@ function kingo(){
 //Kingo End
 
 function kingoTwitch(){
-  window.open('https://www.twitch.tv/little_bunbunny', '_blank')
+  window.open('https://www.twitch.tv/little_bunbunny', '_blank');
 }
