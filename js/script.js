@@ -300,9 +300,9 @@ tstInp.value = window.location.hash;
 if(window.location.hash == "#kingo"){
   kingo();
 }
-  if(window.location.pathname == "/#king"){
+  if(window.location.hash == "#king"){
     kingo();
   }
-  if(window.location.pathname == "/#King"){
+  if(window.location.hash == "#King"){
     kingo();
   }
