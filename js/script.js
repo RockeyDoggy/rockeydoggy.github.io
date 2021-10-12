@@ -294,12 +294,12 @@ menuBtn.style.transform = "";
 }
 
 //open King
-//if(window.location.pathname = "/#kingo"){
+//if(window.location.pathname == "/#kingo"){
 //  kingo();
 //}
-//if(window.location.pathname = "/#king"){
+//if(window.location.pathname == "/#king"){
 //  kingo();
 //}
-//if(window.location.pathname = "/#King"){
+//if(window.location.pathname == "/#King"){
 //  kingo();
 //}
