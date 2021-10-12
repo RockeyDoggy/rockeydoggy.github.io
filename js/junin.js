@@ -3,6 +3,8 @@ function junin(){
   var menuBtn = document.getElementById("menu");
   menuBtn.style.transform = "scale(0) rotate(360deg)";
   
+  window.location.hash = "juninho"
+  
   //+Variaveis//
   var banner = document.getElementById("bannerTab");
   var headNome = document.getElementById("nome");
