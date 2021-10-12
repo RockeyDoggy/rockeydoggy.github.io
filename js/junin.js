@@ -29,6 +29,8 @@ function junin(){
   banner.style.background = "url(https://i.imgur.com/UjzWIes.png)";
   headNome.innerHTML = "Juninho";
   nick.innerHTML = "rGreque";
+  nick.setAttribute("onclick" "juninTwitch()");
+  nick.setAttribute('class', 'sbHover');
   
     //Inventory
       //Flora'eyes
@@ -133,4 +135,7 @@ function junin(){
   //Projeção da Lista
   hBox.appendChild(killTab4)+hBox.appendChild(killTab3)+hBox.appendChild(killTab2)+hBox.appendChild(killTab1);
 
+}
+function juninTwitch(){
+  window.open('https://www.twitch.tv/rgreque');
 }
