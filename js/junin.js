@@ -29,7 +29,7 @@ function junin(){
   banner.style.background = "url(https://i.imgur.com/UjzWIes.png)";
   headNome.innerHTML = "Juninho";
   nick.innerHTML = "rGreque";
-  nick.setAttribute("onclick" "juninTwitch()");
+  nick.setAttribute("onclick", "juninTwitch()");
   nick.setAttribute('class', 'sbHover');
   
     //Inventory
