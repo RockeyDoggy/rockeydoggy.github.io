@@ -11,7 +11,8 @@ var userNome = document.getElementById("nome");
 var userNick = document.getElementById("nick");
 userNome.innerHTML ="Fools";
 userNick.innerHTML ="Fools113";
-  userNick.setAttribute("onclick" "foolsTwitch()")
+  userNick.setAttribute("onclick" "foolsTwitch()");
+  userNick.setAttribute('class', 'sbHover');
 
 //Banners ID
 //Tab
