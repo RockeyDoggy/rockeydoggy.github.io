@@ -11,6 +11,7 @@ var userNome = document.getElementById("nome");
 var userNick = document.getElementById("nick");
 userNome.innerHTML ="Fools";
 userNick.innerHTML ="Fools113";
+  userNick.setAttribute("onclick" "foolsTwitch()")
 
 //Banners ID
 //Tab
@@ -383,5 +384,8 @@ function stopSecret(){
   folBanner.style.backgroundImage = "url(https://i.imgur.com/PpHVeZ2.png)";
 }
 
+function foolsTwitch(){
+  windows.open('https://www.twitch.tv/fools113')
+}
 
 //    (FIM)       //
