@@ -246,6 +246,7 @@ function closeDesign(){
 function encerrar(){
   document.getElementById('brackground').style.display = "none";
   document.getElementById('ProfileTab').style.display ="none";
+  window.location.hash = "";
   var tabBanner = document.getElementById("bannerEaster");
   var tabBanner2 = document.getElementById("bannerTab");
   document.getElementById("pTabFooter").innerHTML = "";
