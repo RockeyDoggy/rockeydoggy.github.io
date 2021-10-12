@@ -29,6 +29,8 @@ function steve(){
   banner.style.background = "url(https://i.imgur.com/jpqYsWu.png)";
   headNome.innerHTML = "Steve";
   nick.innerHTML = "Sbevee_";
+    nick.setAttribute("onclick", "stevoTwitch()");
+    nick.setAttribute('class', 'sbHover');
     
   //Inventory
     //Flora'eyes
@@ -76,4 +78,8 @@ function steve(){
     //Projeção da Lista
     hBox.appendChild(killTab1);
   window.location.hash = "steve";
+}
+
+function stevoTwitch(){
+  window.open('https://www.twitch.tv/Sbevee_', '_blank');
 }
