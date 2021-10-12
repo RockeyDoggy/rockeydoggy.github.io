@@ -30,6 +30,8 @@ function mandrax(){
   banner.style.background = "url(https://i.imgur.com/aIIr053.png)";
   headNome.innerHTML = "Mandrax";
   nick.innerHTML = "Draaaxxy";
+    nick.setAttribute("onclick", "draxyTwitch()");
+    nick.setAttribute('class', 'sbHover');
     
   //Inventory
     //Flora'eyes
@@ -76,4 +78,8 @@ function mandrax(){
     //Projeção da Lista
     hBox.appendChild(killTab1);
   window.location.hash = "mandrax";
+}
+
+function draxyTwitch(){
+  window.open('https://www.twitch.tv/draaaxxy', '_blank');
 }
