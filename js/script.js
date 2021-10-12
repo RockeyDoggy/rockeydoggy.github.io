@@ -306,3 +306,39 @@ if(tstInp.value == "#kingo"){
   if(tstInp.value == "#King"){
     kingo();
   }
+
+//On Fools
+if(tstInp.value == "#fools"){
+  kingo();
+}
+  if(tstInp.value == "#Fools"){
+    kingo();
+  }
+  if(tstInp.value == "#Fools113"){
+    kingo();
+  }
+
+//On Junin
+if(tstInp.value == "#Juninho"){
+  kingo();
+}
+  if(tstInp.value == "#juninho"){
+    kingo();
+  }
+  if(tstInp.value == "#junin"){
+    kingo();
+  }
+
+//On Fools
+if(tstInp.value == "#sbeeker"){
+  kingo();
+}
+  if(tstInp.value == "#Sbeeker"){
+    kingo();
+  }
+  if(tstInp.value == "#steve"){
+    kingo();
+  }
+  if(tstInp.value == "#sneker"){
+    kingo();
+  }
