@@ -4,7 +4,8 @@ function fools(){
   var menuBtn = document.getElementById("menu");
   menuBtn.style.transform = "scale(0) rotate(360deg)";
   
-
+window.location.hash = "fools"
+  
 //Identificações
 var userNome = document.getElementById("nome");
 var userNick = document.getElementById("nick");
