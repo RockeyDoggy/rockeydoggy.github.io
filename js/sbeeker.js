@@ -130,7 +130,7 @@ var invent = document.getElementById("pChar");
   act2.appendChild(hName2)+act2.appendChild(actName2)+act2.appendChild(wName2);
   act2.setAttribute("id", "killBar");
   
-
+window.location.hash = "sbeeker"
 
   //Escrever Historico
   story.appendChild(act2)+story.appendChild(act1);
