@@ -29,6 +29,8 @@ function kingo(){
   banner.style.background = "url(https://i.imgur.com/F8n8QMS.png)";
   headNome.innerHTML = "Sir King";
   nick.innerHTML = "S1rKing_";
+    nick.setAttribute("onclick", "kingoTwitch()");
+    nick.setAttribute('class', 'sbHover');
     
   //Inventory
     //Flora'eyes
@@ -78,3 +80,7 @@ function kingo(){
   window.location.hash = "kingo";
 }
 //Kingo End
+
+function kingoTwitch(){
+  window.open('https://www.twitch.tv/little_bunbunny', '_blank')
+}
