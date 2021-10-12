@@ -39,7 +39,9 @@ body::-webkit-scrollbar-thumb{
   border-radius:2px;
   border:double 6px #222;
 }
-
+#locateTeste{
+  display:none;
+}
 #header{
   width:100%;
   text-align:center;
