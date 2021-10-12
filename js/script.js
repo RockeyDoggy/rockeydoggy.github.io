@@ -293,7 +293,13 @@ var menuBtn = document.getElementById("menu");
 menuBtn.style.transform = "";
 }
 
-//Who open
-if(window.location.pathname == "/#kingo"){
+//open King
+if(window.location.pathname = "/#kingo"){
+  kingo();
+}
+if(window.location.pathname = "/#king"){
+  kingo();
+}
+if(window.location.pathname = "/#King"){
   kingo();
 }
