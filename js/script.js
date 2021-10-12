@@ -295,7 +295,7 @@ menuBtn.style.transform = "";
 
 var tstInp = document.getElementById("locateTeste");
 
-tstInp.value = window.location.pathname;
+tstInp.value = window.location.hash;
 //open King
 if(window.location.pathname == "/#kingo"){
   kingo();
