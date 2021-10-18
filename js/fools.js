@@ -321,7 +321,7 @@ bossIcon.setAttribute("id", "bossI");
 
 //    ~~Status~~    //
 setTimeout(function(){
-  vidBar.style.width = "15%";
+  vidBar.style.width = "20%";
   difBar.style.width = "50%";
   forBar.style.width = "87%";
   resBar.style.width = "40%";
