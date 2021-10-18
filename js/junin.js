@@ -49,7 +49,7 @@ function junin(){
   var resBar = document.getElementById("rBar");
   
   setTimeout(function(){
-  vidBar.style.width= "15%";
+  vidBar.style.width= "10%";
   difBar.style.width = "50%";
   forBar.style.width = "70%";
   resBar.style.width = "21%";
