@@ -48,7 +48,7 @@ function steve(){
   var forBar = document.getElementById("fBar");
   var resBar = document.getElementById("rBar");
   setTimeout(function(){
-    vidBar.style.width= "2.5%";
+    vidBar.style.width= "3%";
     difBar.style.width = "2.5%";
     forBar.style.width = "3.4%";
     resBar.style.width = "2.5%";
