@@ -48,7 +48,7 @@ function mandrax(){
   var forBar = document.getElementById("fBar");
   var resBar = document.getElementById("rBar");
   setTimeout(function(){
-    vidBar.style.width= "2.5%";
+    vidBar.style.width= "3.5%";
     difBar.style.width = "2.5%";
     forBar.style.width = "4%";
     resBar.style.width = "2.5%";
