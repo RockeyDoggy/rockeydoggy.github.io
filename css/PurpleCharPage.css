@@ -536,6 +536,7 @@ body{
     float:left;
     transition:height 0.2s ease-in-out;
     /*border:dashed 1px #FF0;*/
+    margin:0px 0 15% 0px;
   }
   .killBar{
     font-size:2.6vw;
