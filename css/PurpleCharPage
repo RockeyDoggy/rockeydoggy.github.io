@@ -1,0 +1,550 @@
+/*  //Importar//   */
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+
+@import url(https://allfont.net/allfont.css?fonts=agency-fb);
+
+@font-face{
+  font-family:Twitchy TV;
+  src:url(https://dl.dropboxusercontent.com/s/blwd36moc27olix/Twitchy.TV.ttf);
+}
+@font-face{
+  font-family:Agency FB;
+  src:url(https://dl.dropboxusercontent.com/s/9ekigg7o8j2iw3y/agency_fb.ttf);
+}
+@font-face{
+  font-family:EnterCommand;
+  src:url(https://dl.dropboxusercontent.com/s/ud2ykkvi5516okb/EnterCommand.ttf);
+}
+
+/*  // Iniciu //  */
+body{
+  background:#050505;
+  margin:0;
+  padding:0;
+}
+
+/*   /Bordas/  */
+.centralizeBordas{
+  width:100%;
+  height:100%;
+  position:fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:none;
+  user-select: none;
+}
+
+.mainBorder{
+  width:100%;
+  height:100%;
+  background:url(https://i.imgur.com/4Lbw3of.png)top center no-repeat, url(https://i.imgur.com/5OtDSGD.png)bottom center no-repeat;
+  background-size:111% auto;
+  margin:0;
+  padding:0;
+  pointer-events:none;
+  user-select: none;
+  transition:height ease-in-out 0.2s, width ease-in-out 0.2s;
+  overflow:hidden;
+  filter:drop-shadow(1px 1px 5px #000);
+}
+/*//Landscape And Portrait//*/
+@media only screen and (orientation: landscape){
+  .mainBorder{
+    background:url(https://i.imgur.com/dFmca8X.png) left center no-repeat, url(https://i.imgur.com/OzuLNoP.png) right center no-repeat;
+    background-size:auto 100%;
+  }
+}
+
+/*   // Corpo Geral //   */
+.centralizeCorpo{
+  width:100%;
+  height:100%;
+  position:fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.corpo{
+  width:100%;
+  height:100%;
+  background:linear-gradient(-185deg, rgba(10,5,15,1), rgba(35,30,40,1));
+  overflow:hidden;
+}
+
+/*|||||||||Banner|||||||||||||*/
+.banner{
+  width:100%;
+  padding-bottom:47%;
+  background:;
+  background-position:top center;
+  background-repeat: no-repeat;
+  background-size:100% auto;
+  /*border:1px dashed #FFF;*/
+  float:left;
+  user-select:none;
+}
+.banner h1{
+  line-height:0;
+  margin:20% 0% -20% 0;
+  padding:0% 0% 0% 3%;
+  text-align:left;
+  font-family:'Teko', Verdana, Arial;
+  font-weight:bold;
+  font-size:30vw;
+  letter-spacing:5px;
+  color:#FFF;
+  text-shadow:-0.9px -0.9px 1px #000, 0.9px 0.9px 1px #E7F;
+  /*box-shadow:0 10px 15px -15px #A8F;
+  border:solid 5px rgba(0,0,0,0);
+  border-bottom:groove 2px #AAA;*/
+}
+.two{
+  opacity:0.25;
+}
+.brid{
+  mix-blend-mode:overlay;
+}
+/*****************************************************************/
+
+/*  ||Conteudo||  */
+.conteudo{
+  width:100%;
+  height:70%;
+  border-top:2px groove #333;
+  float:left;
+  box-shadow:inset 0px 8px 10px -7px #000;
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+.conteudo::-webkit-scrollbar{
+  width:6px;
+  background:rgba(20,10,30,0.8);
+}
+.conteudo::-webkit-scrollbar-thumb{
+  background:linear-gradient(rgba(0,0,0,0), rgba(40,30,60,1), rgba(0,0,0,0));
+}
+
+/*  // Conteudo Inicial //   */
+#nick{
+  margin:-0px 0 0px 0;
+  text-align:center;
+  font-family:'Teko';
+  font-size:13vw;
+  font-weight:lighter;
+  color:#AAA;
+  text-shadow:-0.3px -0.3px 1px #000, /*0.3px 0.3px 1px #FFF,*/ 1px 1px 5px #000;
+}
+.conteudo h3{
+  margin:5px 3% 0% 0%;
+  font-size:8vw;
+  text-align:right;
+  font-family:'Agency FB';
+  font-weight:lighter;
+  color:#CCC;
+  user-select:none;
+}
+.conteudo h4{
+  width:95%;
+  margin:0px 5% 10px 5%;
+  padding:0;
+  font-size:5.3vw;
+  font-family:Trebuchet MS;
+  font-weight:lighter;
+  color:#FFF;
+  text-align:left;
+  float:left;
+  user-select:none;
+}
+.conteudo h5{
+  width:90%;
+  float:left;
+  text-align:right;
+  margin:0px 20px;
+  padding:0 0px 0 0px;
+  color:#999;
+  font-size:9vw;
+  font-family:'Teko';
+  font-weight:lighter;
+  user-select:none;
+  /*border:1px dashed #FFF;*/
+}
+.conteudo h6{
+  width:100%;
+  float:left;
+  text-align:center;
+  font-size:8vw;
+  font-family:'EnterCommand';
+  font-weight:lighter;
+  margin:4% 0 15%;
+  color:#FFF;
+  text-shadow:1px 1px 3px #000;
+  cursor:pointer;
+  user-select:none;
+}
+
+    /*//////Stats Bar///////*/
+.stats{
+  user-select:none;
+}
+
+.barBase{
+  width:80%;
+  padding-bottom:9%;
+  /*border:dashed 1px #FFF;*/
+  margin:-4% 4%;
+  transform:skew(30deg);
+  float:left;
+}
+
+.barsBG{
+  width:95%;
+  padding-bottom:9%;
+  background:url(https://i.imgur.com/SNsywZm.png) left top no-repeat;
+  background-size:100%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:0;
+  mix-blend-mode: screen;
+}
+.barIMG{
+  padding-bottom:0%;
+  position:;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  overflow:hidden;
+  /*border:dotted 1px #00F;*/
+  float:left;
+  transition:width 0.5s ease-in-out;
+}
+/* | | Status da Barra | | */
+.barIMG img{
+  width:75vw;
+}
+#healthSts img{
+  filter:drop-shadow(0 0 15px #316);
+}
+#difSts img{
+  filter:drop-shadow(0 0 5px #081);
+}
+#forcSts img{
+  filter:drop-shadow(0 0 10px #316);
+}
+#resSts img{
+  filter:drop-shadow(0 0 8px #126);
+}
+
+.sideLight{
+  width:1px;
+  padding-bottom:5.1%;
+  float:left;
+  position:;
+  margin:2.5% 0;
+  z-index:10;
+}
+#sd1{
+  width:5px;
+  box-shadow:0 0 20px 2px #50F;
+  background:#316;
+}
+#sd2{
+  width:2px;
+  padding-bottom:4.7%;
+  box-shadow:0 0 20px 2px #081;
+  background:#081;
+  margin:2.8% 0;
+}
+#sd3{
+  width:5px;
+  box-shadow:0 0 20px 2px #50F;
+  background:#316;
+}
+#sd4{
+  width:5px;
+  box-shadow:0 0 20px 2px #126;
+  background:#126;
+}
+
+/*  |||||| Iventarios ||||||  */
+.inventory{
+  width:100%;
+  padding-bottom:0%;
+  float:left;
+  box-shadow:inset 1px 1px 5px #000;
+  overflow-x:scroll;
+  overflow-y:hidden;
+}
+.inventory::-webkit-scrollbar{
+  height:4px;
+  background:#334;
+}
+.inventory::-webkit-scrollbar-thumb{
+  background:linear-gradient(105deg, rgba(0,0,0,0), rgba(10,5,30,1), rgba(0,0,0,0));
+}
+
+.inventory button{
+  width:23%;
+  padding-top:23%;
+  margin:5px 1%;
+  background:none;
+  border:2px double transparent;
+  box-shadow:/*inset 0 0 5px #000,*/ inset 0px -9px 10px -10px #64F, 0px 9px 10px -10px #64F;
+  border-bottom:2px groove #97F;
+}
+#floraeyes{
+  cursor:pointer;
+  background:url(https://i.imgur.com/sinfJsj.png) center top no-repeat;
+  background-size:100%;
+}
+
+.invNow{
+  width:100%;
+  padding-bottom:0%;
+  float:left;
+  box-shadow:inset 1px 1px 5px #000;
+}
+
+#pStory{
+  width:100%;
+  height:45%;
+  float:left;
+  margin:0px 0;
+  box-shadow:inset 1px 0px 5px #000;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  transform: rotateY(180deg);
+}
+#pStory::-webkit-scrollbar{
+  width:4px;
+  /*background:#213;*/
+}
+#pStory::-webkit-scrollbar-thumb{
+  background:linear-gradient(0deg, rgba(0,0,0,0), rgba(50,45,100,1), rgba(0,0,0,0));
+}
+
+/*// Design De Informação //*/
+.killBar{
+  width:99%;
+  box-shadow:1px 1px 5px #000;
+  float:left;
+  transform:rotateY(-180deg);
+  background:linear-gradient(25deg, rgba(25,20,30,1), rgba(25,23,30,1));
+  color:#FFF;
+  font-size:7vw;
+  font-family:'EnterCommand', teko;
+  font-weight:lighter;
+  line-height:120%;
+  display:flex;
+  justify-content:center;
+  margin:5px 0% 0% 0.5%;
+}
+.leftInfo{
+  width:50%;
+  /*border:dashed 1px #FFF;*/
+  float:left;
+  white-space: nowrap;
+  padding:0 0% 0 1%;
+  text-shadow:0 0 10px #20F;
+}
+.centerInfo{
+  width:auto;
+  /*border:dashed 1px #FFF;*/
+  float:left;
+  filter:saturate(0%) drop-shadow(0 0 5px #555);
+  text-align:center;
+  white-space: nowrap;
+  font-size:6.5vw;
+}
+.rightInfo{
+  width:50%;
+  /*border:dashed 1px #FFF;*/
+  float:right;
+  text-shadow:0 0 10px #F00;
+  text-align:right;
+  white-space: nowrap;
+  padding:0 1% 0 0%;
+}
+
+/* |||Extra||| */
+#secretFool{
+  width:100%;
+  /*border:1px dashed #FFF;*/
+  position:absolute;
+  top:0;
+  overflow:hidden;
+  margin:-2% 0;
+  display:none;
+}
+#secretFool video{
+  width:100%;
+  opacity:0.4;
+}
+#secretFool div{
+  width:100%;
+  height:100%;
+  /*border:groove 1px #FFF;*/
+  position:absolute;
+  top:0;
+  background:linear-gradient(0deg, rgba(20,14,25,1), rgba(0,0,0,0));
+}
+
+@media only screen and (orientation: landscape){
+  .corpo{
+    position:fixed;
+    /*background:url(https://i.imgur.com/AOD3TJJ.png) left center no-repeat, linear-gradient(-185deg, rgba(10,5,15,1), rgba(35,30,40,1));*/
+    background-size:auto 100%;
+  }
+/*//Banner//*/
+  .banner{
+    width:20%;
+    height:100%;
+    padding:0;
+    /*border:1px dashed #FFF;*/
+    float:left;
+    background:none;
+    background-size:auto 100%;
+  }
+  .banner h1{
+    display:none;
+  }
+  .two{
+    opacity:0.25;
+  }
+  .brid{
+    mix-blend-mode:overlay;
+  }
+  .conteudo{
+    width:78%;
+    height:100%;
+    /*border:dotted 1px #F2F;*/
+    float:right;
+    overflow:initial;
+    border:none;
+    box-shadow:none;
+  }
+  /*  ||Conteudo||  */
+  .conteudo::-webkit-scrollbar{
+  }
+  .conteudo::-webkit-scrollbar-thumb{
+  }
+  
+  /*  // Conteudo Inicial //   */
+  #nick{
+    font-size:10vw;
+    margin:-1% 0 -2%;
+    user-select:none;
+  }
+  .conteudo h3{
+    width:50%;
+    font-size:4.5vw;
+    margin:0;
+    text-align:center;
+  }
+  .conteudo h4{
+    font-size:3vw;
+    margin:0% 0% 2%;
+    text-shadow:1px 1px 5px #000;
+  }
+  .conteudo h5{
+    width:40%;
+    font-size:5vw;
+    float:right;
+    /*border:dotted 1px #555;*/
+    margin:0 3% 0 0%;
+  }
+  .conteudo h6{
+    display:none;
+  }
+    /*//////Stats Bar///////*/
+  .stats{
+    width:52%;
+    height:55%;
+    user-select:none;
+    float:left;
+    /*border:groove 1px #FF4;*/
+  }
+  
+  .barBase{
+    width:auto;
+    height:53%;
+    margin:-4.5% 17% -30%;
+  }
+  
+  .barsBG{
+  }
+  .barIMG{
+  }
+  /* | | Status da Barra | | */
+  .barIMG img{
+    width:40vw;
+  }
+  #healthSts{
+  }
+  #healthSts img{
+  }
+  #difSts{
+  }
+  #difSts img{
+  }
+  #forcSts{
+  }
+  #forcSts img{
+  }
+  #resSts{
+  }
+  #resSts img{
+  }
+  
+  .sideLight{
+  }
+  #sd1{
+  }
+  #sd2{
+  }
+  #sd3{
+  }
+  #sd4{
+  }
+
+  /*  |||||| Iventarios ||||||  */
+  .inventory{
+    width:47%;
+    height:55%;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    margin:0 0% 0 1%;
+    transition:height 0.2s ease-in-out;
+  }
+  .inventory::-webkit-scrollbar{
+    width:4px;
+  }
+  .inventory::-webkit-scrollbar-thumb{
+  }
+  
+  .inventory button{
+    float:left;
+  }
+  #pStory{
+    width:47%;
+    height:0%;
+    display:;
+    float:left;
+    transition:height 0.2s ease-in-out;
+    /*border:dashed 1px #FF0;*/
+  }
+  .killBar{
+    font-size:2.6vw;
+  }
+  .centerInfo{
+    font-size:2.2vw;
+  }
+  #stoLLapse{
+    position:absolute;
+    right:20%;
+  }
+}
