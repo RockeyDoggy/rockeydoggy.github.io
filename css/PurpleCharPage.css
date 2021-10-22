@@ -313,7 +313,7 @@ body{
   width:100%;
   height:45%;
   float:left;
-  margin:0px 0;
+  margin:0px 0 17% 0px;
   box-shadow:inset 1px 0px 5px #000;
   overflow-y:scroll;
   overflow-x:hidden;
@@ -536,7 +536,6 @@ body{
     float:left;
     transition:height 0.2s ease-in-out;
     /*border:dashed 1px #FF0;*/
-    margin:0px 0 15% 0px;
   }
   .killBar{
     font-size:2.6vw;
