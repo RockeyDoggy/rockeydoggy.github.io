@@ -5,7 +5,7 @@
 	<meta name="description" content="Esse Link Não Morde, Prometo!">
 	<meta property='og:video' content='https://dl.dropboxusercontent.com/s/fr67w31kqbx6nvf/Fire%20Portal%20Looped%2000_00_00-00_00_05.webm'/>
 <style>
-  body{
+body{
   position:fixed;
   width:100%;
   height:100%;
@@ -16,25 +16,116 @@
   justify-content:center;
 }
 
-  video{
-    width:150px;
-    /*border:#F00 1px solid;*/
-    filter:/*drop-shadow(0 0 10px #F50)*/ contrast(2);
-  }
-  
+#vidPos{
+  width:150px;
+  padding-bottom:21%;
+  /*border:dotted 2px #FFF;*/
+  transform:scale(1);
+  cursor:pointer;
+}
+
+#vidPos video{
+  width:150px;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  /*border:#F00 1px solid;*/
+  margin:0;
+  /*filter:drop-shadow(0 0 10px #F50) contrast(2);*/
+  transition:opacity 0.05s linear;
+}
+#vidIn{
+  opacity:0;
+}
+#vidLoop{
+  opacity:0;
+}
+#vidOut{
+  opacity:0;
+  diplay:none;
+}
+#vidPos h2{
+  height:100%;
+  position:absolute;
+  top:0%;
+  bottom:0%;
+  left:0%;
+  right:0%;
+  /*border:dashed 1px #FF0;*/
+  color:#FFF;
+  text-shadow:0 0 10px #FFF;
+  font-family:'Trebuchet MS', Verdana, Calibri, Arial;
+  animation:pressPLS 0.5s linear infinite;
+  transition:opacity 1s linear;
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:100%;
+}
+
 @keyframes bgV{
   0%{background:rgba(10,100,50);}
   50%{background:rgba(52,10,80);}
   100%{background:rgba(10,100,50);}
 }
+
+@keyframes pressPLS{
+  0%{}
+  50%{text-shadow:-0.5px -0.5px 1px #000, 0.5px 0.5px 1px #FFF; color:#777;}
+  100%{}
+}
 </style>
 </head>
 
-<body onmouseover="pray()">
-<video id="vidd" autoplay loop muted>
-  <source src="https://dl.dropboxusercontent.com/s/fr67w31kqbx6nvf/Fire%20Portal%20Looped%2000_00_00-00_00_05.webm" type="video/webm" />
-</video>
+<body>
+  <div id="vidPos" onclick="decide()">
+    
+    <video id="vidIn" muted>
+      <source src="https://dl.dropboxusercontent.com/s/2ee8htyijus27p1/Fire%20Portal%20Ignite.webm"></source>
+    </video>
+  
+    <video id="vidLoop" muted loop>
+      <source src="https://dl.dropboxusercontent.com/s/fr67w31kqbx6nvf/Fire%20Portal%20Looped%2000_00_00-00_00_05.webm"></source>
+    </video>
+    <video id="vidOut" muted>
+      <source src="https://dl.dropboxusercontent.com/s/bgoxv6n7jq2cwl6/Fire%20Portal%20Close.webm"></source>
+    </video>
+
+    <h2 id="kast">Click Me</h2>
+  </div>
 </body>
 
 <script>
+function decide(){
+  var vid1 = document.getElementById("vidIn");
+  var vid2 = document.getElementById("vidLoop");
+  var vid3 = document.getElementById("vidOut");
+  var clm = document.getElementById("kast");
+  var btn = document.getElementById("vidPos");
+  
+  if(vid2.paused){
+    vid1.style.opacity = "1";
+    vid1.play();
+    clm.style.opacity = "0";
+    btn.removeAttribute("onclick");
+    setTimeout(function(){
+      vid2.style.opacity = "1"
+      vid2.load();
+      vid2.play();
+      setTimeout(function(){
+        vid1.style.opacity = "0";
+        btn.setAttribute("onclick", "decide()");
+      }, 50)
+    }, 1360)
+  }else{
+    vid3.play();
+    vid3.style.opacity = "1";
+    vid2.style.opacity = "0";
+    vid2.pause();
+  }
+}
+//
 </script>
