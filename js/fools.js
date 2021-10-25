@@ -362,7 +362,6 @@ function playSecret(){
   
   divBanner.setAttribute("id", "bannerEaster");
   bannerSource.setAttribute("src", "https://dl.dropboxusercontent.com/s/yrw6f66zsca4ad4/Rolled.mp4")
-  videoBanner.setAttribute("volume", "0.3");
   divBanner.appendChild(videoBanner);
   videoBanner.appendChild(bannerSource);
   gradientBann.setAttribute("id", "gradientBG");
