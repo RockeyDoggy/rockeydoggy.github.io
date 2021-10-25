@@ -91,7 +91,7 @@ function saveMute(){
   }else{
     muteBtn.value = 1;
     muteBtn.setAttribute("class", "btnOn");
-    volAtual.value = 0.1;
+    volAtual.value = 500;
   }
   setTimeout(function(){
     localStorage.setItem("muteSave", muteBtn.value);
