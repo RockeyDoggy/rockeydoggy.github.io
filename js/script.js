@@ -91,7 +91,7 @@ function saveMute(){
   }else{
     muteBtn.value = 1;
     muteBtn.setAttribute("class", "btnOn");
-    volAtual.value = '5';
+    volAtual.value = 999;
   }
   setTimeout(function(){
     localStorage.setItem("muteSave", muteBtn.value);
@@ -220,7 +220,7 @@ setTimeout(function leitor(){
   
   var volAll = document.getElementById('aVolume');
   if(volAll.value == 0){
-    volAll.value = 500;
+    volAll.value = 999;
   }
   setTimeout(leitor, 100);
 }, 200)
