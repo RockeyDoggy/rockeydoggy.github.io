@@ -26,7 +26,7 @@
 </head>
 
 <body onmouseover="pray()">
-<video id="vidd" loop>
+<video id="vidd" loop autoplay>
   <source src="https://dl.dropboxusercontent.com/s/fr67w31kqbx6nvf/Fire%20Portal%20Looped%2000_00_00-00_00_05.webm?dl=0"></source>
 </video>
 </body>
@@ -34,12 +34,10 @@
 <script>
 var vid = document.getElementById("vidd");
 
-vid.play();
-
 setTimeout(function(){
   if(vid.paused){
-    vid.play();
+    vid.innerHTML = "Error";
   }
-}, 2000)
+}, 5000)
 
 </script>
