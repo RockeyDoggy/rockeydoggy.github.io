@@ -366,7 +366,7 @@ function playSecret(){
   videoBanner.appendChild(bannerSource);
   gradientBann.setAttribute("id", "gradientBG");
   gradientBann.setAttribute("onclick", "stopSecret()");
-  videoBanner.setAttribute("volume", "0.05")
+  videoBanner.volume = 0.3;
   videoBanner.play();
   //
   tabBanner.appendChild(divBanner)+tabBanner.appendChild(gradientBann);
