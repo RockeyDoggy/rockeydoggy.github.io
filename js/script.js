@@ -131,7 +131,7 @@ var volFade = document.getElementById("volNum");
 function custom(){
   custScreen.style.display = "flex";
   imgAsDes.play();
-  imgAsDes.volume = 0.3;
+  imgAsDes.volume = 0.5;
   passBGM.volume = '0.001';
             //Close Menu
   var menuOp = document.getElementById("menuPos");
