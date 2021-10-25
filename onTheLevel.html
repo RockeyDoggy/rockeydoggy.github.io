@@ -1,0 +1,45 @@
+<head>
+<style>
+  body{
+  position:fixed;
+  width:100%;
+  height:100%;
+  margin:0;
+  animation:bgV 2s linear infinite;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+  video{
+    width:150px;
+    /*border:#F00 1px solid;*/
+    filter:drop-shadow(0 0 10px #F50) contrast(2);
+  }
+  
+@keyframes bgV{
+  0%{background:rgba(10,100,50);}
+  50%{background:rgba(52,10,80);}
+  100%{background:rgba(10,100,50);}
+}
+</style>
+</head>
+
+<body onmouseover="pray()">
+<video id="vidd" loop>
+  <source src="https://dl.dropboxusercontent.com/s/fr67w31kqbx6nvf/Fire%20Portal%20Looped%2000_00_00-00_00_05.webm?dl=0"></source>
+</video>
+</body>
+
+<script>
+var vid = document.getElementById("vidd");
+
+vid.play();
+
+setTimeout(function(){
+  if(vid.paused){
+    vid.play();
+  }
+}, 2000)
+
+</script>
