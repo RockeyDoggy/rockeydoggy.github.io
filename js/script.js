@@ -220,7 +220,7 @@ setTimeout(function leitor(){
   
   var volAll = document.getElementById('aVolume');
   if(volAll.value == 0){
-    volAll.value = 999;
+    volAll.value = 500;
   }
   setTimeout(leitor, 100);
 }, 200)
