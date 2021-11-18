@@ -156,7 +156,7 @@ var invent = document.getElementById("pChar");
 
   var actName4 = document.createElement("DIV");
   actName4.setAttribute("id", "centralName");
-  actName4.innerHTML ="-1.11HP";
+  actName4.innerHTML ="-1 HP";
 
   var wName4 = document.createElement("DIV");
   wName4.setAttribute("id", "rightName");
