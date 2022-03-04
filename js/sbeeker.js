@@ -184,7 +184,7 @@ var invent = document.getElementById("pChar");
   
       //Escrita 05
     var act5 = document.createElement("DIV");
-    act5.appendChild(hName4)+act5.appendChild(actName5)+act5.appendChild(wName5);
+    act5.appendChild(hName5)+act5.appendChild(actName5)+act5.appendChild(wName5);
     act5.setAttribute("id", "killBar");
   
 
