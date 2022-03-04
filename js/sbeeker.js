@@ -143,10 +143,11 @@ var invent = document.getElementById("pChar");
   var wName3 = document.createElement("DIV");
   wName3.setAttribute("id", "rightName");
   wName3.innerHTML = "Sbeeker";
-    //Escrita 03
-  var act3 = document.createElement("DIV");
-  act3.appendChild(hName3)+act3.appendChild(actName3)+act3.appendChild(wName3);
-  act3.setAttribute("id", "killBar");
+  
+      //Escrita 03
+    var act3 = document.createElement("DIV");
+    act3.appendChild(hName3)+act3.appendChild(actName3)+act3.appendChild(wName3);
+    act3.setAttribute("id", "killBar");
 
   //Historico 04
     //Dados do Historico 04
@@ -161,13 +162,34 @@ var invent = document.getElementById("pChar");
   var wName4 = document.createElement("DIV");
   wName4.setAttribute("id", "rightName");
   wName4.innerHTML = "Sbeeker";
-    //Escrita 04
-  var act4 = document.createElement("DIV");
-  act4.appendChild(hName4)+act4.appendChild(actName4)+act4.appendChild(wName4);
-  act4.setAttribute("id", "killBar");
+  
+      //Escrita 04
+    var act4 = document.createElement("DIV");
+    act4.appendChild(hName4)+act4.appendChild(actName4)+act4.appendChild(wName4);
+    act4.setAttribute("id", "killBar");
+
+  //Historico 05
+    //Dados do Historico 05
+  var hName5 = document.createElement("DIV");
+  hName5.setAttribute("id", "leftName");
+  hName5.innerHTML =  "Fools113";
+
+  var actName5 = document.createElement("DIV");
+  actName5.setAttribute("id", "centralName");
+  actName5.innerHTML ="-20 HP";
+
+  var wName5 = document.createElement("DIV");
+  wName5.setAttribute("id", "rightName");
+  wName5.innerHTML = "Sbeeker";
+  
+      //Escrita 05
+    var act5 = document.createElement("DIV");
+    act5.appendChild(hName4)+act4.appendChild(actName4)+act4.appendChild(wName4);
+    act5.setAttribute("id", "killBar");
+  
 
   //Escrever Historico
-  story.appendChild(act4)+story.appendChild(act3)+story.appendChild(act2)+story.appendChild(act1);
+  story.appendChild(act5)+story.appendChild(act4)+story.appendChild(act3)+story.appendChild(act2)+story.appendChild(act1);
   
 window.location.hash = "sbeeker"
             //Fim//
