@@ -186,6 +186,19 @@ rName10.innerHTML = "Venceu (Deixou De Ser Boss)";
 
 //---------------------------//
 
+//   Tab 11   //
+var name11 = document.createElement("DIV");
+name11.setAttribute("id", "leftName");
+name11.innerHTML = "Fools113";
+
+var cName11 = document.createElement("DIV");
+cName11.setAttribute("id", "centralName");
+cName11.innerHTML = "-20 HP"
+
+var rName11 = document.createElement("DIV");
+rName11.setAttribute("id", "rightName");
+rName11.innerHTML = "Sbeeker";
+
 //Num 1
 var killTab1 = document.createElement("DIV");
 killTab1.appendChild(name1)+killTab1.appendChild(cName1)+killTab1.appendChild(rName1);
@@ -235,6 +248,11 @@ killTab9.appendChild(name9)+killTab9.appendChild(cName9)+killTab9.appendChild(rN
 var killTab10 = document.createElement("DIV");
 killTab10.setAttribute("id", "killBar");
 killTab10.appendChild(name10)+killTab10.appendChild(cName10)+killTab10.appendChild(rName10);
+
+//Num 11
+var killTab11 = document.createElement("DIV");
+killTab11.setAttribute("id", "killBar");
+killTab11.appendChild(name11)+killTab11.appendChild(cName11)+killTab11.appendChild(rName11);
 
 
 
