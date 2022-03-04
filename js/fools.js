@@ -258,7 +258,7 @@ killTab11.appendChild(name11)+killTab11.appendChild(cName11)+killTab11.appendChi
 
 //Lista Inserida Na caixa
 var inside = document.getElementById("pStory");
-inside.appendChild(killTab10)+inside.appendChild(killTab1)+inside.appendChild(killTab2)+inside.appendChild(killTab3)+inside.appendChild(killTab4)+inside.appendChild(killTab5)+inside.appendChild(killTab6)+inside.appendChild(killTab7)+inside.appendChild(killTab8)+inside.appendChild(killTab9);
+inside.appendChild(killTab11)+inside.appendChild(killTab10)+inside.appendChild(killTab1)+inside.appendChild(killTab2)+inside.appendChild(killTab3)+inside.appendChild(killTab4)+inside.appendChild(killTab5)+inside.appendChild(killTab6)+inside.appendChild(killTab7)+inside.appendChild(killTab8)+inside.appendChild(killTab9);
 
 
 //    -- Skins  --      //
