@@ -26,7 +26,7 @@ function whity(){
   invent.style.filter = "saturate(0%)";
   
   //(Informações)
-  banner.style.background = "url()";
+  banner.style.background = "url(https://i.imgur.com/AjINP7o.png)";
   headNome.innerHTML = "Whity";
   nick.innerHTML = "WhityKun_";
     nick.setAttribute("onclick", "whityTwitch()");
