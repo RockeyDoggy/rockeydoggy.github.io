@@ -50,7 +50,7 @@ function whity(){
   setTimeout(function(){
     vidBar.style.width= "3%";
     difBar.style.width = "2.5%";
-    forBar.style.width = "3.0%";
+    forBar.style.width = "4.25%";
     resBar.style.width = "2.5%";
     }, 100);
     
