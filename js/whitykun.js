@@ -40,7 +40,7 @@ function whity(){
     floraEyes.setAttribute("draggable", "false");
     floraEyes.setAttribute("onClick", "floraeyes()");
     //Gerar
-    invent.appendChild(floraEyes);
+    //invent.appendChild(floraEyes);
     
   //Info Bar
   var vidBar = document.getElementById("vBar");
