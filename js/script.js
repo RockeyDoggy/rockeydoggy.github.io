@@ -383,3 +383,17 @@ tstInp.value = window.location.hash;
       steve();
     }
   
+  //On Whity
+  if(tstInp.value == "#whity"){
+    steve();
+  }
+    if(tstInp.value == "#Whity"){
+      steve();
+    }
+    if(tstInp.value == "#whitykun_"){
+      steve();
+    }
+    if(tstInp.value == "#WhityKun_"){
+      steve();
+    }
+  
