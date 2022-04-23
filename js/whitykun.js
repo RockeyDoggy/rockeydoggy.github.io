@@ -1,6 +1,6 @@
 //     Pagina do WhityKun_    //
 
-function fools(){
+function whity(){
   var menuBtn = document.getElementById("menu");
   menuBtn.style.transform = "scale(0) rotate(360deg)";
   
