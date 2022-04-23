@@ -374,16 +374,16 @@ tstInp.value = window.location.hash;
 
 //On Whity
   if(tstInp.value == "#whity"){
-    whity();
+    whitie();
   }
     if(tstInp.value == "#Whity"){
-      whity();
+      whitie();
     }
     if(tstInp.value == "#whitykun_"){
-      whity();
+      whitie();
     }
     if(tstInp.value == "#WhityKun_"){
-      whity();
+      whitie();
     }
   
 
