@@ -371,19 +371,8 @@ tstInp.value = window.location.hash;
     if(tstInp.value == "#draaaxxy"){
       mandrax();
     }
-  
-  //On Steve
-  if(tstInp.value == "#steve"){
-    steve();
-  }
-    if(tstInp.value == "#Steve"){
-      steve();
-    }
-    if(tstInp.value == "#sbevee_"){
-      steve();
-    }
-  
-  //On Whity
+
+//On Whity
   if(tstInp.value == "#whity"){
     whity();
   }
@@ -396,4 +385,17 @@ tstInp.value = window.location.hash;
     if(tstInp.value == "#WhityKun_"){
       whity();
     }
+  
+
+  //On Steve
+  if(tstInp.value == "#steve"){
+    steve();
+  }
+    if(tstInp.value == "#Steve"){
+      steve();
+    }
+    if(tstInp.value == "#sbevee_"){
+      steve();
+    }
+ 
   
