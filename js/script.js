@@ -385,15 +385,15 @@ tstInp.value = window.location.hash;
   
   //On Whity
   if(tstInp.value == "#whity"){
-    steve();
+    whity();
   }
     if(tstInp.value == "#Whity"){
-      steve();
+      whity();
     }
     if(tstInp.value == "#whitykun_"){
-      steve();
+      whity();
     }
     if(tstInp.value == "#WhityKun_"){
-      steve();
+      whity();
     }
   
