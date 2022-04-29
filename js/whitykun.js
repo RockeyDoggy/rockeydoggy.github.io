@@ -64,7 +64,7 @@ function whitie(){
     
     var cName1 = document.createElement("DIV");
     cName1.setAttribute("id", "centralName");
-    cName1.innerHTML = "-5.61HP"
+    cName1.innerHTML = "-5.61 HP"
     
     var rName1 = document.createElement("DIV");
     rName1.setAttribute("id", "rightName");
@@ -82,7 +82,7 @@ function whitie(){
     
     var cName2 = document.createElement("DIV");
     cName2.setAttribute("id", "centralName");
-    cName2.innerHTML = "-3HP"
+    cName2.innerHTML = "-3 HP"
     
     var rName2 = document.createElement("DIV");
     rName2.setAttribute("id", "rightName");
