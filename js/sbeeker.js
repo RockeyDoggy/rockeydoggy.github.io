@@ -205,10 +205,29 @@ var invent = document.getElementById("pChar");
     var act6 = document.createElement("DIV");
     act6.appendChild(hName6)+act6.appendChild(actName6)+act6.appendChild(wName6);
     act6.setAttribute("id", "killBar");
+
+  //Historico 07
+    //Dados do Historico 07
+  var hName7 = document.createElement("DIV");
+  hName7.setAttribute("id", "leftName");
+  hName7.innerHTML =  "WhityKun_";
+
+  var actName7 = document.createElement("DIV");
+  actName7.setAttribute("id", "centralName");
+  actName7.innerHTML ="-3 HP";
+
+  var wName7 = document.createElement("DIV");
+  wName7.setAttribute("id", "rightName");
+  wName7.innerHTML = "Sbeeker";
+  
+      //Escrita 07
+    var act7 = document.createElement("DIV");
+    act7.appendChild(hName7)+act7.appendChild(actName7)+act7.appendChild(wName7);
+    act7.setAttribute("id", "killBar");
   
 
   //Escrever Historico
-  story.appendChild(act6)+story.appendChild(act5)+story.appendChild(act4)+story.appendChild(act3)+story.appendChild(act2)+story.appendChild(act1);
+  story.appendChild(act7)+story.appendChild(act6)+story.appendChild(act5)+story.appendChild(act4)+story.appendChild(act3)+story.appendChild(act2)+story.appendChild(act1);
   
 window.location.hash = "sbeeker"
             //Fim//
