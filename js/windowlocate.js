@@ -1,17 +1,17 @@
 
-var tstInp = document.getElementById("locateTeste");
-tstInp.value = window.location.hash;
+var sexo = document.getElementById("locateTeste");
+sexo.value = window.location.hash;
 
 //On Whity
-  if(tstInp.value == "#whity"){
-    mandrax();
+  if(sexo.value == "#whity"){
+    whitie();
   }
-    if(tstInp.value == "#Whity"){
-      mandrax();
+    if(sexo.value == "#Whity"){
+      whitie();
     }
-    if(tstInp.value == "#whitykun_"){
-      mandrax();
+    if(sexo.value == "#whitykun_"){
+      whitie();
     }
-    if(tstInp.value == "#WhityKun_"){
-      mandrax();
+    if(sexo.value == "#WhityKun_"){
+      whitie();
     }
