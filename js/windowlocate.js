@@ -4,14 +4,14 @@ tstInp.value = window.location.hash;
 
 //On Whity
   if(tstInp.value == "#whity"){
-    whitie();
+    mandrax();
   }
     if(tstInp.value == "#Whity"){
-      whitie();
+      mandrax();
     }
     if(tstInp.value == "#whitykun_"){
-      whitie();
+      mandrax();
     }
     if(tstInp.value == "#WhityKun_"){
-      whitie();
+      mandrax();
     }
