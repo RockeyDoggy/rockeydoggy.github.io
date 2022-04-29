@@ -120,7 +120,7 @@ var invent = document.getElementById("pChar");
 
   var actName2 = document.createElement("DIV");
   actName2.setAttribute("id", "centralName");
-  actName2.innerHTML ="-1.5HP";
+  actName2.innerHTML ="-1.5 HP";
 
   var wName2 = document.createElement("DIV");
   wName2.setAttribute("id", "rightName");
@@ -138,7 +138,7 @@ var invent = document.getElementById("pChar");
 
   var actName3 = document.createElement("DIV");
   actName3.setAttribute("id", "centralName");
-  actName3.innerHTML ="-1.11HP";
+  actName3.innerHTML ="-1.11 HP";
 
   var wName3 = document.createElement("DIV");
   wName3.setAttribute("id", "rightName");
