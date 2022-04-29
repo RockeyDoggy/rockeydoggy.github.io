@@ -74,9 +74,27 @@ function whitie(){
        var killTab1 = document.createElement("DIV");
        killTab1.setAttribute("id", "killBar");
        killTab1.appendChild(name1)+killTab1.appendChild(cName1)+killTab1.appendChild(rName1);
+  
+    //Conteudo tab 02
+    var name2 = document.createElement("DIV");
+    name2.setAttribute("id", "leftName");
+    name2.innerHTML = "WhityKun_";
+    
+    var cName2 = document.createElement("DIV");
+    cName2.setAttribute("id", "centralName");
+    cName2.innerHTML = "-5.61HP"
+    
+    var rName2 = document.createElement("DIV");
+    rName2.setAttribute("id", "rightName");
+    rName2.innerHTML = "Sbeeker";
+    
+      //painel 02
+       var killTab2 = document.createElement("DIV");
+       killTab2.setAttribute("id", "killBar");
+       killTab2.appendChild(name2)+killTab2.appendChild(cName2)+killTab2.appendChild(rName2);
     
     //Projeção da Lista
-    hBox.appendChild(killTab1);
+    hBox.appendChild(killTab2)+hBox.appendChild(killTab1);
   window.location.hash = "whity";
 }
 
