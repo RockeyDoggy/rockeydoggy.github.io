@@ -1,14 +1,3 @@
-// ------------------------------------------------------ //
-
-//Streamlabs Links
-
-//var goal-Current = document.getElementById('goal-current').innerHTML;
-//var goal-Total = document.getElementById('goal-total').innerHTML;
-// document.getElementById('paypal').innerHTML = goal-Current;
-// document.getElementById('maximo').innerHTML = goal-total;
-
-//Funções padrões
-
 //Skin Location
 //Fundo
 var sFundo = "url(https://i.imgur.com/z95zJ1e.png)";
@@ -43,9 +32,9 @@ setTimeout(function refletir(){
   setTimeout(refletir, 1000);
   
   //var atual = document.getElementById("goal-current").innerHTML;
-  var atual = "{AMOUNT}";
+  var atual = "50";
   //var total = document.getElementById("goal-total").innerHTML;
-  var total = "{GOAL}";
+  var total = "100";
   var Paypal = document.getElementById("paypal").innerHTML;
   var Pix = document.getElementById("pix").innerHTML;
   
