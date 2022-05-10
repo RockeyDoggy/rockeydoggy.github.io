@@ -229,6 +229,7 @@ body{
   top:66px;
   left:33px;
   transition:all 1s ease-out;
+    background:url('https://i.imgur.com/AJKDmh4.png');
   /*filter:invert(100%);*/
 }
 
