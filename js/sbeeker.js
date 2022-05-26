@@ -46,7 +46,7 @@ var invent = document.getElementById("pChar");
     invText.innerHTML = "Inventario (Boss):";
     
     var invBox = document.getElementById("pChar");
-    invBox.appendChild(invText);
+    //invBox.appendChild(invText);
     
     //Lista de Itens
     //vip
