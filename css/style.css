@@ -928,8 +928,8 @@ body::-webkit-scrollbar-thumb{
 }
 #menuBTN5{
   width:240px;
-  background:rgba(255,255,255,0.4);*/
-  filter:saturate(0%) invert(100%) contrast(200%);
+  background:rgba(0,0,0,0.4);*/
+  filter:saturate(0%) contrast(200%);
   font-size:36px;
   color:#FFF;
   text-shadow:0 0 15px #FFF;
