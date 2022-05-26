@@ -70,7 +70,7 @@ function password(){
 function passClose(){
   var passInput = document.getElementById("passIs")
   passAll.style.display = "none";
-  passBtn.setAttribute("onclick", "passOpen()");
+  //passBtn.setAttribute("onclick", "passOpen()");
   var letters = document.getElementsByClassName("ltrs");
   for(i = 0; i <letters.length; i++){
     letters[i].value = null;
