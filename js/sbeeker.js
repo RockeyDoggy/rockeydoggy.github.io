@@ -77,8 +77,8 @@ var invent = document.getElementById("pChar");
     bossIcon.setAttribute("draggable", "false");
     bossIcon.setAttribute("id", "bossI");
     
-    //
-    invBox.appendChild(vipIcon)+invBox.appendChild(rPoints)+invBox.appendChild(rSecret)+invBox.appendChild(bossIcon);
+    //Projetar Itens
+    //invBox.appendChild(vipIcon)+invBox.appendChild(rPoints)+invBox.appendChild(rSecret)+invBox.appendChild(bossIcon);
   
   //Barras
   var vidBar = document.getElementById("vBar");
