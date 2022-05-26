@@ -926,13 +926,13 @@ body::-webkit-scrollbar-thumb{
   border:none;
   font-variant:small-caps;
 }
-#menuBTN5{
+#menuBTN5{                          /*Botão de Password*/
   width:240px;
   background:rgba(0,0,0,0.4);*/
   filter:saturate(0%) contrast(200%);
   font-size:36px;
   color:#FFF;
-  text-shadow:0 0 15px #FFF;
+  text-shadow:0 0 15px #000;
   font-variant:small-caps;
 }
 
