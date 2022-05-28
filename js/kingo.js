@@ -47,9 +47,9 @@ function kingo(){
   var forBar = document.getElementById("fBar");
   var resBar = document.getElementById("rBar");
   setTimeout(function(){
-    vidBar.style.width= "2.8%";
-    difBar.style.width = "2.5%";
-    forBar.style.width = "2.9%";
+    vidBar.style.width= "4.0%";
+    difBar.style.width = "10%";
+    forBar.style.width = "5.9%";
     resBar.style.width = "2.5%";
     }, 100);
     
