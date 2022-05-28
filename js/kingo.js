@@ -17,8 +17,9 @@ function kingo(){
   //Design de Pagina
   bgDesign.style.background = "linear-gradient(-185deg, rgba(15,15,15,1), rgba(35,35,35,1))";
   
-  bgDesign.style.boxShadow = "none";
-  bgDesign.style.borderTop = "double 5px #333";
+  bgDesign.style.backgroundImage = "linear-gradient(-185deg, rgba(10,5,15,1), rgba(35,30,40,1))";
+  bgDesign.style.boxShadow = "inset 0px 30px 20px -25px #FC7, inset 0px -30px 20px -20px #100500";
+  bgDesign.style.borderTop = "double 5px #FC9";
   invent.style.background = "rgba(5,0,10,0.8)";
   invent.style.borderTop = "double 4px #97F";
   invent.style.borderBottom = "double 4px #97F";
