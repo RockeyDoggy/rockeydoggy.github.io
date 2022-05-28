@@ -129,6 +129,10 @@ body::-webkit-scrollbar-thumb{
   background:url(https://i.imgur.com/1L6RW85.png);
   background-size:100% 100%;
 }
+#char8{
+  background:url(https://i.imgur.com/EYl3Pye.png);
+  background-size:100% 100%;
+}
 #char34{
   background:url(https://i.imgur.com/bOYR5lr.png);
   background-size:100% 100%;
@@ -143,10 +147,6 @@ body::-webkit-scrollbar-thumb{
 }
 #char28{
   background:url(https://i.imgur.com/xr4Jaeq.png);
-  background-size:100% 100%;
-}
-#char27{
-  background:url(https://i.imgur.com/JPc4C9g.png);
   background-size:100% 100%;
 }
 #char26{
