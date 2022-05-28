@@ -23,7 +23,7 @@ function kingo(){
   invent.style.borderTop = "double 4px #333";
   invent.style.borderBottom = "double 4px #333";
   invent.style.boxShadow = "none";
-  invent.style.filter = "saturate(0%)";
+  invent.style.filter = "";
   
   //(Informações)
   banner.style.background = "url(https://i.imgur.com/C8bdCDJ.png)";
