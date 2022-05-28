@@ -91,9 +91,27 @@ function kingo(){
        var killTab2 = document.createElement("DIV");
        killTab2.setAttribute("id", "killBar");
        killTab2.appendChild(name2)+killTab2.appendChild(cName2)+killTab2.appendChild(rName2);
+    
+    //Conteudo tab 03
+    var name3 = document.createElement("DIV");
+    name3.setAttribute("id", "leftName");
+    name3.innerHTML = "S1rKing_";
+    
+    var cName3 = document.createElement("DIV");
+    cName3.setAttribute("id", "centralName");
+    cName3.innerHTML = "Derrotou"
+    
+    var rName3 = document.createElement("DIV");
+    rName3.setAttribute("id", "rightName");
+    rName3.innerHTML = "Kinguinha";
+    
+      //painel 03
+       var killTab3 = document.createElement("DIV");
+       killTab3.setAttribute("id", "killBar");
+       killTab3.appendChild(name3)+killTab3.appendChild(cName3)+killTab3.appendChild(rName3);
   
     //Projeção da Lista
-    hBox.appendChild(killTab2)+hBox.appendChild(killTab1);
+    hBox.appendChild(killTab3)+hBox.appendChild(killTab2)+hBox.appendChild(killTab1);
   
   window.location.hash = "kingo";
 }
