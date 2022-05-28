@@ -19,9 +19,9 @@ function kingo(){
   
   bgDesign.style.boxShadow = "none";
   bgDesign.style.borderTop = "double 5px #333";
-  invent.style.background = "rgba(5,5,5,0.8)";
-  invent.style.borderTop = "double 4px #333";
-  invent.style.borderBottom = "double 4px #333";
+  invent.style.background = "";
+  invent.style.borderTop = "";
+  invent.style.borderBottom = "";
   invent.style.boxShadow = "none";
   invent.style.filter = "";
   
