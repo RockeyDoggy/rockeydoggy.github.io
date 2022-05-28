@@ -114,6 +114,7 @@ function kingo(){
     hBox.appendChild(killTab3)+hBox.appendChild(killTab2)+hBox.appendChild(killTab1);
   
   window.location.hash = "kingo";
+  invLoad();
 }
 //Kingo End
 
