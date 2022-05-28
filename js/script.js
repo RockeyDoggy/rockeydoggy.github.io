@@ -1,3 +1,7 @@
+//Mapeamento de Pagina de Personagem
+const inventory = document.getElementById("pChar");
+
+
 //Inspecionar
 function encerrarSpec(){
   // Encerrar Inspecionar
