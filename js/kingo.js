@@ -19,11 +19,11 @@ function kingo(){
   
   bgDesign.style.boxShadow = "none";
   bgDesign.style.borderTop = "double 5px #333";
-  invent.style.background = "";
-  invent.style.borderTop = "";
-  invent.style.borderBottom = "";
-  invent.style.boxShadow = "none";
-  invent.style.filter = "";
+  invent.style.background = "rgba(5,0,10,0.8)";
+  invent.style.borderTop = "double 4px #97F";
+  invent.style.borderBottom = "double 4px #97F";
+  invent.style.boxShadow = "inset 0px 15px 15px -13px #429, inset 0px -15px 15px -15px #429";
+  invent.style.filter = "saturate(100%)";
   
   //(Informações)
   banner.style.background = "url(https://i.imgur.com/C8bdCDJ.png)";
