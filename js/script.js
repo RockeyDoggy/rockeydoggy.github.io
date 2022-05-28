@@ -1,5 +1,6 @@
 //Mapeamento de Pagina de Personagem
 const inventory = document.getElementById("pChar");
+const userNick  = document.getElementById("nick");
 
 
 //Inspecionar
