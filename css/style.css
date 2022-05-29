@@ -1014,6 +1014,7 @@ body::-webkit-scrollbar-thumb{
   box-shadow:inset 0px 9px 10px -9px #F91, 0 -9px 10px -9px #F91, inset 0px -9px 10px -9px #F91, 0px 9px 10px -9px #F91;
   overflow-y:scroll;
   overflow-x:hidden;
+  transition:all 0.3s ease-in-out;
 }
 
 #passScreen::-webkit-scrollbar{
