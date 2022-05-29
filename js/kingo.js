@@ -116,8 +116,6 @@ function kingo(){
   
   window.location.hash = "kingo";
   invLoad();
-  passDone();
-  authPlace();
 }
 //Kingo End
 
