@@ -347,7 +347,8 @@ setTimeout(function(){
 
 //  ~~Design edit~~    //
 
-
+//~ ~~Organizar Inventario~~
+  invLoad();
 //~~  Ativar Segredo  ~~//
 var rodaPe = document.getElementById("pTabFooter");
 var segredo = document.createElement("DIV");
