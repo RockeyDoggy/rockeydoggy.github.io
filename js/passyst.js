@@ -212,3 +212,16 @@ function clearPassInput(){
       letters[i].value = null;
     }
 }
+
+
+function upperCaps(e){
+  var start = e.target.selectionStart;
+  var end = e.target.selectionEnd;
+  const letra = document.getElementsByClassName("ltrs");
+  e.target.value = e.target.value.toUpperCase();
+  e.target.setSelectionRange(start, end);
+}
+const letra = document.getElementsByClassName("ltrs");
+for(i = 0; i <letra.length; i++){
+  letra[i].addEventListener("keyup", upperCaps, false);
+}
