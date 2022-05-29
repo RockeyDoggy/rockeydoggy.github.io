@@ -59,7 +59,7 @@ function password(){
   passBGM.volume = 0.3;
   volFade.value = 300;
   imgAsDes.volume = "0.001";
-  
+  pasScreen.style.opacity = "1";
           //Close Menu
   var menuOp = document.getElementById("menuPos");
   var menuBtn = document.getElementById("menu");
