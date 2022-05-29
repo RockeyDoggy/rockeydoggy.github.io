@@ -116,6 +116,7 @@ function kingo(){
   
   window.location.hash = "kingo";
   invLoad();
+  passDone();
 }
 //Kingo End
 
