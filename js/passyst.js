@@ -203,5 +203,12 @@ function passConfirm(){
       cnfPass.setAttribute('class', 'borderBtn');
     }, 2000);
   }
+ 
+ doubleCheck();
   
+}
+function clearPassInput(){ 
+    for(i = 0; i <letters.length; i++){
+      letters[i].value = null;
+    }
 }
