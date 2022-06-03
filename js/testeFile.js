@@ -30,7 +30,7 @@ var kingInfos = {
     }
 }
 
-//Logme
+                    //Logme//
 userID.value = localStorage.getItem("LoggThis");
 versionUser();
 
