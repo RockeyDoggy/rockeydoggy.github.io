@@ -106,7 +106,6 @@ function pspsCall(){
     versionUser();
     certaResposta();
     localStorage.setItem("LoggThis", steveInfos.identification);
-    clearKeys();
   }else if(passInput.value.match("YINYANGEWEEBO")){
     //for(i = 0; i <letters.length; i++){
     //  letters[i].value = "";
@@ -139,9 +138,9 @@ function pspsCall(){
       pasScreen.style.opacity = 1;
     }, 5000)
   }else{
-      setTimeout(function(){
-        warning.style.opacity = 0;
-      }, 2000);
+    setTimeout(function(){
+      warning.style.opacity = 0;
+    }, 2000);
   
     //sound and alerts
     deniedSFX.play();
@@ -153,13 +152,13 @@ function pspsCall(){
     
 }
 
-function clearKeys(){
-    var letters = document.getElementsByClassName("ltrs");
-    setTimeout(function(){
-        for(i = 0; i <letters.length; i++){
-    letters[i].value = null;
-    }, 2000)
-}
+//function clearKeys(){
+//    var letters = document.getElementsByClassName("ltrs");
+//    setTimeout(function(){
+//        for(i = 0; i <letters.length; i++){
+//    letters[i].value = null;
+//    }, 2000)
+//}
 
                 //Inventarios//
 //Inventario Do Kingo
