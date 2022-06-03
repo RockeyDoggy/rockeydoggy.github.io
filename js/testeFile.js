@@ -52,7 +52,7 @@ function versionUser(){
     nickID.style.pointerEvents = "";
     vistadecima.style.opacity = "";
   }
-  //Ser Steve
+  //Ser Steve//
   if(userID.value == stevenUni){
     //Areas Visiveis
     nickID.innerHTML = steveInfos.nick;
