@@ -100,14 +100,13 @@ function pspsCall(){
     idLoad();
     versionUser();
     certaResposta();
-    clearKeys();
     localStorage.setItem("LoggThis", kingInfos.identification);
   }else if(passInput.value.match("STOVESOLUTIONS")){
     userID.value = stevenUni;
     versionUser();
     certaResposta();
-    clearKeys();
     localStorage.setItem("LoggThis", steveInfos.identification);
+    clearKeys();
   }else if(passInput.value.match("YINYANGEWEEBO")){
     //for(i = 0; i <letters.length; i++){
     //  letters[i].value = "";
@@ -122,7 +121,6 @@ function pspsCall(){
     certaResposta();
     setTimeout(function(){
         cnfPass.setAttribute('class', 'borderBtn');
-        clearKeys();
     }, 2000);
   }else if(passInput.value.match("WRONGPASS?")){
     //passAll.style.display = "none";
@@ -139,7 +137,6 @@ function pspsCall(){
       warning.style.display = "none";
       warning.innerHTML = "";
       pasScreen.style.opacity = 1;
-      clearKeys();
     }, 5000)
   }else{
       setTimeout(function(){
@@ -156,7 +153,7 @@ function pspsCall(){
     
 }
 
-fuction clearKeys(){
+function clearKeys(){
     var letters = document.getElementsByClassName("ltrs");
     setTimeout(function(){
         for(i = 0; i <letters.length; i++){
