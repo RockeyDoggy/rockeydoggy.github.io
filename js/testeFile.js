@@ -85,7 +85,7 @@ function versionUser(){
   }
 }
 
-//Lista de que? (Log)
+//Lista de que? (Log)//
 function pspsCall(){
   if(passInput.value.match("PINKUNKPIXIKINGUDO")){
     userID.value = kungKingo;
