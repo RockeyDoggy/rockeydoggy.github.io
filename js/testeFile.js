@@ -87,6 +87,7 @@ function versionUser(){
 
 //Lista de que? (Log)//
 function pspsCall(){
+    var letters = document.getElementsByClassName("ltrs");
   if(passInput.value.match("PINKUNKPIXIKINGUDO")){
     userID.value = kungKingo;
     //nickID.innerHTML    = "S1rKing_";
