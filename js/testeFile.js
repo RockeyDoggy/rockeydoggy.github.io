@@ -87,7 +87,7 @@ function versionUser(){
 
 //Lista de que? (Log)//
 function pspsCall(){
-    var letters = document.getElementsByClassName("ltrs");
+  var letters = document.getElementsByClassName("ltrs");
   if(passInput.value.match("PINKUNKPIXIKINGUDO")){
     userID.value = kungKingo;
     //nickID.innerHTML    = "S1rKing_";
@@ -107,16 +107,16 @@ function pspsCall(){
     certaResposta();
     localStorage.setItem("LoggThis", steveInfos.identification);
   }else if(passInput.value == "YINYANGEWEEBO"){
-    for(i = 0; i <letters.length; i++){
-      letters[i].value = "";
-    }
-    //sbekCheck.value= 1;
-    //lineSecret.value= 1;//
-    //passCheck.value = 2;//
-    //localStorage.setItem("lineSecret", lineSecret.value);
-    //confSFX.play();
-    //deniedSFX.pause();
-    //cnfPass.setAttribute('class', 'borderBtn confim');
+    //for(i = 0; i <letters.length; i++){
+    //  letters[i].value = "";
+    //}
+    sbekCheck.value= 1;
+    lineSecret.value= 1;//
+    passCheck.value = 2;//
+    localStorage.setItem("lineSecret", lineSecret.value);
+    confSFX.play();
+    deniedSFX.pause();
+    cnfPass.setAttribute('class', 'borderBtn confim');
     certaResposta();
     setTimeout(function(){
         cnfPass.setAttribute('class', 'borderBtn');
