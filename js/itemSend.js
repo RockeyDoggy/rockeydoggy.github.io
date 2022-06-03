@@ -20,7 +20,7 @@ const rewardWin = document.getElementById("rewardConfirm");
 const rewardTxt = document.getElementById("text-rwContent");
 const centRw = document.getElementById("centrelizeRW");
 
-  //Criar Icones Destacados
+  //Criar Icones Destacados//
 const florais = document.createElement("IMG");
 florais.setAttribute("src", "https://i.imgur.com/VbAIghD.png");
 florais.setAttribute("title", "Flora'Eyes");
