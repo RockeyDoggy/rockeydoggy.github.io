@@ -372,7 +372,7 @@ function sacrifice(){
   if(dataItemID.value == "4"){
     if(rewardsItem.getAttribute("value") > 4){
       rewardsItem.setAttribute("value", killRewards);
-      localStorage.setItem("kingoRwValue", rewardsItem.getAttribute("value"));
+      localStorage.setItem(nickID.innerHTML+rewardsID, rewardsItem.getAttribute("value"));//
       dataItemCount.value = rewardsItem.getAttribute("value");//
       centRw.style.display = "none";
       dataItemPay.value = 5;
