@@ -106,14 +106,14 @@ function pspsCall(){
     versionUser();
     certaResposta();
     localStorage.setItem("LoggThis", steveInfos.identification);
-  }else if(passInput.value == "YINYANGEWEEBO"){
+  }else if(passInput.value == "YIN-YANGEWEEBO"){
     //for(i = 0; i <letters.length; i++){
     //  letters[i].value = "";
     //}
     //sbekCheck.value= 1;
     //lineSecret.value= 1;//
     //passCheck.value = 2;//Pass Check Si oR NoT
-    localStorage.setItem("lineSecret", lineSecret.value);
+    //localStorage.setItem("lineSecret", lineSecret.value);
     confSFX.play();
     deniedSFX.pause();
     cnfPass.setAttribute('class', 'borderBtn confim');
