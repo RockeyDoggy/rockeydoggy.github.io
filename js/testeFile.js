@@ -194,7 +194,7 @@ function kingInventory(){
   }
 }
 
-//Inventario Do Steven
+                            //Inventario Do Steven//
 function steveInventory(){
   if(userNick.innerHTML == steveInfos.nick){
     //Loads
