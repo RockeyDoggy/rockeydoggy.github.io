@@ -100,11 +100,13 @@ function pspsCall(){
     idLoad();
     versionUser();
     certaResposta();
+    clearKeys();
     localStorage.setItem("LoggThis", kingInfos.identification);
   }else if(passInput.value.match("STOVESOLUTIONS")){
     userID.value = stevenUni;
     versionUser();
     certaResposta();
+    clearKeys();
     localStorage.setItem("LoggThis", steveInfos.identification);
   }else if(passInput.value.match("YINYANGEWEEBO")){
     //for(i = 0; i <letters.length; i++){
@@ -120,6 +122,7 @@ function pspsCall(){
     certaResposta();
     setTimeout(function(){
         cnfPass.setAttribute('class', 'borderBtn');
+        clearKeys();
     }, 2000);
   }else if(passInput.value.match("WRONGPASS?")){
     //passAll.style.display = "none";
@@ -136,13 +139,10 @@ function pspsCall(){
       warning.style.display = "none";
       warning.innerHTML = "";
       pasScreen.style.opacity = 1;
+      clearKeys();
     }, 5000)
   }else{
       setTimeout(function(){
-        //for(i = 0; i <letters.length; i++){
-        //  letters[i].value = null;
-        //}
-        //passInput.value = null;
         warning.style.opacity = 0;
       }, 2000);
   
@@ -154,6 +154,14 @@ function pspsCall(){
     }, 1000);
   }
     
+}
+
+fuction clearKeys(){
+    var letters = document.getElementsByClassName("ltrs");
+    setTimeout(function(){
+        for(i = 0; i <letters.length; i++){
+    letters[i].value = null;
+    }, 2000)
 }
 
                 //Inventarios//
