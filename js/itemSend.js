@@ -104,7 +104,6 @@ claimMore.setAttribute("id", "infButton");
 //Checagem Dupla
 function doubleCheck(){
   pspsCall();
-  certaResposta();
 }
 
 function screenKill(){
