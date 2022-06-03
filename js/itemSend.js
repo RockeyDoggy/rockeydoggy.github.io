@@ -530,3 +530,9 @@ function solicitarReward(){
   }
   request.send(JSON.stringify(params));//Conteudo que vai ser enviado
 }
+
+//Sair
+function runOut(){
+  userID.value = "";
+  versionUser();
+}
