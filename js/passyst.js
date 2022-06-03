@@ -135,73 +135,9 @@ function passConfirm(){
   
   passInput.value = pLtrIs;
   
-   //Senha Errada?
-  if(passInput.value.match("wrongpass?")){
-    //passAll.style.display = "none";
-    passCheck.value = 2;
-    warning.style.display = "initial";
-    warning.innerHTML = "<h1>Sim!</h1><h2>A Senha Está Errada</h2><h3>Até Mais!</h3>";
-    warning.style.opacity = 1;
-    pasScreen.style.opacity = 0;
-    cnfPass.setAttribute('class', 'borderBtn den');
-    
-    setTimeout(function(){
-      passAll.style.display = "none";
-      warning.style.display = "none";
-      warning.innerHTML = "";
-      pasScreen.style.opacity = 1;
-    }, 5000)
-  }
-  
   if(passCheck.value.match(2)){
     audioFade();
     passCheck.value = 1;
-  }
-  setTimeout(function(){
-    for(i = 0; i <letters.length; i++){
-      letters[i].value = null;
-    }
-    passInput.value = null;
-    warning.style.opacity = 0;
-  }, 2000);
-  
-  //sound and alerts
-  deniedSFX.play();
-  cnfPass.setAttribute('class', 'borderBtn den');
-  setTimeout(function(){
-    cnfPass.setAttribute('class', 'borderBtn');
-  }, 1000);
-  
-  //Primeiro
-  if(passInput.value.match("yin-yangeweebo")){
-    for(i = 0; i <letters.length; i++){
-      letters[i].value = null;
-    }
-    sbekCheck.value= 1;
-    lineSecret.value= 1;
-    passCheck.value = 2;
-    localStorage.setItem("lineSecret", lineSecret.value);
-    confSFX.play();
-    deniedSFX.pause();
-    cnfPass.setAttribute('class', 'borderBtn confim');
-    setTimeout(function(){
-      cnfPass.setAttribute('class', 'borderBtn');
-    }, 2000);
-  }
-  if(passInput.value.match("YIN-YANGEWEEBO")){
-    for(i = 0; i <letters.length; i++){
-      letters[i].value = null;
-    }
-    sbekCheck.value= 1;
-    lineSecret.value= 1;
-    passCheck.value = 2;
-    localStorage.setItem("lineSecret", lineSecret.value);
-    confSFX.play();
-    deniedSFX.pause();
-    cnfPass.setAttribute('class', 'borderBtn confim');
-    setTimeout(function(){
-      cnfPass.setAttribute('class', 'borderBtn');
-    }, 2000);
   }
  
  doubleCheck();
