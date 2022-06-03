@@ -105,7 +105,7 @@ function pspsCall(){
     versionUser();
     certaResposta();
     localStorage.setItem("LoggThis", steveInfos.identification);
-  }else if(passInput.value == "YINYANGEWEEBO"){
+  }else if(passInput.value == "YIN YANGEWEEBO"){
     for(i = 0; i <letters.length; i++){
       letters[i].value = "";
     }
