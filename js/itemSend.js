@@ -155,6 +155,9 @@ function certaResposta(){
   cnfPass.setAttribute('class', 'borderBtn confim');
   deniedSFX.pause();
   localStorage.setItem("loggedHas", nickID.innerHTML);
+  setTimeout(function(){
+    cnfPass.setAttribute('class', 'borderBtn');
+  }, 1000)
   screenKill();
   audioFade();
 }
