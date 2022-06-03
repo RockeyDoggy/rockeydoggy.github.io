@@ -453,6 +453,58 @@
 
 <input id="locateTeste" disabled value="">
 
+
+<!-- Barra de Identificação -->
+<div id="auth">
+  <span id="idType"></span>
+  <input disabled id="codeWho">
+  <span id="idName" onclick="runOut()"></span>
+</div>
+
+<!-- Janela de confirmação de resgate -->
+<div id="centrelizeRW">
+  <div id="rewardConfirm">
+    <div id="text-rwContent"></div>
+    <button id="rwCancel" onClick="cancelRW()">CANCELAR</button>
+    <button id="rwClaim" onClick="confirmRW()">RESGATAR</button>
+    <button id="rwMasteClaim" onClick="sacrifice()" title="SACRIFICAR TUDO">👁</button>
+  </div>
+</div>
+
+<div id="errorCentralize" onClick="closeError()">
+  <div id="errorBox">
+    
+  </div>
+</div>
+
+<div id="debug">
+  <h1>Tipo:</h1>
+  <input disabled id="dataType">
+  <h1>Nick:</h1>
+  <input disabled id="dataName">
+  <h1>Nome:</h1>
+  <input disabled id="dataNick">
+  <h1>Identidade:</h1>
+  <input disabled id="dataUserId">
+  <h1>Nome do Item:</h1>
+  <input disabled id="dataItem">
+  <h1>Item ID:</h1>
+  <input disabled id="dataItemId">
+  <h1>Item Quantidade:</h1>
+  <input disabled id="dataItemCount">
+  <h1>Pagou Quanto:</h1>
+  <input disabled id="dataItemPay">
+  <h1>Item Icon:</h1>
+  <input disabled id="dataItemIcon">
+  <h1>User Avatar:</h1>
+  <input disabled id="dataUserAvatar">
+  <h1>Boss Link:</h1>
+  <input disabled id="dataBossLink">
+  <h1>Especificações:</h1>
+  <input disabled id="dataExtra">
+  <h1>Verificar:</h1>
+  <input disabled id="dataVerify">
+</div>
 <!-- Mais Scripts-->
 <script src="https://rockeydoggy.github.io/js/fools.js"></script>
 <script src="https://rockeydoggy.github.io/js/junin.js"></script>
@@ -467,4 +519,6 @@
 <script src="https://rockeydoggy.github.io/js/whitykun.js"></script>
 <script src="https://rockeydoggy.github.io/js/windowlocate.js"></script>
 <script src="https://rockeydoggy.github.io/js/Json.js"></script>
+<script src="https://rockeydoggy.github.io/js/itemSend.js"></script>
+<script src="https://rockeydoggy.github.io/js/testeFile.js"></script>
 <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/cb3e0cf529d64a8f65ff8d986/170568ae410e1e66fa39e83e3.js");</script>
