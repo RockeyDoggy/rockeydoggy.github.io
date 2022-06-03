@@ -115,7 +115,7 @@ function pspsCall(){
     //passCheck.value = 2;
     //localStorage.setItem("lineSecret", lineSecret.value);
     //  confSFX.play();//
-    //deniedSFX.pause();//
+    //deniedSFX.pause();
     //cnfPass.setAttribute('class', 'borderBtn confim');
     certaResposta();
     setTimeout(function(){
