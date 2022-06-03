@@ -95,7 +95,7 @@ function pspsCall(){
     //userID.value        = kungKingo;
     //dataBossLink.value  =kingoLink;
     //dataUserAvatar.value= kingoAvatar;
-    //customGuide[0].append(custTitle);
+    //customGuide[0].append(custTitle);//
     //customGuide[0].append(kingCard);//
     idLoad();
     versionUser();
