@@ -164,7 +164,7 @@ function kingInventory(){
     inventory.append(florais, subInvent, vipItem, rewardsItem);//
     authVerify();
     
-    //condições
+    //condições//
     if(nickID.innerHTML == userNick.innerHTML){
       vipItem.setAttribute("onclick", "rwVip()");
       rewardsItem.setAttribute("onClick", "claimRewards()");
