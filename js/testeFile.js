@@ -116,8 +116,9 @@ function pspsCall(){
     confSFX.play();
     deniedSFX.pause();
     cnfPass.setAttribute('class', 'borderBtn confim');
+    certaResposta();
     setTimeout(function(){
-      cnfPass.setAttribute('class', 'borderBtn');
+    cnfPass.setAttribute('class', 'borderBtn');
     }, 2000);
   }else if(passInput.value.match("WRONGPASS?")){
     //passAll.style.display = "none";
