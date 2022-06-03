@@ -111,8 +111,8 @@ function pspsCall(){
     //  letters[i].value = "";
     //}
     //sbekCheck.value= 1;
-    //lineSecret.value= 1;//
-    //passCheck.value = 2;//Pass Check Si oR NoT
+    //lineSecret.value= 1;
+    //passCheck.value = 2;
     //localStorage.setItem("lineSecret", lineSecret.value);
     confSFX.play();
     deniedSFX.pause();
