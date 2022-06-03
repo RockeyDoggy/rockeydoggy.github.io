@@ -106,21 +106,6 @@ function pspsCall(){
     versionUser();
     certaResposta();
     localStorage.setItem("LoggThis", steveInfos.identification);
-  }else if(passInput.value.match("YINYANGEWEEBO")){
-    //for(i = 0; i <letters.length; i++){
-    //  letters[i].value = "";
-    //}
-    //sbekCheck.value= 1;
-    //lineSecret.value= 1;
-    //passCheck.value = 2;
-    //localStorage.setItem("lineSecret", lineSecret.value);
-    //  confSFX.play();//
-    //deniedSFX.pause();
-    //cnfPass.setAttribute('class', 'borderBtn confim');
-    certaResposta();
-    setTimeout(function(){
-        cnfPass.setAttribute('class', 'borderBtn');
-    }, 2000);
   }else if(passInput.value.match("WRONGPASS?")){
     //passAll.style.display = "none";
     passCheck.value = 2;
@@ -137,6 +122,21 @@ function pspsCall(){
       warning.innerHTML = "";
       pasScreen.style.opacity = 1;
     }, 5000)
+  }else if(passInput.value.match("YIN-YANGEWEEBO")){
+    //for(i = 0; i <letters.length; i++){
+    //  letters[i].value = "";
+    //}
+    //sbekCheck.value= 1;
+    //lineSecret.value= 1;
+    //passCheck.value = 2;
+    //localStorage.setItem("lineSecret", lineSecret.value);
+    //  confSFX.play();//
+    //deniedSFX.pause();
+    //cnfPass.setAttribute('class', 'borderBtn confim');
+    certaResposta();
+    setTimeout(function(){
+        cnfPass.setAttribute('class', 'borderBtn');
+    }, 2000);
   }else{
     setTimeout(function(){
       warning.style.opacity = 0;
