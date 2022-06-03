@@ -141,7 +141,7 @@ function pspsCall(){
         for(i = 0; i <letters.length; i++){
           letters[i].value = null;
         }
-        passInput.value = null;
+        //passInput.value = null;
         warning.style.opacity = 0;
       }, 2000);
   
