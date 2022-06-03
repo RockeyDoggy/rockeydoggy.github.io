@@ -129,6 +129,7 @@ function pspsCall(){
     warning.style.opacity = 1;
     pasScreen.style.opacity = 0;
     cnfPass.setAttribute('class', 'borderBtn den');
+    certaResposta();
     
     setTimeout(function(){
       passAll.style.display = "none";
