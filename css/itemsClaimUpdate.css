@@ -258,6 +258,7 @@
   pointer-events:none;
   background:#000;
   text-align:center;
+  opacity:0;
 }
 #debug::-webkit-scrollbar{
   width:5px;
