@@ -15,14 +15,3 @@ sexo.value = window.location.hash;
     if(sexo.value == "#WhityKun_"){
       whitie();
     }
-
-//On Pandas
-const panducao = ["#pandas", "#Pandas", "#pandas_s2", "#Pandas_S2", "#Pandos", "#pandos", "#pandas_S2", "#Pandas_s2", "#Pandoca", "#pandoca"]; //Tags Validas
- 
-  if(panducao.includes(sexo.value)){
-    pandos();
-  }
-
-if(sexo.value == "#Pandos"){
-    pandos();
-}
