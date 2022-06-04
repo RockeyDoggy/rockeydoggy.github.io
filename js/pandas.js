@@ -1,4 +1,4 @@
-//SirKingo
+//Pandas
 function pandos(){
   var menuBtn = document.getElementById("menu");
   menuBtn.style.transform = "scale(0) rotate(360deg)";
