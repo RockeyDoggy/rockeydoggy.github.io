@@ -21,4 +21,5 @@ const pandao = ["#pandas", "#Pandas", "#pandas_s2", "#Pandas_S2", "#Pandos", "#p
  
   if(pandao.includes(sexo.value)){
     pandos();
+    invLoad();
   }
