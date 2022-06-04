@@ -19,10 +19,10 @@ sexo.value = window.location.hash;
 //On Pandas
 const pandoca = ["#pandas", "#Pandas", "#pandas_s2", "#Pandas_S2", "#Pandos", "#pandos", "#pandas_S2", "#Pandas_s2", "#Pandoca", "#pandoca"];
  
-  if(pandoca.includes(tstInp.value)){
+  if(pandoca.includes(sexo.value)){
     pandos();
   }
 
-if(tstInp.value == "#Pandos"){
+if(sexo.value == "#Pandos"){
     pandos();
 }
