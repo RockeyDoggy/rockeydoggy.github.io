@@ -48,10 +48,10 @@ function pandos(){
   var forBar = document.getElementById("fBar");
   var resBar = document.getElementById("rBar");
   setTimeout(function(){
-    vidBar.style.width= "4.0%";
-    difBar.style.width = "10%";
-    forBar.style.width = "5.9%";
-    resBar.style.width = "2.5%";
+    vidBar.style.width= "5.0%";   //Vida
+    difBar.style.width = "20%";   //Dificuldade
+    forBar.style.width = "8%";  //Força
+    resBar.style.width = "2.5%";  //Resistencia
     }, 100);
     
   //Historico
