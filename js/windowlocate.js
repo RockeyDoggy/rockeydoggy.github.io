@@ -15,3 +15,10 @@ sexo.value = window.location.hash;
     if(sexo.value == "#WhityKun_"){
       whitie();
     }
+
+//On Pandas
+const pandoca = ["#pandas", "#Pandas", "#pandas_s2", "#Pandas_S2", "#Pandos", "#pandos", "#pandas_S2", "#Pandas_s2", "#Pandoca", "#pandoca"];
+ 
+  if(pandoca.includes(tstInp.value)){
+    pandos();
+  }
