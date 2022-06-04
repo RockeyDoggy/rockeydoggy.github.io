@@ -27,7 +27,7 @@ function pandos(){
   invent.style.filter = "saturate(100%)";
   
   //(Informações)
-  banner.style.background = "url(https://i.imgur.com/C8bdCDJ.png)";
+  banner.style.background = "url(https://i.imgur.com/kLIT76F.png)";
   headNome.innerHTML = "Pandas";
   nick.innerHTML = "Pandas_S2";
     nick.setAttribute("onclick", "pandoTwitch()");
