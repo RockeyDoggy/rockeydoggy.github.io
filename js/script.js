@@ -410,4 +410,8 @@ const pandoca = ["#pandas", "#Pandas", "#pandas_s2", "#Pandas_S2", "#Pandos", "#
   if(pandoca.includes(tstInp.value)){
     pandos();
   }
+
+if(tstInp.value == "#Pandos"){
+    pandos();
+}
   
