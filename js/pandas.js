@@ -68,7 +68,7 @@ function pandos(){
     
     var rName1 = document.createElement("DIV");
     rName1.setAttribute("id", "rightName");
-    rName1.innerHTML = "LucarioJogas";
+    rName1.innerHTML = "Lucariojoga";
     
       //painel 01
        var killTab1 = document.createElement("DIV");
