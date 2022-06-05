@@ -4,6 +4,7 @@ const foolyFool = "1868413w4818a6186a";
 const juninSmol = "18458d48w6a8412w53";
 const sbekerLov = "17568521d58a4q8415";
 const stevenUni = "15684d8sa6w8d48a38";
+const pandostos = "1a48a68s4w1568s476";
 
 //Avatares
 const kingoAvatar = "https://i.imgur.com/EYl3Pye.png";
