@@ -1,4 +1,4 @@
-const botName = "The Eye in One Mind"; //Bot Name
+const botName = "The Eye in One Mind"; //Bot Name//
 const botAvatar="https://cdn.discordapp.com/attachments/490283052010831875/798729546912235561/GIFMaker.org_8r22tq.gif";
 //Identificadores
 const nickID = document.getElementById("idName");
