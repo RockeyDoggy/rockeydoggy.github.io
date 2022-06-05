@@ -1,3 +1,4 @@
+const webLink = "https://discord.com/api/webhooks/982842914440884235/HVS8kBHO_IBHf2qo82DsTN9h-ciNIezFbkBnLc0_DqmH1Yrtulg1Fqn6p6F6yOiaxv8d";//aaaa
 const botName = "The Eye in One Mind"; //Bot Name
 const botAvatar="https://cdn.discordapp.com/attachments/490283052010831875/798729546912235561/GIFMaker.org_8r22tq.gif";
 //Identificadores
@@ -534,5 +535,4 @@ function solicitarReward(){
 //Sair
 function runOut(){
   userID.value = "";
-  versionUser();
-}
+  vers
