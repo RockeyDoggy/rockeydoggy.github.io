@@ -536,3 +536,4 @@ function solicitarReward(){
 function runOut(){
   userID.value = "";
   vers
+}
