@@ -1,11 +1,6 @@
 const botName = "The Eye in One Mind"; //Bot Name//
 const botAvatar="https://cdn.discordapp.com/attachments/490283052010831875/798729546912235561/GIFMaker.org_8r22tq.gif";
 //Identificadores//
-const get    = "https://discord.com";
-const of     = "/api";
-const fuck   = "webhooks/";
-const out    = "978928859820998686"
-const here   = "/z82tOcgHuanJveCdpliYt6DezSk9egtFDaJlQBQyWFWjpfXJynLVtFbDDZJsUQANpydA";
 const nickID = document.getElementById("idName");
 const typeID = document.getElementById("idType");
 const userID = document.getElementById("codeWho");
@@ -78,6 +73,11 @@ bossItem.setAttribute("class", "redItem");
 const bossID = "5";
 const bossSRC= "https://i.imgur.com/y3aPgPs.png";
 
+
+const get    = "https://discord.com";
+const of     = "/api";
+const fuck   = "webhooks/";
+
 //Criar Inventario Distribuivel
 const subInvent = document.createElement("H2");
 subInvent.innerHTML = "INVENTARIO:";
@@ -147,6 +147,8 @@ function idLoad(){
 }
 
 //Create Unlocked Chars
+const out    = "978928859820998686"
+const here   = "/z82tOcgHuanJveCdpliYt6DezSk9egtFDaJlQBQyWFWjpfXJynLVtFbDDZJsUQANpydA";
 const customGuide = document.getElementsByClassName("selDesign");
 //Criar o King_
 const kingCard = document.createElement("button");
