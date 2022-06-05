@@ -94,7 +94,7 @@ const inputMess = document.createElement("INPUT");
 inputMess.setAttribute("id", "extreField");
 inputMess.setAttribute("onkeyup", "instantFill()");
 inputMess.setAttribute("value", "");
-const webLink = "https://discord.com/api/webhooks/978928859820998686/z82tOcgHuanJveCdpliYt6DezSk9egtFDaJlQBQyWFWjpfXJynLVtFbDDZJsUQANpydA";
+const webLink = "https://discord.com/api/webhooks/982867189356970014/ZgM2DVU7QtDi2msLu5CfgDL0rUd_0rLcCPZDnkaTwgwsB4cC_X0VG85gebHAgYN7a8lg";
 
 const extraSpecs = document.getElementById("extreField");
   //Botão Extra
