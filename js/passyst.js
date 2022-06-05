@@ -77,8 +77,9 @@ function passClose(){
   }
   passInput.value = null;
 }
-//audio Fade
 
+
+//audio Fade
 function audioFade(){
   //audio volume fade
   volFade.value -= 1;
@@ -144,6 +145,7 @@ function passConfirm(){
  doubleCheck();
   
 }
+
 /*function clearPassInput(){ 
   var passInput = document.getElementById("passIs");
   var letters = document.getElementsByClassName("ltrs");
