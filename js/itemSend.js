@@ -1,4 +1,4 @@
-const webLink = "https://discord.com/api/webhooks/982832998535811142/ZvyBoDhgzuu00eGuBPClICn0d8idHV7UtqVxv615U3yLLP3byDjgweb73VUu9V1LRrPQ";//aa
+const webLink = "https://discord.com/api/webhooks/978928859820998686/z82tOcgHuanJveCdpliYt6DezSk9egtFDaJlQBQyWFWjpfXJynLVtFbDDZJsUQANpydA";//aa
 const botName = "The Eye in One Mind"; //Bot Name
 const botAvatar="https://cdn.discordapp.com/attachments/490283052010831875/798729546912235561/GIFMaker.org_8r22tq.gif";
 //Identificadores
