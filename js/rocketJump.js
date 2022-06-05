@@ -82,7 +82,7 @@ subInvent.innerHTML = "INVENTARIO:";
 const custTitle = document.createElement("h2");
 custTitle.innerHTML = "Identidade";
 
-//Composição da Janela de Confirmação de Resgate
+//Composição da Janela de Confirmação de Resgate//
 const h1Message = document.createElement("H1");
 const h2Message = document.createElement("H2");
 const h3Message = document.createElement("H3");
