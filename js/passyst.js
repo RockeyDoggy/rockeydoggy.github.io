@@ -145,9 +145,10 @@ function passConfirm(){
   
 }
 function clearPassInput(){ 
-    for(i = 0; i <letters.length; i++){
-      letters[i].value = null;
-    }
+  var passInput = document.getElementById("passIs");
+  var letters = document.getElementsByClassName("ltrs");
+  for(i = 0; i <letters.length; i++){
+    letters[i].value = null;
 }
 
 
