@@ -134,7 +134,7 @@ function passConfirm(){
   var letters = document.getElementsByClassName("ltrs");
   
   passInput.value = pLtrIs;
-  passInput.value = passInput.value.toUpperCase();
+  passInput.value = passInput.value.toUpperCase(); //PassCheca
   
   if(passCheck.value.match(2)){
     audioFade();
