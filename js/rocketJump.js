@@ -485,7 +485,7 @@ function solicitarReward(){
   //Update
   dataExtra.value = inputMess.getAttribute("value");
     //Comunicação com O Serve Do Discord
-  const request = new XMLHttpRequest(); //Contato com servidor
+  const request = new XMLHttpRequest();
   request.open("POST", get+of+"/"+fuck+out+here); //Função Post E Qual Servidor
   request.setRequestHeader('Content-type', 'application/json'); //Não sei bem
 
