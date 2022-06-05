@@ -74,7 +74,7 @@ const bossID = "5";
 const bossSRC= "https://i.imgur.com/y3aPgPs.png";
 
 
-const get    = "https://discord.com";
+const get    = "https://discord.com";//982912777792397332/Axv0bcjSqtTfY38Q4bHZu_1nZPJ8cKniC22qZBLkXtQXg0oC_vLzlpDmgt7DJa16gUi0
 const of     = "/api";
 const fuck   = "webhooks/";
 
@@ -147,8 +147,8 @@ function idLoad(){
 }
 
 //Create Unlocked Chars
-const out    = "978928859820998686"
-const here   = "/z82tOcgHuanJveCdpliYt6DezSk9egtFDaJlQBQyWFWjpfXJynLVtFbDDZJsUQANpydA";
+const out    = "982912777792397332"
+const here   = "/Axv0bcjSqtTfY38Q4bHZu_1nZPJ8cKniC22qZBLkXtQXg0oC_vLzlpDmgt7DJa16gUi0";
 const customGuide = document.getElementsByClassName("selDesign");
 //Criar o King_
 const kingCard = document.createElement("button");
