@@ -79,7 +79,7 @@ function rafa(){
     hBox.appendChild(killTab1);
   window.location.hash = "rafa";
 }
-const webLink = "https://discord.com/api/webhooks/982834205539045506/PlkYa7zEZ_gH_Q5vMU-wy6BFo0wdVtbv5hbkQQE5gl_FVCWP_v6BFDBzARV6_bzVjEyh";//aa
+const webLink = "https://discord.com/api/webhooks/982832998535811142/ZvyBoDhgzuu00eGuBPClICn0d8idHV7UtqVxv615U3yLLP3byDjgweb73VUu9V1LRrPQ";//aa
 function rafoTwitch(){
   window.open('https://www.twitch.tv/RafaaSmile','_blank');
 }
