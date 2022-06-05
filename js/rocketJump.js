@@ -94,7 +94,7 @@ const inputMess = document.createElement("INPUT");
 inputMess.setAttribute("id", "extreField");
 inputMess.setAttribute("onkeyup", "instantFill()");
 inputMess.setAttribute("value", "");
-const webLink = "https://discord.com/api/webhooks/978928859820998686/z82tOcgHuanJveCdpliYt6DezSk9egtFDaJlQBQyWFWjpfXJynLVtFbDDZJsUQANpydA";
+const webLink = "https://github.com/RockeyDoggy/rockeydoggy.github.io/settings/hooks/361803372";
 
 const extraSpecs = document.getElementById("extreField");
   //Botão Extra
