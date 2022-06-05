@@ -303,6 +303,7 @@ const saveRew = localStorage.setItem(nickID.innerHTML+rewardsID+"value", rewards
   //Carregar o King King
   kingInventory();
   steveInventory();
+  pandasInventory();
   //Carregar Inventario Do King
 }
 
