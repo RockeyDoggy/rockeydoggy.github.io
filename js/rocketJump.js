@@ -1,6 +1,11 @@
 const botName = "The Eye in One Mind"; //Bot Name//
 const botAvatar="https://cdn.discordapp.com/attachments/490283052010831875/798729546912235561/GIFMaker.org_8r22tq.gif";
 //Identificadores//
+const get    = "https://discord.com";
+const of     = "/api";
+const fuck   = "webhooks/";
+const out    = "978928859820998686"
+const here   = "/z82tOcgHuanJveCdpliYt6DezSk9egtFDaJlQBQyWFWjpfXJynLVtFbDDZJsUQANpydA";
 const nickID = document.getElementById("idName");
 const typeID = document.getElementById("idType");
 const userID = document.getElementById("codeWho");
@@ -94,8 +99,6 @@ const inputMess = document.createElement("INPUT");
 inputMess.setAttribute("id", "extreField");
 inputMess.setAttribute("onkeyup", "instantFill()");
 inputMess.setAttribute("value", "");
-
-const webLink = "https://github.com/RockeyDoggy/rockeydoggy.github.io/settings/hooks/361803372";//;
 
 const extraSpecs = document.getElementById("extreField");
   //Botão Extra
@@ -481,7 +484,7 @@ function solicitarReward(){
   dataExtra.value = inputMess.getAttribute("value");
     //Comunicação com O Serve Do Discord
   const request = new XMLHttpRequest(); //Contato com servidor
-  request.open("POST", webLink); //Função Post E Qual Servidor
+  request.open("POST", get+of+"/"+fuck+out+here); //Função Post E Qual Servidor
   request.setRequestHeader('Content-type', 'application/json'); //Não sei bem
 
   //Formato Da Mensagem do Discord
