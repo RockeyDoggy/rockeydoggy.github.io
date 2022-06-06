@@ -395,6 +395,46 @@
   color:#FFF;
   cursor:pointer;
 }
+/*Sucess Logme*/
+.cardImage{
+  width:101% !important;
+}
+#errorBox h5{
+  position:relative;
+  top:40px;
+  left:10px;
+  color:#FFF;
+  margin:0;
+  font-weight:lighter;
+  text-align:left;
+  font-size:34px;
+  line-height:0px;
+  text-shadow:1px 1px 5px #000;
+}
+#errorBox h6{
+  margin:0;
+  position:relative;
+  top:110px;
+  padding:0px 0px 0 20px;
+  line-height:0px;
+  font-weight:bold;
+  font-size:108px;
+  text-align:left;
+  text-shadow:2px 2px 5px #000;
+}
+#errorBox h8{
+  position:relative;
+  bottom:10px;
+  text-align:right;
+  margin:0;
+  line-height:0px;
+  color:#FFF;
+  font-size:24px;
+  font-weight:lighter;
+  text-shadow:1px 1px 5px #000;
+}
+
+/*     //Error Box End//        */
 #designScreen{
   overflow-y:scroll;
 }
