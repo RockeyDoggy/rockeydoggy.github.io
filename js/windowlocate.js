@@ -41,16 +41,16 @@ const foolzao = ["#Fools", "#fools", "#Fooly", "#fooly", "#Fools113", "#fools113
   }
   
 //On Junin
-const junin = ["#Juninho", "#juninho", "#Junin", "#junin", "#junesco", "#Junesco", "#greque", "#Greque"];
+const junesco = ["#Juninho", "#juninho", "#Junin", "#junin", "#junesco", "#Junesco", "#greque", "#Greque"];
   //open Junin
-  if(junin.includes(sexo.value)){
+  if(junesco.includes(sexo.value)){
     junin();
   }
   
 //On Sbeeker
-const sbeeker = ["#Sbeeker", "#sbeeker", "#Sbekeer", "#sbekeer", "#SteveESneker", "#steveesneker", "#stevesneker", "#SteveSneker"];
+const sbeekeru = ["#Sbeeker", "#sbeeker", "#Sbekeer", "#sbekeer", "#SteveESneker", "#steveesneker", "#stevesneker", "#SteveSneker"];
   //open Sbeeker
-  if(sbeeker.includes(sexo.value)){
+  if(sbeekeru.includes(sexo.value)){
     sbeeker();
   }
   
@@ -62,23 +62,23 @@ const raffas = ["#Rafa", "#rafa", "#rafaasmile", "#RafaaSmile", "#rafinha", "#Ra
   }
   
 //On Girl
-const girl = ["#girl", "#Girl", "#GirlStrangerFear", "#girlstrangerfear", "#BunBunny", "#bunbunny"];
+const girlBunny = ["#girl", "#Girl", "#GirlStrangerFear", "#girlstrangerfear", "#BunBunny", "#bunbunny"];
   //open Girl
-  if(girl.includes(sexo.value)){
+  if(girlBunny.includes(sexo.value)){
     girl();
   }
   
 //On Mandrax
-const mandrac = ["#mandrax", "#Mandrax", "#Draaaxxy", "#draaaxxy", "#Draxy", "#draxy"];
+const mandracao = ["#mandrax", "#Mandrax", "#Draaaxxy", "#draaaxxy", "#Draxy", "#draxy"];
   //open Mandrax
-  if(mandrac.includes(sexo.value)){
+  if(mandracao.includes(sexo.value)){
     mandrax();
   }
 
 //On Steve
-const stevo = ["#Steve", "#steve", "#sbevee_", "#Sbevee_", "#weebo", "#Weebo"];
+const stevon = ["#Steve", "#steve", "#sbevee_", "#Sbevee_", "#weebo", "#Weebo"];
   //open Mandrax
-  if(stevo.includes(sexo.value)){
+  if(stevon.includes(sexo.value)){
     steve();
     invLoad();
   }
