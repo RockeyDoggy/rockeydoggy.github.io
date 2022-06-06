@@ -17,3 +17,48 @@ const kingoLink = "https://rockeydoggy.github.io/#kingo"; // The Link
 const foolsLink = "https://rockeydoggy.github.io/#fools";
 const juninLink = "https://rockeydoggy.github.io/#juninho";
 const sbekeLink = "https://rockeydoggy.github.io/#sbeeker";
+
+    //Infos Teste//
+var steveInfos = {
+    nick: 'Sbevee_',
+    display_nick: 'Steve',
+    identification: stevenUni,
+    user_type: 'ADMINISTRADOR',
+    avatar_url: 'https://i.imgur.com/bOYR5lr.png',
+    link: 'https://rockeydoggy.github.io/#steve',
+    item_detalhes:{
+      floraisItem_count: '2',
+      vipItem_count: '3',
+      giftItem_count: '1',
+      rewardsItem_count: '11',
+      bossItem_count: '0',
+    }
+}
+var kingInfos = {
+    nick: 'S1rKing_',
+    display_nick: 'Sir King',
+    identification: kungKingo,
+    user_type: 'BOSS',
+    avatar_url: 'https://i.imgur.com/EYl3Pye.png',
+    link: 'https://rockeydoggy.github.io/#kingo',
+    user_item: [vipItem, rewardsItem, bossItem],
+    item_detalhes:{
+      vipItem_count: '1',
+      rewardsItem_count: '5',
+      bossItem_count: '0',
+    }
+}
+var pandasInfo = {
+  nick: 'Pandas_S2',
+  display_nick: 'Pandas',
+  identification: pandostos ,
+  user_type: 'BOSS',
+  avatar_url: 'https://i.imgur.com/DB7cQaL.png',
+  link: 'https://rockeydoggy.github.io/#pandas',
+  user_item: [vipItem, rewardsItem, bossItem],
+  item_detalhes:{
+    vip: '1',
+    rewards: '5',
+    boss: '1',
+  }
+}
