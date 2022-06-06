@@ -49,7 +49,7 @@ var kingInfos = {
       rewardsItem_count: '5',
       bossItem_count: '0',
     }
-}
+},
 var pandasInfo = {
   nick: 'Pandas_S2',
   display_nick: 'Pandas',
