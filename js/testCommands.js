@@ -4,4 +4,4 @@ const pandola = "PANDULASUGARIDLPATOS";
 
 //Another
 const prank = "WRONGPASS?";
-const sbk   = "YIN-YANGEWEEBO";
+const sbk   = "YIN-YANGEWEEBO";//
