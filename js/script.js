@@ -307,12 +307,15 @@ tstInp.value = window.location.hash;
   //open King
   if(tstInp.value == "#kingo"){
     kingo();
+    invLoad();
   }
     if(tstInp.value == "#king"){
       kingo();
+      invLoad();
     }
     if(tstInp.value == "#King"){
       kingo();
+      invLoad();
     }
   
   //On Fools
