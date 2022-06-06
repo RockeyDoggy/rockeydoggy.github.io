@@ -43,7 +43,6 @@ var kingInfos = {
     user_type: 'BOSS',
     avatar_url: 'https://i.imgur.com/EYl3Pye.png',
     link: 'https://rockeydoggy.github.io/#kingo',
-    user_item: [vipItem, rewardsItem, bossItem],
     item_detalhes:{
       vipItem_count: '1',
       rewardsItem_count: '5',
