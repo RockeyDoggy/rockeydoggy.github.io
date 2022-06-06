@@ -445,7 +445,7 @@ function closeError(){
 
 //Caso Não Possua Mais Stacks desse Item
 function emptyItem(){
-  const desactiveColors = "filter:saturate(0%) brightness(50%) !important;";
+  const desactiveColors = "filter:saturate(0%) brightness(50%) !important; display:none;";
   if(rewardsItem.getAttribute("value") < 1){
     rewardsItem.setAttribute("style", desactiveColors);
   }else{
@@ -455,6 +455,16 @@ function emptyItem(){
     vipItem.setAttribute("style", desactiveColors);
   }else{
     vipItem.removeAttribute("style");//
+  }
+  if(floraisItem.getAttribute("value") < 1){
+    floraisItem.setAttribute("style", desactiveColors);
+  }else{
+    floraisItem.removeAttribute("style");//
+  }
+  if(giftItem.getAttribute("value") < 1){
+    giftItem.setAttribute("style", desactiveColors);
+  }else{
+    giftItem.removeAttribute("style");//
   }
 }
 
