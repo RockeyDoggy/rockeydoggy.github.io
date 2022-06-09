@@ -13,42 +13,53 @@ firebase.initializeApp(firebaseConfig);
 
 const path = firebase.firestore();
 
-path.collection("bosses").doc("bosse_infos").onSnapshot(function(bss){
-    var chefe = bss.data();
-    loadUsers(chefe);
+path.collection("bosses").onSnapshot(function(bss){
+    bss.docChanges().forEach(function(adicionar){
+      var path = adicionar.doc;
+      var add = path.data();
+      loadUsers(add);
+    })
 });
 
 //Variaveis
 const bossesField = document.getElementById('bosses');
 
     //create Users//
-function loadUsers(chefe){
-        //Kingo
-    const kingCard = document.createElement('IMG');
-    kingCard.setAttribute('src', chefe.king_avatar);
-    kingCard.setAttribute('title', chefe.king_nome);
-    kingCard.setAttribute('onclick', 'kingo()');
-        //Pandas
-    const pandasCard = document.createElement('IMG');
-    pandasCard.setAttribute('src', chefe.pandas_avatar);
-    pandasCard.setAttribute('title', chefe.pandas_nome);
-    pandasCard.setAttribute('onclick', 'pandos()');
-        //Steve
-    const steveCard = document.createElement('IMG');
-    steveCard.setAttribute('src', chefe.steve_avatar);
-    steveCard.setAttribute('title', chefe.steve_nome);
-    steveCard.setAttribute('onclick', 'stevo()');
-        //User 04
-    const User4Card = document.createElement('IMG');
-    User4Card.setAttribute('src', '');
-    User4Card.setAttribute('title', '');
-    User4Card.setAttribute('onclick', 'user4()');
-        //User 05
-    const User5Card = document.createElement('IMG');
-    User5Card.setAttribute('src', '');
-    User5Card.setAttribute('title', '');
-    User5Card.setAttribute('onclick', 'user5()');
-
-    bossesField.append(kingCard, pandasCard, steveCard, User4Card, User5Card);
+function loadUsers(add){
+  const chars = document.createElement('IMG');
+  chars.src = add.avatar_url;
+  chars.setAttribute('title', add.nome);
+  chars.setAttribute('onclick', add.funcao);
 }
+
+
+//function loadUsers(add){
+//        //Kingo
+//    const kingCard = document.createElement('IMG');
+//    kingCard.setAttribute('src', chefe.king_avatar);
+//    kingCard.setAttribute('title', chefe.king_nome);
+//    kingCard.setAttribute('onclick', 'kingo()');
+//        //Pandas
+//    const pandasCard = document.createElement('IMG');
+//    pandasCard.setAttribute('src', chefe.pandas_avatar);
+//    pandasCard.setAttribute('title', chefe.pandas_nome);
+//    pandasCard.setAttribute('onclick', 'pandos()');
+//        //Steve
+//    const steveCard = document.createElement('IMG');
+//    steveCard.setAttribute('src', chefe.steve_avatar);
+//    steveCard.setAttribute('title', chefe.steve_nome);
+//    steveCard.setAttribute('onclick', 'stevo()');
+//        //User 04
+//    const User4Card = document.createElement('IMG');
+//    User4Card.setAttribute('src', '');
+//    User4Card.setAttribute('title', '');
+//    User4Card.setAttribute('onclick', 'user4()');
+//        //User 05
+//    const User5Card = document.createElement('IMG');
+//    User5Card.setAttribute('src', '');
+//    User5Card.setAttribute('title', '');
+//    User5Card.setAttribute('onclick', 'user5()');
+//
+//    bossesField.append(kingCard, pandasCard, steveCard, User4Card, User5Card);
+//}
 loadUsers();
