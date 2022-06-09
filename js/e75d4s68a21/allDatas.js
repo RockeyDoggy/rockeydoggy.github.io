@@ -13,24 +13,7 @@ firebase.initializeApp(firebaseConfig);
 
 const path = firebase.firestore();
 
-path.collection("bosses").onSnapshot(function(bss){
-    bss.docChanges().forEach(function(adicionar){
-      var path = adicionar.doc;
-      var add = path.data();
-      loadUsers(add);
-    })
-});
 
-//Variaveis
-const bossesField = document.getElementById('bosses');
-
-    //create Users//
-function loadUsers(add){
-  const chars = document.createElement('IMG');
-  chars.src = add.avatar_url;
-  chars.setAttribute('title', add.nome);
-  chars.setAttribute('onclick', add.funcao);
-}
 
 
 //function loadUsers(add){
@@ -62,4 +45,3 @@ function loadUsers(add){
 //
 //    bossesField.append(kingCard, pandasCard, steveCard, User4Card, User5Card);
 //}
-loadUsers();
