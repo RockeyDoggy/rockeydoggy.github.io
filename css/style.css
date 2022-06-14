@@ -309,6 +309,9 @@ body::-webkit-scrollbar-thumb{
   overflow-y:scroll;
   overflow-x:hidden;
   transition:all linear 0.2s;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
   #pChar::-webkit-scrollbar{
     width:4px;
