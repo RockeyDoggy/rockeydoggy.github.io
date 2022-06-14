@@ -321,8 +321,8 @@ body::-webkit-scrollbar-thumb{
   }
 
   #pChar img{
-    width:65px;
-    height:65px;
+    width:55px;
+    height:55px;
     margin:3px;
     float:left;
     border:1px solid rgba(0,0,0,0);
