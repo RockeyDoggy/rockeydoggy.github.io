@@ -305,6 +305,7 @@ body::-webkit-scrollbar-thumb{
   border-bottom:double 4px #97F;
   box-shadow:inset 0px 15px 15px -13px #429, inset 0px -15px 15px -15px #429;
   margin:10px 8px;
+  text-align:center;
   float:left;
   overflow-y:scroll;
   overflow-x:hidden;
