@@ -116,9 +116,11 @@ function pandos(){
   
   window.location.hash = "pandas";
   invLoad();
+  newInv();
 }
 //Kingo End
 
 function pandoTwitch(){
   window.open('https://www.twitch.tv/pandas_s2', '_blank');
 }
+newInv(){}
