@@ -123,4 +123,4 @@ function pandos(){
 function pandoTwitch(){
   window.open('https://www.twitch.tv/pandas_s2', '_blank');
 }
-newInv(){}
+function newInv(){}
