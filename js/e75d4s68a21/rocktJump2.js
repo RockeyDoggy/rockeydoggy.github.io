@@ -413,27 +413,27 @@ function cancelRW(){
 
 
 //Constantes de Funções de autorização
-const botaoConfirm = document.getElementById("rwClaim");
-
-//Função de Verificação de Disponibilidade
-function itemClaimeble(){
-  if(dataItemCount.value < 1){
-    botaoConfirm.removeAttribute("onClick");
-    botaoConfirm.style.backgroundColor = "#353";
-    botaoConfirm.style.color = "#555";
-  }else{
-    botaoConfirm.setAttribute("onClick", "confirmRW()")
-    botaoConfirm.style.backgroundColor = "";
-    botaoConfirm.style.color = "";
-  }
-  if(dataItemID.value == rewardsID){
-    if(dataItemCount.value < 5){
-      mastButton.style.filter = "saturate(0%)";
-    }else{
-      mastButton.style.filter = "";
-    }
-  }
-}
+//const botaoConfirm = document.getElementById("rwClaim");
+//
+////Função de Verificação de Disponibilidade
+//function itemClaimeble(){
+//  if(dataItemCount.value < 1){
+//    botaoConfirm.removeAttribute("onClick");
+//    botaoConfirm.style.backgroundColor = "#353";
+//    botaoConfirm.style.color = "#555";
+//  }else{
+//    botaoConfirm.setAttribute("onClick", "confirmRW()")
+//    botaoConfirm.style.backgroundColor = "";
+//    botaoConfirm.style.color = "";
+//  }
+//  if(dataItemID.value == rewardsID){
+//    if(dataItemCount.value < 5){
+//      mastButton.style.filter = "saturate(0%)";
+//    }else{
+//      mastButton.style.filter = "";
+//    }
+//  }
+//}
 
 //Caso Não atenda ou Atenda as Condições ao sacrificar//
 function closeError(){
