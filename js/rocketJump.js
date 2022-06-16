@@ -108,6 +108,7 @@ claimMore.setAttribute("id", "infButton");
 //Checagem Dupla
 function doubleCheck(){
   pspsCall();
+  dataSend();
 }
 
 function screenKill(){
