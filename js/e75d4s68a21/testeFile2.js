@@ -304,7 +304,7 @@ function steveInventory(){
 
 
           ///Inventario Do Pandas///
-//function pandasInventory(){
+function pandasInventory(){
 //  if(userNick.innerHTML == pandasInfo.nick){
 //    //Loads
 //    const vipLoad     = localStorage.getItem(userNick.innerHTML+vipID);
@@ -342,5 +342,5 @@ function steveInventory(){
 //      localStorage.setItem(userNick.innerHTML+rewardsID, rewardsItem.getAttribute("value"));
 //    }
 //  }
-//}
+}
 //hmmm
