@@ -552,5 +552,5 @@ function solicitarReward(){
 //Sair
 function runOut(){
   userID.value = "";
-  vers
+  versionUser();
 }
