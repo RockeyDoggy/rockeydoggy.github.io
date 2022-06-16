@@ -30,6 +30,7 @@ function pandos(){
   banner.style.background = "url(https://i.imgur.com/kLIT76F.png)";
   headNome.innerHTML = "Pandas";
   nick.innerHTML = "Pandas_S2";
+  malav.innerHTML = 'pandas_infos';
     nick.setAttribute("onclick", "pandoTwitch()");
     nick.setAttribute('class', 'sbHover');
     
