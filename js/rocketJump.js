@@ -553,4 +553,5 @@ function solicitarReward(){
 function runOut(){
   userID.value = "";
   versionUser();
+  localStorage.setItem("LoggThis", "");
 }
