@@ -1,5 +1,5 @@
     ///-----Gui Historico E Dados----///
-const gui_infos_Story = [
+const guiStory = [
   rule1 = {
     atirador:'godiira',
     atitude: 'Derrotou',
@@ -7,7 +7,7 @@ const gui_infos_Story = [
   },
 ]
 
-const gui_infos_equipable = [
+const guiequipable = [
   floraisEq = {
     nome: "Flora'Eyes",
     id: '1',
@@ -19,7 +19,7 @@ const gui_infos_equipable = [
     open: 'floraeyes()',
   },
 ];    ///-----Gui Historico E Dados----///
-const pandas_infos_Story = [
+const pandasStory = [
   rule1 = {
     atirador:'Pandas_S2',
     atitude: 'Derrotou',
@@ -27,7 +27,7 @@ const pandas_infos_Story = [
   },
 ]
 
-const pandas_infos_equipable = [
+const pandasequipable = [
   floraisEq = {
     nome: "Flora'Eyes",
     id: '1',
