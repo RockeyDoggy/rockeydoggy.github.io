@@ -1,5 +1,5 @@
     ///-----Gui Historico E Dados----///
-const guiStory = [
+const gui_infos_Story = [
   rule1 = {
     atirador:'godiira',
     atitude: 'Derrotou',
@@ -7,7 +7,7 @@ const guiStory = [
   },
 ]
 
-const equipable = [
+const gui_infos_equipable = [
   floraisEq = {
     nome: "Flora'Eyes",
     id: '1',
