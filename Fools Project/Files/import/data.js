@@ -9,6 +9,5 @@
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
+firebase.initializeApp(firebaseConfig);
 const fooly = firebase.firestore();
