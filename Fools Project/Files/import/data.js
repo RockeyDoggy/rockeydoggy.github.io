@@ -11,4 +11,4 @@
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const fool = firebase.firestore();
+const fooly = firebase.firestore();
