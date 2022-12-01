@@ -1,0 +1,182 @@
+<head>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <link rel="stylesheet" href="/css/editor.css">
+</head>
+
+<!-- Lobby -->
+<div id="LobbyHud">
+  <div id="booksGallery">
+    <button id="ItsMe"></button>
+    <h1>Titulos De <span id="UserInTitle"></span></h1>
+    <div id="BookList">
+      <button id="favPages">Marcações</button>
+      <span id="booksHave"></span>
+      <button id="addBook">Nova Historia</button>
+    </div>
+    
+  </div>
+</div>
+
+    
+<div id="loginScreen">
+  <div id="logMe">
+    <input id="insertName" placeholder="Quem é Você?">
+    <p><button id="logIn">?</button> <button id="resetIn">Voltar</button></p>
+  </div>
+</div>
+
+<div id="createBookScreen">
+  <div id="createBookWindow">
+    <h1>Criar Nova Historia</h1>
+    <p><img id="CoverPreview" src=""/></p>
+    <input id="NameCreate" placeholder="Titulo Do Livro">
+    <input id="CoverCreate" placeholder="Capa Do Livro">
+    <textarea id="Descript" placeholder="Descrição/Sinopse" contenteditable></textarea>
+    <input id="dedicatoria" placeholder="Dedicatorias">
+    <input id="docColor" type="color" value="#ffffff" placeholder="Cor">
+    <input id="observacao" placeholder="Observação">
+    <input id="FileName" placeholder="Nome do Arquivo" >
+    <p><button id="CreateBook">Salvar</button> <button id="cancelBook">Descartar</button></p>
+  </div>
+</div>
+
+<div id="fileSet">
+  <div id="User">
+    <input id="quem" placeholder="De Quem é o Livro?" disabled>
+  </div>
+  <div id="bookName">
+    <span id="NameOfBook" placeholder="Nome do Livro?"></span>
+  </div>
+</div>
+
+<fieldset id="textEditPage">
+  <fieldset id="FontFormatting">
+    <button class="FileManage" id="saveFile" title="Salvar"></button>
+    <button class="FileManage" id="BackToLobby" title="Voltar Pro Menu"></button>
+    <button class="fontStyle"  id="ItalicBtn"    onclick="" title="Italico"></button>
+    <button class="fontStyle"  id="BoldBtn"      onclick="document.execCommand( 'bold',false,null);" title="Negrito"></button>
+    <button class="fontStyle"  id="UnderlineBtn" onclick="document.execCommand( 'underline',false,null);" title="Underline"></button>
+    <button class="fontStyle"  id="TitleBtn" title="Fonts Para Titulo"></button>
+    <span id="fontList">
+      <p>LINHA:</p>
+      <button class="fontFamily lSize"  onclick="fontIs()">Dark Magic       </button>
+      <button class="fontFamily mSize"  onclick="fontIs()">Modern M         </button>
+      <button class="fontFamily mSize"  onclick="fontIs()">Scriptorium      </button>
+      <button class="fontFamily"        onclick="fontIs()">hkh glyphs short </button>
+      <button class="fontFamily"        onclick="fontIs()">Steam Punk Flyer </button>
+      <button class="fontFamily mSize"  onclick="fontIs()">The Old Forest   </button>
+      <button class="fontFamily"        onclick="fontIs()">Arial            </button>
+      <button class="fontFamily"        onclick="fontIs()">Comic Sans MS    </button>
+      <button class="fontFamily"        onclick="fontIs()">Courier New      </button>
+      <button class="fontFamily"        onclick="fontIs()">Georgia          </button>
+      <button class="fontFamily"        onclick="fontIs()">Impact           </button>
+      <button class="fontFamily"        onclick="fontIs()">Palatino         </button>
+      <button class="fontFamily"        onclick="fontIs()">Symbol           </button>
+      <button class="fontFamily"        onclick="fontIs()">Times New Roman  </button>
+      <button class="fontFamily"        onclick="fontIs()">Trebuchet MS     </button>
+      <button class="fontFamily"        onclick="fontIs()">Verdana          </button>
+      <button class="fontFamily"        onclick="fontIs()">Webdings         </button>
+    </span>
+    <button class="fontStyle" id="FontSize" title="Tamanho Do Texto">j</button>
+    <span id="sizeOp">
+      <button id="" onMouseOver="fontSizeIs()">6</button>
+      <button id="" onMouseOver="fontSizeIs()">7</button>
+      <button id="" onMouseOver="fontSizeIs()">8</button>
+      <button id="" onMouseOver="fontSizeIs()">9</button>
+      <button id="" onMouseOver="fontSizeIs()">10</button>
+      <button id="" onMouseOver="fontSizeIs()">11</button>
+      <button id="" onMouseOver="fontSizeIs()">12</button>
+      <button id="" onMouseOver="fontSizeIs()">14</button>
+      <button id="" onMouseOver="fontSizeIs()">18</button>
+      <button id="" onMouseOver="fontSizeIs()">24</button>
+      <button id="" onMouseOver="fontSizeIs()">36</button>
+      <button id="" onClick="customSizeIs()" onMouseOver="fontSizeIs()">Pers</button>
+      <button id="" onMouseOver="resetFontSize()">Def</button>
+    </span>
+    <button class="fontStyle" id="ResetForm" title="Remover Qualquer Formatação"></button>
+    <input id="TextColor" type="color" title="Cor Do Texto">
+    <button id="SavedColors" title="Cores Ja Usadas">V</button>
+    <span id="ListOfColor">
+    </span>
+    <button class="fontStyle" id="AlignLeft"    onclick="document.execCommand( 'justifyLeft',false);" title="Alinhar Para Esquerda"></button>
+    <button class="fontStyle" id="AlignCenter"  onclick="document.execCommand( 'justifyCenter',false,null);" title="Alinhar Para o Meio"></button>
+    <button class="fontStyle" id="AlignRight"   onclick="document.execCommand( 'justifyRight',false,null);" title="Alinhar Para Direita"></button>
+<!--     <input id="ImgSource" placeholder="Link Da Imagem Inserida"> -->
+    <button class="fontStyle" id="imageSend" title="Adicionar Imagem"></button>
+    <span id="charLength">0</span>
+  </fieldset>
+  
+  <div id="editor" contenteditable>
+    
+  </div>
+<div id="PageNav">
+  <button id="PrevButton" disabled>Voltar</button>
+  <p id="PageFile">Pagina ?</p>
+  <button id="NextButton" disabled>Proxima</button>
+  <span id="moreButtons"></span>
+</div>
+</fieldset>
+<div id="markField">
+</div>
+
+<div id="userInfos">
+  <div id="PageInfo">
+    <h1>PAGE NAME</h1>
+    <input id="PageName" placeholder="Nome Para Pagina/Capitulo">
+    <h1>FONTE PADRÃO</h1>
+    <select id="PageFont" value="Fonte Da Pagina">
+    </select>
+    <h1>BACKGROUND</h1>
+    <input id="BackgroundPage" placeholder="Fundo da Pagina">
+    <h1>Index Da Pagina</h1>
+    <input id="BookPageIndex" type="number" disabled placeholder="Numero De Organização Da Pagina">
+    <h1>Cor Da Marcação</h1>
+    <input id="BookMarkColor" type="color" placeholder="Cor da Marcação">
+  </div>
+  <h1>Marcações</h1>
+  <div id="PageListLocate">
+    
+  </div>
+</div>
+
+<div id="ActualBookInfos">
+  <h2>TITULO</h2>
+  <input id="BookTitle" placeholder="Titulo da Historia">
+  <h2>CAPA</h2>
+  <input id="BookCover" placeholder="Capa Da Historia">
+  <h2>DESCRIÇÃO</h2>
+  <textarea id="BookDescript" placeholder="Descrição/Sinopse Da Historia"></textarea>
+  <h2>DEDICATÓRIA</h2>
+  <input id="BookDedication" placeholder="Dedicatoria Da Historia">
+  <h2>OBSERVAÇÃO</h2>
+  <input id="BookObs" placeholder="Observações Da Historia">
+  <h2>BORDA DA CAPA</h2>
+  <input id="BookColor" placeholder="Cor Da Borda da Capa">
+  <h2>ARQUIVO</h2>
+  <input id="BookFile" disabled placeholder="Nome Do Arquivo">
+  <button id="DeleteHistory">APAGAR HISTORIA</button>
+</div>
+
+<div id="MarkedWindow">
+  <div id="MarkedTab">
+    <h1>Paginas Marcadas <j>P</j></h1>
+    <div id="listOfMarked"></div>
+    <div id="markDetails">
+    </div>
+  </div>
+</div>
+
+<div id="WarningWindow">
+  <div id="WarningBox">
+  </div>
+</div>
+
+<div id="debuggView">
+</div>
+
+<div id="closeTabs"></div>
+
+<script src="https://rockeydoggy.github.io/Fools%20Project/Files/import/data.js"></script>
+
+<script src="/js/editor.js"></script>
