@@ -1,0 +1,1560 @@
+@font-face{
+  font-family:Dark Magic;
+  src:url(https://rockeydoggy.github.io/cssfonts/Vintage%20Book/DarkMagic%20Free%20Trial.ttf);
+}
+@font-face{
+  font-family:Modern M;
+  src:url(https://rockeydoggy.github.io/cssfonts/Modern/modern%20M.ttf);
+}
+@font-face{
+  font-family:FormmatingIcons;
+  src:url(https://rockeydoggy.github.io/cssfonts/Fools%20Writter%20Project/BookWritterFontFormmating.ttf);
+}
+@font-face{
+  font-family:Scriptorium;
+  src:url(https://rockeydoggy.github.io/cssfonts/Fools%20Writter%20Project/For%20Title%20Fonts/Scriptorium.ttf);
+}
+@font-face{
+  font-family:hkh glyphs short;
+  src:url(https://rockeydoggy.github.io/cssfonts/Fools%20Writter%20Project/For%20Title%20Fonts/HKH%20Old%20Glyphs%20short.ttf);
+}
+@font-face{
+  font-family:Steam Punk Flyer;
+  src:url(https://rockeydoggy.github.io/cssfonts/Fools%20Writter%20Project/For%20Title%20Fonts/Steam%20Punk%20Flyer.ttf);
+}
+@font-face{
+  font-family:The Old Forest;
+  src:url(https://rockeydoggy.github.io/cssfonts/Fools%20Writter%20Project/For%20Title%20Fonts/The%20Old%20Forest%20Demo.ttf);
+}
+@font-face{
+  font-family:Comfortaa;
+  src:url(https://rockeydoggy.github.io/cssfonts/Fools%20Writter%20Project/For%20Title%20Fonts/Comfortaa-Regular.ttf);
+}
+@font-face{
+  font-family:SansSerif;
+  src:url(https://rockeydoggy.github.io/cssfonts/Fools%20Writter%20Project/For%20Title%20Fonts/SansSerifBookFLF.otf);
+}
+@font-face{
+  font-family:LilitaOne;
+  src:url(https://rockeydoggy.github.io/cssfonts/Fools%20Writter%20Project/For%20Title%20Fonts/LilitaOne-Regular.ttf);
+}
+@font-face{
+  font-family:;
+  src:url();
+}
+
+:root{
+  --FileFont:Arial;
+  --createBackground:#908580;
+  --LobbyDisplay:flex;
+  --ColorSavedBox:0vw;/*9vw*/
+  --ColorSavedWidth:0vw;/*10.3vw*/
+  --TextHighlightedColor:#AAA;
+  --TextHighlightedBackground:#111;
+  --WarningDisplay:none;
+  --PageIndex:'0';
+  --SelectedPageColor:#396;
+  --editorFocusColor:solid 0.2vw #E94;
+  --editorLightColor:#E94;
+  --waitBeforeKill:wait;
+  --PaginaDeMarcacoes:none;
+  --CloseTabsActivated:none;
+}
+
+body{
+  background:#080808;
+  color:#FFF;
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:auto;
+}
+body::-webkit-scrollbar{
+  width:0.5vw;
+  background:#99F8;
+}
+body::-webkit-scrollbar-thumb{
+  background:#222;
+}
+
+fieldset{
+  padding:none;
+  border:none;
+  margin:0;
+  z-index:10;
+  pointer-events:none;
+}
+#editor{
+  width:60vw;
+  min-height:50em;
+  padding:0.6vw;
+  background:var(--PageBGColor, #EEE);
+  background-image:var(--PageBG, none);
+  background-size:100% 100% !important;
+  color:#222;
+  font-family:var(--FileFont);
+  font-size:1.33vw;
+  pointer-events:auto;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#editor:focus{
+  outline:0.1vw solid var(--editorLightColor) !important;
+  box-shadow:inset 0 0 0.6vw var(--editorLightColor), 0 0 0.6vw var(--editorLightColor);
+}
+#editor h1{
+  margin:0vw;
+  text-align:center;
+  font-family:Dark Magic;
+  font-weight:lighter;
+  letter-spacing:0.1vw;
+  font-size:3.7vw;
+/*   mix-blend-mode:luminosity; */
+}
+#editor h2{
+  margin:0;
+  text-align:center;
+  font-family:Modern M;
+  font-weight:lighter;
+  font-size:2.3vw;
+}
+#editor h3{
+  margin:0;
+  text-align:center;
+  font-family:Scriptorium;
+  font-weight:lighter;
+  font-size:2.1vw;
+}
+#editor h4{
+  margin:0;
+  text-align:center;
+  font-family:HKH Glyphs Short;
+  font-weight:lighter;
+  font-size:2.7vw;
+}
+#editor h5{
+  margin:0;
+  text-align:center;
+  font-family:Steam Punk Flyer !important;
+  font-weight:lighter;
+  font-size:2.2vw;
+  letter-spacing:0.4vw;
+}
+#editor h6{
+  margin:0;
+  text-align:center;
+  font-family:The Old Forest;
+  font-weight:lighter;
+  font-size:3.6vw;
+}
+#editor h1::selection, font::selection, #editor h2::selection, #editor h3::selection, #editor h4::selection, #editor h5::selection, #editor h6::selection, #editor p::selection, #editor span::selection, #editor div::selection{
+  color:var(--TextHighlightedColor);
+  background-color:var(--TextHighlightedBackground);
+}
+
+#editor p{
+  margin:0;
+  padding:0;
+}
+#editor img{
+  max-width:60vw;
+  opacity:0.9;
+  z-index:1;
+}
+
+#FontFormatting{
+  margin:0;
+  position:sticky;
+  top:0;
+  text-align:center;
+  pointer-events:none;
+  background:#6699;
+  z-index:10;
+  box-shadow:0.2vw 0.2vw 0.7vw -0.3vw #000;
+/*   border-radius:5px 5px 0px 0px; */
+}
+#FontFormatting button{
+  cursor:pointer;
+  pointer-events:auto;
+  font-size:1.4vw;
+  line-height:0.9vw;
+  padding:0.5vw 0.55vw;
+  font-family:FormmatingIcons, Calibri;
+}
+#FontFormatting button:focus{
+  box-shadow:inset 0 0 0.5vw #000;
+}
+#FontFormatting input{
+  width:14vw;
+  background:none;
+  cursor:pointer;
+  color:#FFF;
+  pointer-events:auto;
+  font-size:0.8vw;
+  line-height:0.5vw;
+  padding:0.4vw 0.3vw;
+  border:none;
+  box-shadow:inset 0.0vw 0.0vw 0.3vw #000;
+  cursor:text;
+}
+#FontFormatting input:focus{
+  background:#333;
+}
+#saveFile{
+  float:left;
+  padding:0.5vw 0.3vw !important;
+}
+#BackToLobby{
+  float:right;
+  padding:0.5vw 0.3vw !important;
+}
+#saveFile::before{
+  font-size:1.9vw;
+  content:'b';
+}
+#BackToLobby::before{
+  font-size:1.9vw;
+  content:'m';
+}
+#ItalicBtn::before{
+  content:'h';
+}
+#BoldBtn::before{
+  content:'d';
+}
+#UnderlineBtn::before{
+  content:'i';
+}
+#TitleBtn::before{
+  content:'c';
+}
+#SubBtn::before{
+  content:'c';
+  font-size:16px;
+}
+#AlignLeft::before{
+  content:'e';
+}
+#AlignCenter::before{
+  content:'f';
+}
+#AlignRight::before{
+  content:'g';
+}
+#imageSend::before{
+  content:'a';
+}
+#FontSize::before{
+/*   content:'j'; */
+  opacity:0.2;
+  pointer-events:none;
+}
+#ResetForm::before{
+  content:'k';
+}
+#FontSize{
+  width:2.5vw;
+/*   height:2.5vw; */
+  font-family:Trebuchet MS;
+  white-space:nowrap;
+}
+
+/*Text Color*/
+#TextColor{
+  width:2.5vw !important;
+/*   height:2.1vw !important; */
+  padding:0 !important;
+  vertical-align: sub;
+  cursor:pointer !important;
+}
+
+/*Color Saved*/
+#SavedColors{
+  padding:0.5vw 0.05vw !important;
+  margin:0 0vw 0 -0.2vw!important;
+  font-size:1vw !important;
+  font-family:Trebuchet MS !important;
+  border:none;
+  background:#0004;
+  color:#FFF;
+}
+
+#ListOfColor{
+  width:10vw;
+  max-height:0vw;
+  position:absolute;
+  margin:2vw 0vw 0 -3.6vw;
+  text-align:left;
+  border:solid 0vw #555;
+  background:#EEEC;
+  overflow:auto;
+  pointer-events:auto;
+  transition:all ease-in-out 0.1s;
+}
+#ListOfColor::-webkit-scrollbar{
+  width:0.3vw;
+  background:#000;
+}
+#ListOfColor::-webkit-scrollbar-thumb{
+  background:#FFF;
+}
+#ListOfColor button{
+  width:1vw;
+  padding-top:0.6vw;
+  margin:0.2vw 0.1vw;
+  border:0.1vw #000 solid;
+  border-radius:1vw;
+}
+
+#sizeOp{
+  width:2.7vw;
+  max-height:0px;
+  position:absolute;
+  overflow-x:hidden;
+  overflow-y:auto;
+  top:2.55vw;
+  margin-left:-3.1vw;
+  transition:all linear 0.05s;
+  border:dashed 0.01vw #779;
+  border-top:none;
+  padding:0;
+  box-shadow:0.3vw 0.2vw 0.25vw #0008;
+}
+#sizeOp::-webkit-scrollbar{
+  width:0.4vw;
+  background:#000;
+  pointer-events:auto;
+}
+#sizeOp::-webkit-scrollbar-thumb{
+  background:#FFF;
+}
+#sizeOp button{
+  width:100%;
+  font-size:1.1vw;
+  font-family:trebuchet ms;
+  padding:0.4vw 0.1vw;
+  border:none;
+  transition:all linear 0.1s;
+  margin:0;
+}
+#sizeOp button:hover{
+  background:#88F;
+}
+
+
+#fontList{
+  width:15vw;
+  max-height:0vw;
+  position:absolute;
+  margin-top:2.1vw;
+  margin-left:-2.7vw;
+  overflow:auto;
+  background:#EEE;
+  pointer-events:auto;
+  transition:all linear 0.05s;
+  box-shadow:0.4vw 0.3vw 0.3vw #0008;
+}
+#fontList::-webkit-scrollbar{
+  width:0.4vw;
+  background:#99F9;
+}
+#fontList::-webkit-scrollbar-thumb{
+  background:#222;
+}
+
+#fontList button{
+  width:100%;
+  font-size:1.2em;
+  white-space:nowrap;
+  background:none;
+  border:none;
+  border-top:1px #000 solid;
+  transition:ease-in-out 0.1s all;
+}
+#fontList button:hover{
+  background:#112;
+  color:#EEE;
+}
+#fontList p{
+  margin:0;
+  text-align:right;
+  color:#555;
+  text-shadow:0.1vw 0.1vw 0.5vw #0004;
+  background:#FFF;
+  font-family:Calibri;
+  font-size:1.3vw;
+}
+.mSize{
+  font-size:1.7em !important;
+}
+.lSize{
+  font-size:2.2em !important;
+}
+.defFont{
+  font-size:1.3vw !important;
+}
+#DarkMagic{
+  font-family:Dark Magic !important;
+  letter-spacing:0.1vw;
+  display:block;
+  font-size:2.4vw !important;
+}
+#ModernM{
+  font-family:Modern M !important;
+  display:block;
+  font-size:1.7vw !important;
+}
+#Scriptor{
+  font-family:Scriptorium !important;
+  display:block;
+  font-size:1.8vw !important;
+}
+#HelveticaFont{
+  font-family:Helvetica !important;
+}
+#VerdanaFont{
+  font-family:Verdana !important;
+}
+#TrebuchetMSFont{
+  font-family:Trebuchet MS !important;
+}
+#AgencyFBFont{
+  font-family:Agency FB !important;
+}
+#CalibriFont{
+  font-family:Calibri !important;
+}
+#TimesRomanFont{
+  font-family:Times New Roman !important;
+}
+#HKHGlyphsShort{
+  font-family:HKH Glyphs Short !important;
+  font-size:1vw !important;
+}
+#SteamPunkFlyer{
+  font-family:Steam Punk Flyer !important;
+  font-size:1.3vw !important;
+}
+#TheOldForest{
+  font-family:The Old Forest !important;
+  font-size:1.9vw !important;
+}
+
+/********/
+
+#textEditPage{
+/*   display:none; */
+}
+
+
+/*File Set*/
+#fileSet{
+  width:97%;
+  position:fixed;
+  bottom:0;
+  text-align:right;
+  pointer-events:none;
+  z-index:50;
+}
+
+#fileSet div{
+  display:inline;
+}
+#fileSet input{
+  background:none;
+  margin:0 0vw 0 1vw;
+  border:none;
+  color:#888;
+  text-overflow: ellipsis;
+  pointer-events:auto;
+}
+#fileSet input:focus{
+  background:#FFD;
+}
+#user{
+  text-align:center;
+}
+#bookName{
+  text-align:right;
+}
+
+#quem{
+  width:13vw;
+  padding-right:1vw;
+  float:left;
+  text-align:center;
+  font-size:1.5vw;
+  font-family:Calibri;
+  text-shadow:0.05vw 0.05vw 0.1vw #000;
+}
+#bookName span{
+  font-family:Calibri;
+  font-size:1.5vw;
+  color:#AAA;
+  text-shadow:0.1vw 0.1vw 0.1vw #000;
+}
+
+#PageNav{
+  width:100%;
+  background:#558;
+  text-align:center;
+  padding:0.5vw 0;
+  font-size:1.3vw;
+  font-family:Helvetica;
+  font-weight:lighter;
+  select-event:none;
+  user-select:none;
+}
+#PageNav button{
+  cursor:pointer;
+  font-family:Trebuchet MS;
+  font-size:1.5vw;
+  margin:0.2vw;
+  border:none;
+  pointer-events:auto;
+}
+#PageNav p{
+  max-width:40vw;
+  margin:0;
+  padding:0vw 0 0vw 0vw;
+  background:none;
+  color:#FFF;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align:center;
+  font-size:1.4vw;
+  display:inline-block;
+  vertical-align:text-top;
+}
+#PrevButton{
+  border-radius:0.8vw 0px 0px 0.8vw;
+  border:none;
+  pointer-events:var(--Playble, none);
+}
+#NextButton{
+  border-radius:0px 0.8vw 0.8vw 0px;
+  border:none;
+  pointer-events:var(--Playble, none);
+}
+#NextButton:disabled, #PrevButton:disabled{
+  cursor:default;
+}
+
+/*Botão de criar pagina nova*/
+#CreatePageButton{
+  font-family:FormmatingIcons !important;
+  padding:0.25vw 0.5vw;
+  border-radius:0.5vw;
+  background-image:linear-gradient(20deg, #123, #213);
+  color:#FFF;
+  transition:all ease-in-out 0.2s;
+}
+#CreatePageButton:hover{
+  color:#AFA;
+  text-shadow:0 0 0.5vw #0F0;
+  box-shadow:inset 0 0 0.5vw #0F0, 0 0 0.5vw #0F0;
+}
+#CreatePageButton:focus{
+  color:#222;
+  box-shadow:inset 0.1vw 0.1vw 0.3vw #000;
+  text-shadow:none;
+  background-image:linear-gradient(25deg, #9AF, #A9F);
+}
+
+.sel{
+  background-image:var(--SelectedPageColor) !important;
+}
+.visivel{
+  opacity:1 !important;
+  pointer-events:auto !important;
+}
+
+/*InfBar*/
+#charLength{
+  margin:0.25vw 1.5vw;
+  background:#EEE;
+  padding:0.2vw 0.3vw;
+  font-family:Verdana;
+  font-size:1.2vw;
+  color:var(--CharCountColor, #333);
+  text-shadow:var(--CharCountLight, 0 0 0.8vw #000);
+  box-shadow:inset 0.1vw 0.1vw 0.3vw #000A;
+  position:absolute;
+  cursor:help;
+  pointer-events:auto;
+}
+
+#markField{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:2vw;
+  display:flex;
+  align-items:center;
+/*   justify-content:center; */
+  pointer-events:none;
+}
+
+
+/* Page Details  */
+#PageInfo{
+  width:18vw;
+  max-height:97%;
+  text-align:right;
+  transition:all linear 0.2s 0.2s;
+  cursor:pointer;
+  pointer-events:auto;
+}
+
+#userInfos h1{
+  margin:0 0.2vw;
+  font-family:Trebuchet MS;
+  font-size:1.2vw;
+  font-weight:lighter;
+  text-align:left;
+}
+#PageInfo input, #PageInfo select{
+  width:100%;
+  font-size:1.3vw;
+  text-align:center;
+  margin:0.2vw 0;
+  padding:0.0vw;
+  border:none;
+  background:#10101500;
+  color:#999;
+  font-family:Calibri;
+  transition:all linear 0.1s;
+  text-overflow:ellipsis;
+}
+#PageInfo select{
+  cursor:pointer;
+  border:none;
+}
+#PageInfo select:focus{
+  background:#111;
+  outerline:none;
+}
+#PageInfo option{
+  cursor:pointer;
+}
+#PageInfo select::-webkit-scrollbar{
+  width:0.2vw;
+  background:#111;
+}
+#PageInfo select::-webkit-scrollbar-thumb{
+  background:#EEE;
+}
+
+#PageInfo input:focus{
+  outline:none;
+  background:#101015;
+}
+
+#PageInfo button{
+  margin:3px;
+  padding:0px 2px;
+  font-size:18px;
+  font-family:Calibri;
+  border:none;
+  cursor:pointer;
+}
+
+.Marcado{
+  background-image:linear-gradient(90deg, #FC5, #0000);
+  font-weight:bold;
+  text-shadow:0.06vw 0.06vw 0.2vw #000, 0 0 10px #FE1;
+  box-shadow:-0.5vw 0 0.6vw -0.4vw #FE0;
+}
+
+#PageListLocate{
+  margin:0 0vw 0 1vw;
+}
+
+/*  //Specific//  */
+#BookPageIndex{
+  border-radius:0.3vw;
+  text-shadow:0.1vw 0.1vw 0.1vw #000;
+}
+
+#BookMarkColor{
+  height:2.1vw;
+  padding:0 3vw !important;
+  cursor:pointer;
+  transition:all linear 0.1s !important;
+}
+#BookMarkColor[type="color"]::-webkit-color-swatch{
+  border:none !important;
+  border-radius:0.5vw !important;
+}
+
+/*USER INFOS*/
+#userInfos{
+  width:18.3vw;
+  max-height:84%;
+  position:fixed;
+  right:0;
+  top:0vw;
+  padding:0.6vw 0.3vw;
+  background:#335;
+  z-index:10;
+  overflow:auto;
+}
+#userInfos::-webkit-scrollbar{
+  width:0.3vw;
+  background:#000;
+}
+#userInfos::-webkit-scrollbar-thumb{
+  background:#DDD;
+}
+
+#userInfos p{
+  margin:0vw 0vw 0 0.9vw;
+  padding:0.15vw 0;
+  cursor:pointer;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  border-radius:0.5vw 0vw 0vw 0.5vw;
+  margin:0.3vw 0;
+  font-family:Helvetica;
+  font-size:1.2vw;
+  transition:all 0.1s ease-in-out;
+}
+#userInfos p:before{
+  content:var(--PageIndex);
+  padding:0.5vw 0.6vw;
+  margin:0 0.2vw 0 0;
+/*   border-radius:2vw 0vw 0vw 2vw; */
+  background-color:var(--PageColor);
+  text-align:center;
+  text-shadow:0.1vw 0.1vw 0.1vw #000;
+}
+#userInfos p:hover{
+  background-color:var(--HoverColor);
+}
+#userInfos button{
+  position:absolute;
+  margin:-2.07vw 0;
+  right:0.3vw;
+  padding:0.206vw 0.4vw;
+  border:none;
+  border-radius:0.5vw 0vw 0vw 0.5vw;
+  background:#F55;
+  font-family:FormmatingIcons;
+  font-size:1.4vw;
+  transition:all 0.2s ease-in-out;
+  cursor:progress;
+}
+#userInfos button:hover{
+  opacity:1;
+  background:#800;
+}
+button#ldp{
+  color:#FFF;
+  opacity:0;
+}
+button#ldp:hover{
+  box-shadow:inset 0 0 0.5vw #F00, 0 0 0.5vw #F00;
+  text-shadow:0 0 0.8vw #F00;
+}
+
+
+#marcar{
+  margin:-2vw 2vw !important;
+  border-radius:0.5vw !important;
+  padding:0.2vw 0.4vw!important;
+  background:none !important;
+  cursor:pointer !important;
+/*   text-shadow:0.02vw 0.02vw 0.3vw #000; */
+  color:#FE5;
+  line-height:1.3vw;
+  opacity:0;
+}
+#marcar:hover{
+  opacity:1;
+  color:#FE8;
+  background:none !important;
+  box-shadow:/*inset 0 0 0.5vw #FF0, 0 0 0.5vw #FF0*/ none !important;
+  text-shadow:0 0 0.5vw #FD0, 0 0 0.9vw #FD0;
+}
+.MarcadoBtn{
+  color:var(--MarkBookColor) !important;
+  opacity:1 !important;
+  text-shadow:0 0 0.3vw var(--MarkBookColor);
+  filter:contrast(150%);
+}
+.MarcadoBtn:hover{
+  color:#999 !important;
+  text-shadow:0.05vw 0.05vw 0.1vw #000 !important;
+}
+
+/*Book Infos*/
+#ActualBookInfos{
+  width:19vw;
+  max-height:90%;
+  position:fixed;
+  left:0;
+  top:0;
+  background:#4489;
+  overflow-y:auto;
+}
+#ActualBookInfos::-webkit-scrollbar{
+  width:0.2vw;
+  background:#000;
+}
+#ActualBookInfos::-webkit-scrollbar-thumb{
+  background:#FFF;
+}
+#ActualBookInfos h2{
+  font-size:1.3vw;
+  margin:0.2vw 1.5vw;
+  font-weight:lighter;
+  font-family:Calibri;
+  text-align:right;
+  text-shadow:0.05vw 0.05vw 0.1vw #000;
+}
+#ActualBookInfos input{
+  width:99.5%;
+  text-align:center;
+  background:none;
+  border:none;
+  border-bottom:solid 0.1vw #AAA0;
+  font-family:Calibri;
+  font-size:1.3vw;
+  margin:0.1vw 0;
+  padding:0.05vw;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  color:#999;
+}
+#ActualBookInfos input::placeholder{
+  color:#555;
+}
+#ActualBookInfos input:focus{
+/*   background:#060606; */
+  border-bottom:solid 0.1vw #AAA;
+  outline: none;
+/*   box-shadow:inset 0.2vw 0.2vw 0.7vw #000; */
+}
+#ActualBookInfos textarea{
+  width:97%;
+/*   height:2em; */
+  text-align:center;
+  background:none;
+  border:none;
+  font-family:Calibri;
+  font-size:1.2vw;
+  margin:0.1vw 0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  color:#CCC;
+  resize:none;
+}
+#ActualBookInfos textarea:focus{
+  background:#111;
+}
+#BookColor{
+  text-shadow:0.08vw 0.08vw 0.15vw #000;
+}
+
+/*Apagar Livro*/
+#DeleteHistory{
+  float:right;
+  margin:0.6vw 0.5vw;
+  padding:0.2vw 0.4vw;
+  background:#F11;
+  border:none;
+  border-radius:0.2vw;
+  font-size:1.4vw;
+  font-family:Calibri;
+  color:#FFF;
+  cursor:pointer;
+  transition:all ease-in-out 0.1s;
+}
+#DeleteHistory:hover{
+  color:#922;
+  background:#F88;
+  text-shadow:0 0 0.7vw #F00;
+  box-shadow:inset 0 0 0.8vw #F00, 0 0 0.8vw #F00;
+}
+
+/*Book Lobby*/
+#LobbyHud{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  display:var(--LobbyDisplay);
+  align-items:center;
+  justify-content:center;
+  backdrop-filter:blur(0.2vw) brightness(40%) contrast(170%);
+  transition:all ease-in-out 2s;
+  cursor:pointer;
+  z-index:20;
+}
+
+#booksGallery{
+  width:90vw;
+/*   max-height:95%; */
+  height:97%;
+  background:#223;
+  border:0.4vw #111 solid;
+  overflow-y:auto;
+  cursor:auto;
+}
+#booksGallery::-webkit-scrollbar{
+  width:0.3vw;
+  height:0.3vw;
+  background:#111;
+}
+#booksGallery::-webkit-scrollbar-thumb{
+  background:#99F;
+}
+
+#booksGallery h1{
+  font-family:Modern M;
+  font-weight:lighter;
+  font-size:3vw;
+  letter-spacing:0.12vw;
+  margin:1vw 0.8vw 0;
+  text-shadow:0.1vw 0.1vw 0.5vw #000;
+}
+#BookList{
+  width:97%;
+  max-height:95%;
+  margin:0 auto;
+  text-align:left;
+  cursor:auto;
+}
+#BookList button{
+  width:16vw;
+  padding-top:22vw;
+  margin:0.9vw 0.45vw;
+  background-color:#555;
+  background-size:100%;
+  background-position:center;
+  background-repeat:no-repeat;
+  box-shadow:0.2vw 0.2vw 0.5vw #000;
+  border:solid 0.2vw #FFF;
+  font-size:1.1vw;
+  font-family:Comfortaa; /*SubTitleFont*/
+  font-weight:100;
+  overflow-x:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  color:#FFF;
+  text-shadow:0.1vw 0.1vw 0.15vw #000, 0 0 0.3vw #000, 0 0 0.2vw #000;
+  cursor:pointer;
+  opacity:0.5;
+  position:relative;
+  transition:all 0.1s ease-in-out;
+  z-index:29;
+}
+#BookList button:hover{
+  overflow-x:visible;
+  text-overflow:clip;
+  text-shadow:0 0 0.2vw #000, 0 0 1vw #000, 0 0 1vw #000, 0 0 1vw #000, 0 0 0.5vw #000, 0 0 0.3vw #000, 0 0 1vw #000;
+  transform:scale(1.2);
+  z-index:30;
+  opacity:1;
+}
+
+#actionBtn{
+  height:7%;
+  text-align:right;
+  border:dotted 1px #55F;
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+}
+#actionBtn button{
+  height:100%;
+  border:none;
+  font-family:Trebuchet MS;
+  font-size:1.4vw;
+  cursor:pointer;
+  margin:0.2vw;
+  transition:all linear 0.05s;
+}
+#remoBook{
+  background:#900;
+  color:#FFF;
+}
+#remoBook:hover{
+  background:#F88;
+  color:#500;
+  box-shadow:0 0 0.5vw #F00;
+}
+#editBook:hover{
+  background:#111;
+  color:#FFF;
+  text-shadow:0 0 0.4vw #FFF;
+}
+/*Botão De User*/
+#ItsMe{
+  width:4vw;
+  margin:0.7vw 1.5vw;
+  padding:0.45vw 0;
+  float:right;
+/*   background:url(https://i.imgur.com/tVk75aT.png) center; */
+/*   background-size:220%; */
+  background-color:var(--EyeActivityColor, #111);
+  box-shadow:var(--EyeActivityLight, none);
+  border:none;
+  border-radius:100%;
+  color:#FFF;
+  font-family:FormmatingIcons;
+  font-weight:lighter;
+  font-size:3.3vw;
+  cursor:pointer;
+  transition:all ease-in-out .2s;
+}
+#ItsMe:before{
+  content:'L';
+}
+#ItsMe:hover{
+  background:#99F;
+  color:#005;
+  box-shadow:0 0 1vw #33F;
+}
+
+/*Login Screen*/
+#loginScreen{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  background:#0009;
+  backdrop-filter:blur(0.3vw);
+  transition:all linear 0.2s;
+  cursor:wait;
+  display:var(--LogView, none);
+  opacity:var(--LogStyle, 0);
+  align-items:center;
+  justify-content:center;
+  z-index:25;
+}
+
+#logMe{
+  width:50vw;
+  background:#222;
+  text-align:center;
+  cursor:auto;
+  border:solid 0.05vw #AAA;
+  border-top:solid 0.5vw #AAA;
+  border-radius:0.5vw 0.5vw 0 0;
+  box-shadow:0.2vw 0.2vw 0.4vw #000;
+}
+#logMe input{
+  width:90%;
+  margin:1.5vw 1vw;
+  background:none;
+  border:none;
+  text-align:center;
+  font-size:1.9vw;
+  font-family:Trebuchet MS;
+  color:#EEE;
+  letter-spacing:0.1vw;
+  text-shadow:0.1vw 0.1vw 0.3vw #000;
+}
+#logMe input::placeholder{
+  color:#AAA;
+}
+#insertName:focus{
+  background:#111;
+  color:#FD8;
+  text-shadow:0 0 0.5vw #FA0;
+}
+#logMe p{
+  margin:0;
+  padding:0;
+}
+#logMe button{
+  background:#111;
+  padding:0.6vw 0.5vw;
+  margin:0.5vw 0vw;
+  border:none;
+  border-radius:0.5vw 0 0.5vw 0vw;
+  box-shadow:inset 0 0 0.6vw #000;
+  color:#FFF;
+  font-size:1.4vw;
+  cursor:pointer;
+  transition:all ease-in-out 0.1s;
+}
+#logMe button:hover{
+  color:#151;
+  background:#9F9;
+  box-shadow:0 0 1vw #4F4;
+}
+#addBook{
+  display:var(--Abble, none);
+}
+
+/*Book Create Screen*/
+#createBookScreen{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  backdrop-filter:blur(0.3vw) brightness(40%) contrast(110%) saturate(250%);
+  display:var(--CreateBookDisplay, none);
+  opacity:var(--CreateBookOpacity, 0);
+  align-items:center;
+  justify-content:center;
+  transition:all ease-in-out 0.2s;
+  z-index:24;
+}
+
+#createBookWindow{
+  width:40vw;
+  max-height:98%;
+  background:var(--createBackground);
+  padding:0.5vw;
+  overflow-y:auto;
+  text-align:center;
+}
+#createBookWindow::-webkit-scrollbar{
+  width:0.25vw;
+  background:#FFF;
+}
+#createBookWindow::-webkit-scrollbar-thumb{
+  background:#000;
+}
+
+#createBookWindow h1{
+  margin:0 1vw;
+  font-family:Modern M;
+  font-weight:lighter;
+  color:#FFF;
+  text-shadow:0.1vw 0.1vw 0.2vw #000;
+  text-align:left;
+}
+#createBookWindow input{
+  width:90%;
+  background:none;
+  border:none;
+/*   margin:0.2vw 0; */
+  padding:0.3vw;
+  color:#FFF;
+  font-size:1.7vw;
+  margin:0.5vw 0;
+  text-align:center;
+  text-shadow:0.05vw 0.05vw 0.1vw #000;
+  text-overflow:ellipsis;
+}
+#createBookWindow input::placeholder{
+  color:#CCC;
+  text-shadow:0.0vw 0vw 0.1vw #000;
+}
+#createBookWindow input:focus{
+  background:#222;
+}
+#createBookWindow textarea{
+  width:92%;
+  height:4em;
+  background:none;
+  border:none;
+  resize:none;
+  text-align:center;
+  font-size:1.2vw;
+  color:#FFF;
+}
+#createBookWindow textarea::placeholder{
+  color:#DDD;
+}
+#createBookWindow textarea:focus{
+  background:#222;
+}
+#createBookWindow button{
+  cursor:pointer;
+  font-size:1.3vw;
+}
+#NameCreate{
+  width:54% !important;
+}
+#CoverCreate{
+  color:#666 !important;
+  text-shadow:none !important;
+}
+#dedicatoria{
+  font-size:1.5vw !important;
+  text-align:left !important;
+}
+#observacao{
+  width:70% !important;
+  text-align:right !important;
+  font-size:1.2vw !important;
+}
+#docColor{
+  width:20% !important;
+  height:8vw;
+  margin:0 0 !important;
+  padding:0 !important;
+  text-align:right;
+  float:left;
+  border-radius:0.5vw;
+  cursor:pointer;
+  box-shadow:0.3vw 0.3vw 0.3vw #0003;
+  line-height:0vw;
+}
+#docColor::before{
+  content:' ';
+  line-height:0vw;
+  padding:0 3vw;
+  padding-bottom:4vw;
+  background-color:var(--createBackground);
+  position:relative;
+  top:2vw;
+}
+#createBookWindow p{
+  width:100%;
+  float:left;
+  margin:2vw 0 0 !important;
+}
+#createBookWindow img{
+  max-width:55%;
+  margin:0vw 0 -3.5vw;
+  border:var(--CoverPreviewBorder);
+  border-color:var(--CoverBorderColor);
+  box-shadow:0.3vw 0.3vw 0.3vw #0008;
+/*   border:0.3vw solid #FFF; */
+}
+
+
+
+/*Debug De Eventos*/
+#debuggView{
+  max-width:25vw;
+  min-width:15vw;
+  pointer-events:none;
+  background:#000;
+  opacity:0.8;
+  position:fixed;
+  left:0;
+  top:0;
+  font-weight:bold;
+  text-align:center;
+  font-family:Agency FB;
+  display:var(--DebuggViewer, none);
+  z-index:50;
+}
+#debuggView input{
+  width:90%;
+  margin:0.2vw 0.3vw;
+  font-size:0.9vw;
+  text-align:center;
+  background:#111;
+  border:none;
+  border-radius:0.3vw;
+  color:#999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#debuggView p{
+  max-width:7vw;
+  margin:0 0.12vw;
+  padding:0vw 0.2vw;
+/*   background:#003; */
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display:inline-block;
+  vertical-align:text-top;
+  font-weight:lighter;
+}
+
+/*Caixa De Avisos*/
+#WarningWindow{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  background:#0009;
+  backdrop-filter:blur(0.3vw) contrast(120%) brightness(150%);
+  display:var(--WarningDisplay);
+  align-items:center;
+  justify-content:center;
+  z-index:50;
+  cursor:not-allowed;
+}
+#WarningBox{
+  max-width:50vw;
+  max-height:90%;
+  background:#000;
+  text-align:center;
+  padding:0.8vw;
+  box-shadow:0.2vw 0.2vw 0.3vw #0008;
+  overflow-y:auto;
+  cursor:default;
+}
+#WarningBox::-webkit-scrollbar{
+  width:0.2vw;
+  background:#FFF;
+}
+#WarningBox::-webkit-scrollbar-thumb{
+  background:#000;
+}
+
+#WarningBox h1{
+  margin:0;
+  padding:0;
+  font-family:Trebuchet MS;
+  font-weight:bold;
+  color:#AAA;
+  text-align:center;
+}
+#WarningBox h2{
+  margin:0;
+  font-size:1.1vw;
+  font-family:Trebuchet MS;
+  font-weight:lighter;
+  color:#AAA;
+}
+#WarningBox h3{
+  margin:0.6vw 0 0;
+  text-align:right;
+  font-size:1vw;
+  font-weight:lighter;
+  font-family:Calibri;
+}
+#WarningBox h4{
+  margin:1vw 0 0;
+  text-align:left;
+  font-size:1.5vw;
+  font-family:Calibri;
+  font-weight:lighter;
+}
+#WarningBox button{
+  margin:2vw 0vw 0;
+  padding:0.3vw 0.6vw;
+  border:none;
+  font-size:1.2vw;
+  font-weight:bold;
+  font-family:Trebuchet MS;
+  transition:all ease-in-out 0.1s;
+  cursor:pointer;
+}
+#WarningBox .denied{
+  background:#F00;
+  color:#FFF;
+}
+#WarningBox .denied:hover{
+  background:#F88;
+  color:#FAA;
+  text-shadow:0 0 0.8vw #F00;
+  box-shadow:inset 0 0 0.5vw #F00, 0 0 0.5vw #F00;
+}
+#WarningBox .confirm{
+  background:#080;
+  color:#FFF;
+}
+#WarningBox .confirm:hover{
+  background:#8F8;
+  color:#373;
+  text-shadow:0 0 0.8vw #0F0;
+  box-shadow:inset 0 0 0.5vw #0F0, 0 0 0.5vw #0F0;
+}
+#WarningBox .blank{
+  background:#111;
+  color:#FFF;
+}
+#WarningBox .blank:hover{
+  background:#FFF;
+  color:#111;
+}
+#WarningBox input{
+  width:90%;
+  margin:0.5vw;
+  padding:0.2vw 0.5vw;
+  font-size:1.3vw;
+  font-family:calibri;
+  background:#111;
+  color:#FFF;
+  border:none;
+  box-shadow:inset 0.1vw 0.1vw 0.3vw #000;
+}
+#WarningBox input::placeholder{
+  color:#555;
+}
+
+#WarningBox input[type=color]{
+  width:10vw;
+  height:3vw;
+  padding:0;
+  background:none;
+  cursor:pointer;
+  display:block;
+}
+#WarningBox input[type=color]::-webkit-color-swatch {
+  border-radius:1vw 0vw 1vw 0vw;
+  border:1px #444 solid;
+}
+
+/*********/
+#MarkedWindow{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  background:#0008;
+  z-index:35;
+  display:var(--PaginaDeMarcacoes);
+  align-items:center;
+  justify-content:center;
+  pointer-events:none;
+}
+#MarkedTab{
+  max-width:80%;
+  min-width:40%;
+  max-height:90%;
+  background-image:linear-gradient(20deg, #151518, #151520);
+  overflow:auto;
+  pointer-events:auto;
+}
+#MarkedTab::-webkit-scrollbar{
+  width:0.25vw;
+  background:#111;
+}
+#MarkedTab::-webkit-scrollbar-thumb{
+  background:#447;
+}
+
+#MarkedTab h1{
+  position:sticky;
+  top:0;
+  margin:0 0vw 0 0vw;
+  padding:0 0 0.5vw 2vw;
+  font-family:SansSerif;
+  font-weight:bold;
+  letter-spacing:0.4vw;
+  background:#151520;
+  box-shadow:0.1vw 0.1vw 0.4vw #000;
+  z-index:36;
+}
+#MarkedTab h1 j{
+  font-family:FormmatingIcons;
+  font-weight:lighter;
+  margin:0 -0.8vw;
+  color:#FE8;
+  text-shadow:0 0 0.6vw #F91;
+}
+#MarkedTab h2{
+  font-family:Comfortaa;
+  font-weight:lighter;
+  font-size:1.7vw;
+  padding:0 1vw;
+  margin:1vw 0 0.6vw 0;
+}
+#MarkedTab h3{
+  font-family:SansSerif;
+  font-weight:lighter;
+  font-size:1.4vw;
+  padding:0 0.2vw;
+  margin:0vw 0 0 0;
+  text-align:left;
+}
+#MarkedTab h4{
+  font-family:Comfortaa;
+  font-weight:lighter;
+  font-size:1vw;
+  padding:0 1vw;
+  margin:0.7vw 0 1vw 0;
+  text-align:center;
+}
+#MarkedTab h5{
+  font-family:Calibri;
+  font-weight:lighter;
+  font-size:1vw;
+  padding:0 0.3vw;
+  margin:0.5vw 0 0 0;
+  text-align:left;
+}
+#MarkedTab h6{
+  font-family:Calibri;
+  font-weight:lighter;
+  font-size:0.9vw;
+  padding:0 0.5vw;
+  margin:0.5vw 0 0 0;
+  text-align:right;
+}
+#MarkedTab p{
+  margin:0.3vw 0vw 0 1.5vw;
+  padding:0.2vw 0vw;
+  background-image:linear-gradient(90deg, #555 10%, #0000 98%);
+  color:var(--MarkedColor);
+  border-radius:0.5vw 0vw 0vw 0.5vw;
+  cursor:pointer;
+  font-family:Calibri;
+  font-size:1.4vw;
+  text-shadow:0 0 0.3vw var(--MarkedColor);
+  filter:brightness(50%) contrast(130%);
+}
+#MarkedTab p::before{
+  content:var(--MarkedIndex);
+  color:#FFF;
+  padding:0.2vw 0.7vw;
+  margin:0 0.5vw 0 -0.1vw;
+  background:var(--MarkedColor);
+  border-radius:0.5vw 0vw 0vw 0.5vw;
+  box-shadow:0.1vw 0.1vw 0.3vw #000;
+  text-shadow:0.1vw 0.1vw 0.15vw #000, 0.1vw 0.1vw 0.2vw #000;
+}
+#MarkedTab p:hover{
+  filter:none;
+  background-image:linear-gradient(90deg, var(--MarkedColor) 10%, #0000 98%);
+  text-shadow:0.1vw 0.1vw 0.2vw #000;
+  color:#FFF;
+}
+
+/******/
+#listOfMarked{
+  width:35vw;
+  height:50hw;
+  float:left;
+  box-shadow:inset -0.2vw 0.2vw 0.2vw #000;
+}
+#markDetails{
+  width:18vw;
+  position:sticky;
+  top:0;
+  border-radius:1vw 1vw 0vw 0;
+  overflow-y:hidden;
+  float:left;
+  z-index:37;
+  word-wrap: break-word;
+}
+#markDetails img{
+  width:100%;
+  height:9vw;
+  border:none;
+  object-fit: cover;
+  object-position: 0% 40%;
+  background:none;
+}
+#gradientMass{
+  width:100%;
+  height:9vw;
+  position:absolute;
+  top:0;
+  background-image:linear-gradient(0deg, #151520 5%, #F810);
+  box-shadow:0vw 0.8vw 0.7vw -0.5vw #151520, inset 0 -0.8vw 0.7vw -0.5vw #151520;
+}
+
+#closeTabs{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  cursor:pointer;
+  display:var(--CloseTabsActivated);
+  z-index:var(--CloseTabsIndex);
+}
