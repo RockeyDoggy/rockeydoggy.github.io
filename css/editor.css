@@ -933,7 +933,7 @@ button#ldp:hover{
 #BookList button{
   width:16vw;
   padding-top:22vw;
-  margin:0.9vw 0.45vw;
+  margin:0.9vw 0 0 0.45vw;
   background-color:#555;
   background-size:100%;
   background-position:center;
