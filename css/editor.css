@@ -924,7 +924,7 @@ button#ldp:hover{
   text-shadow:0.1vw 0.1vw 0.5vw #000;
 }
 #BookList{
-  width:97%;
+  width:100%;
   max-height:95%;
   margin:0 auto;
   text-align:left;
@@ -933,7 +933,7 @@ button#ldp:hover{
 #BookList button{
   width:16vw;
   padding-top:22vw;
-  margin:0.9vw 0 0 0.45vw;
+  margin:0.9vw 0 0 0.4vw;
   background-color:#555;
   background-size:100%;
   background-position:center;
