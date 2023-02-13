@@ -6,6 +6,6 @@
 @keyframes pressTo{
   0%{   text-shadow:1px -1px 20px #F00, -1px 1px 15px #00F, 1px 1px 10px #0F0;}
   30%{  text-shadow:1px -1px 20px #0F0, -1px 1px 15px #F00, 1px 1px 10px #00F;}
-  60%{  text-shadow:1px -1px 20px #00F, -1px 1px 15px #0F0, 1px 1px 10px #F00; transform:scale(1.05) rotate(3deg);}
+  60%{  text-shadow:1px -1px 20px #00F, -1px 1px 15px #0F0, 1px 1px 10px #F00; /*transform:scale(1.05) rotate(3deg);*/}
   100%{ text-shadow:1px -1px 20px #F00, -1px 1px 15px #00F, 1px 1px 10px #0F0;}
 }
