@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
 
       // Continue com o seu código aqui, como adicionar o evento onAuthorized e criar o botão de login da Twitch
-    }, 1000);
+    }, 10000);
   } else {
       twitch.onAuthorized((auth) => {
         // Exibe as informações de autenticação na div
