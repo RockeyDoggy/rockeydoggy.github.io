@@ -7,7 +7,7 @@
       });
 
       function twitchLogin() {
-        var redirectUri = encodeURIComponent("https://seusite.com/auth/twitch");
+        var redirectUri = encodeURIComponent("https://rockeydoggy.github.io/testes.html");
         window.location.href = "https://id.twitch.tv/oauth2/authorize?client_id=seuclientid&redirect_uri=" + redirectUri + "&response_type=token&scope=user:read:email";
       }
 
