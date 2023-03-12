@@ -3,7 +3,7 @@
         width: 720,
         height: 300,
         channel: "RockeyDoggy",
-        parent: ["https://rockeydoggy.github.io"]
+        parent: ["rockeydoggy.github.io"]
       });
 
       twitch.addEventListener(Twitch.Embed.AUTHENTICATE, function(auth) {
