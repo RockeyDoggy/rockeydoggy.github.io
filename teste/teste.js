@@ -6,16 +6,9 @@
         parent: ["rockeydoggy.github.io"]
       });
 
-      var auth;
-
       function twitchLogin() {
-        auth = Twitch.authenticate({
-          client_id: "xyphtivx2n7mw5ec9xtatlcijycovm",
-          redirect_uri: "https://rockeydoggy.github.io/testes",
-          response_type: "token",
-          scope: ["user_read"]
-        });
-        window.location = auth.url;
+        var redirectUri = encodeURIComponent("https://seusite.com/auth/twitch");
+        window.location.href = "https://id.twitch.tv/oauth2/authorize?client_id=seuclientid&redirect_uri=" + redirectUri + "&response_type=token&scope=user:read:email";
       }
 
       function twitchCallback() {
