@@ -1,5 +1,27 @@
+window.addEventListener('DOMContentLoaded', () => {
+  const twitch = window.Twitch ? window.Twitch.ext : null;
 
-    window.addEventListener('DOMContentLoaded', () => {
+  if (!twitch) {
+    // Aguarda até que o objeto Twitch.ext seja definido pelo SDK da Twitch
+    setTimeout(() => {
+      const twitch = window.Twitch ? window.Twitch.ext : null;
+
+      if (!twitch) {
+        console.error('Twitch SDK não encontrado.');
+        return;
+      }
+
+      // Continue com o seu código aqui, como adicionar o evento onAuthorized e criar o botão de login da Twitch
+    }, 1000);
+  } else {
+    // Continue com o seu código aqui, como adicionar o evento onAuthorized e criar o botão de login da Twitch
+  }
+});
+
+    
+
+
+window.addEventListener('DOMContentLoaded', () => {
       const twitch = window.Twitch ? window.Twitch.ext : null;
 
       if (!twitch) {
