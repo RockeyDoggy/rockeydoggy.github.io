@@ -16,7 +16,7 @@
       // Cria o botão de autenticação da Twitch
       const twitchLogin = new Twitch.LoginButton({
         // Substitua CLIENT_ID pelo seu Client ID
-        client_id: 'xyphtivx2n7mw5ec9xtatlcijycovm',
+        client_id: 'g9ca0qr1bl5w8kmxss461l6i622ddy',
         redirect_uri: 'https://rockeydoggy.github.io/testes.html',
         scope: ['user_read'],
         width: 200,
