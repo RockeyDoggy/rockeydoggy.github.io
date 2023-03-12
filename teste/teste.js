@@ -1,15 +1,27 @@
 
       var twitch = new Twitch.Embed("twitch-embed", {
-        width: 720,
+        width: 400,
         height: 300,
         channel: "RockeyDoggy",
         parent: ["rockeydoggy.github.io"]
       });
 
-var displayName;
+      var auth;
 
-      twitch.addEventListener(Twitch.Embed.AUTHENTICATE, function(auth) {
-        var token = auth.token;
+      function twitchLogin() {
+        auth = Twitch.authenticate({
+          client_id: "xyphtivx2n7mw5ec9xtatlcijycovm",
+          redirect_uri: "https://rockeydoggy.github.io/testes",
+          response_type: "token",
+          scope: ["user_read"]
+        });
+        window.location = auth.url;
+      }
+
+      function twitchCallback() {
+        var hash = window.location.hash.substring(1);
+        var tokenParams = hash.split("&");
+        var token = tokenParams[0].split("=")[1];
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "https://api.twitch.tv/helix/users", true);
         xhr.setRequestHeader("Authorization", "Bearer " + token);
@@ -25,10 +37,10 @@ var displayName;
           }
         };
         xhr.send();
-      });
+      }
 
-setTimeout(()=>{
-    var usuario = document.getElementById('user-info');
-      usuario.innerHTML = displayName;
-      console.log('Nome De Usuario é: ' + displayName);
-},1500);
+      document.getElementById("twitch-login-button").addEventListener("click", twitchLogin);
+
+      if (window.location.pathname === "/auth/twitch") {
+        twitchCallback();
+      }
