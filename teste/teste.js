@@ -1,6 +1,11 @@
 
     window.addEventListener('DOMContentLoaded', () => {
-      const twitch = window.Twitch.ext;
+      const twitch = window.Twitch ? window.Twitch.ext : null;
+
+      if (!twitch) {
+        console.error('Twitch SDK não encontrado.');
+        return;
+      }
 
       twitch.onAuthorized((auth) => {
         // Exibe as informações de autenticação na div
