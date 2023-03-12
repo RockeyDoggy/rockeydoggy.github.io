@@ -1,3 +1,10 @@
+  window.addEventListener('load', function() {
+    if (Twitch && Twitch.ext) {
+      // Coloque o código que usa a variável Twitch aqui
+    } else {
+      console.log('Twitch SDK não foi carregado corretamente');
+    }
+  });
 
   // Inicialize o SDK da Twitch
   window.addEventListener('load', function() {
