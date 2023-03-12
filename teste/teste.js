@@ -18,7 +18,7 @@
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "https://api.twitch.tv/helix/users", true);
         xhr.setRequestHeader("Authorization", "Bearer " + token);
-        xhr.setRequestHeader("Client-ID", "xyphtivx2n7mw5ec9xtatlcijycovm");
+        xhr.setRequestHeader("Client-ID", "y9qqxglpke7zxzf823otz1jhb1bd9l");
         xhr.onload = function() {
           if (xhr.status === 200) {
             var response = JSON.parse(xhr.responseText);
