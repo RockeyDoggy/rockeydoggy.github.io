@@ -30,4 +30,5 @@ var displayName;
 setTimeout(()=>{
     var usuario = document.getElementById('user-info');
       usuario.innerHTML = displayName;
+      console.log('Nome De Usuario é: ' + displayName);
 },1500);
