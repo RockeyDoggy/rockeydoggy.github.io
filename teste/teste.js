@@ -14,21 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
       // Continue com o seu código aqui, como adicionar o evento onAuthorized e criar o botão de login da Twitch
     }, 1000);
   } else {
-    // Continue com o seu código aqui, como adicionar o evento onAuthorized e criar o botão de login da Twitch
-  }
-});
-
-    
-
-
-window.addEventListener('DOMContentLoaded', () => {
-      const twitch = window.Twitch ? window.Twitch.ext : null;
-
-      if (!twitch) {
-        console.error('Twitch SDK não encontrado.');
-        return;
-      }
-
       twitch.onAuthorized((auth) => {
         // Exibe as informações de autenticação na div
         const userInfo = document.getElementById('user-info');
@@ -47,3 +32,6 @@ window.addEventListener('DOMContentLoaded', () => {
       });
       twitchLogin.attach('#twitch-login');
     });
+  }
+});
+
