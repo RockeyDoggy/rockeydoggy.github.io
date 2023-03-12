@@ -1,46 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Autenticação da Twitch</title>
-    <script src="https://cdn.jsdelivr.net/npm/twitch-js/dist/twitch.min.js"></script>
-  </head>
-  <body>
-    <h1>Autenticação da Twitch</h1>
-    <div id="login">
-      <button onclick="twitchLogin()">Entrar com Twitch</button>
-    </div>
-    <div id="user-info"></div>
+<button onclick="authenticate()">Autenticar pela Twitch</button>
 
-    <script>
-      const clientId = "wmvc2pcoaa2g2cno4ldyackeh3l8t7";
-      const redirectUri = "https://rockeydoggy.github.io/test.html"; // Sua URL de redirecionamento
-      const scope = "user:read:email";
+<p>O usuário autenticado é: <span id="username"></span></p>
 
-      const Twitch = window.Twitch.ext;
-
-      function twitchLogin() {
-        Twitch.ext.onAuthorized(function(auth) {
-          Twitch.api({method: 'GET', path: '/users'}, auth.token, function(err, response) {
-            if (err) {
-              console.error(err);
-              return;
-            }
-
-            const userInfo = response.data[0];
-
-            // Exibe as informações do usuário na div com id "user-info"
-            const userInfoDiv = document.getElementById("user-info");
-            userInfoDiv.innerHTML = "Bem-vindo, " + userInfo.display_name + "!";
-          });
-        });
-
-        Twitch.ext.actions.requestAuth({
-          client_id: clientId,
-          redirect_uri: redirectUri,
-          scopes: [scope]
-        });
-      }
-    </script>
-  </body>
-</html>
+<script src="teste/teste.js"></script>
