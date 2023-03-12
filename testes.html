@@ -1,14 +1,32 @@
-<html>
-  <head>
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-    <title>Identificação do usuário da Twitch</title>
-	  <link rel="icon" href="https://i.imgur.com/pv8rDm5.png" type="image/png" sizes="16x16">
-  </head>
-  <body>
-    <div id="twitch-embed"></div>
-    <button id="twitch-login-button">Entrar com Twitch</button>
-    <div id="user-info"></div>
-  </body>
-</html>
+<button id="login-button">Autenticar na Twitch</button>
+<div id="user-info"></div>
 
-<script src="teste/teste.js"></script>
+<script>
+const clientId = 'SEU_CLIENT_ID';
+const redirectUri = 'http://localhost:8000/';
+const scope = 'user:read:email';
+
+const loginButton = document.getElementById('login-button');
+const userInfo = document.getElementById('user-info');
+
+loginButton.addEventListener('click', () => {
+  window.location = `https://id.twitch.tv/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=token&scope=${scope}`;
+});
+
+const params = new URLSearchParams(window.location.hash.substring(1));
+const accessToken = params.get('access_token');
+
+if (accessToken) {
+  fetch('https://api.twitch.tv/helix/users', {
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'Client-Id': clientId
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    const user = data.data[0];
+    userInfo.innerHTML = `Nome de usuário: ${user.login}<br/>Display Name: ${user.display_name}`;
+  });
+}
+</script>
