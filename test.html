@@ -2,44 +2,74 @@
 <html>
 <head>
 	<title>Autenticação Twitch</title>
-	<script src="https://cdn.jsdelivr.net/npm/@supergrecko/twitch-js@2.0.0/dist/twitch.min.js"></script>
-	<script>
-		// Credenciais do cliente Twitch
-		var client_id = 'wmvc2pcoaa2g2cno4ldyackeh3l8t7';
-		var redirect_uri = 'https://rockeydoggy.github.io/test.html';
-
-		// Função de autenticação da Twitch
-		function authenticate() {
-			Twitch.authenticate({
-				client_id: client_id,
-				redirect_uri: redirect_uri,
-				scope: ['user_read'],
-				response_type: 'token'
-			});
-		}
-
-		// Função de tratamento do redirecionamento da Twitch
-		function handleRedirect() {
-			if (window.location.hash) {
-				var hash = window.location.hash.substring(1);
-				var accessToken = hash.split('&')[0].split('=')[1];
-
-				Twitch.api({method: 'user'}, function(error, user) {
-					if (error) {
-						console.log(error);
-					} else {
-						var username = user.display_name;
-						document.getElementById('username').innerHTML = username;
-					}
-				});
-			}
-		}
-	</script>
 </head>
-<body onload="handleRedirect()">
+<body>
 	<h1>Autenticação Twitch</h1>
 	<p>Clique no botão abaixo para autenticar pela Twitch:</p>
 	<button onclick="authenticate()">Autenticar pela Twitch</button>
 	<p>O usuário autenticado é: <span id="username"></span></p>
+	<script>
+		// Credenciais do cliente Twitch
+		var client_id = 'SEU_ID_DE_CLIENTE';
+		var client_secret = 'SEU_CLIENT_SECRET';
+		var redirect_uri = 'SUA_URL_DE_REDIRRECIONAMENTO';
+
+		// URL de autorização do OAuth2 da Twitch
+		var auth_url = 'https://id.twitch.tv/oauth2/authorize' +
+			'?client_id=' + client_id +
+			'&redirect_uri=' + redirect_uri +
+			'&response_type=code' +
+			'&scope=user_read';
+
+		// Função de autenticação da Twitch
+		function authenticate() {
+			window.location.href = auth_url;
+		}
+
+		// Função de tratamento do redirecionamento da Twitch
+		function handleRedirect() {
+			if (window.location.search) {
+				var search = window.location.search.substring(1);
+				var code = search.split('&')[0].split('=')[1];
+
+				// Use o código de autorização para obter um token de acesso
+				var xhr = new XMLHttpRequest();
+				xhr.open('POST', 'https://id.twitch.tv/oauth2/token', true);
+				xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				xhr.onreadystatechange = function() {
+					if (xhr.readyState === XMLHttpRequest.DONE) {
+						if (xhr.status === 200) {
+							var response = JSON.parse(xhr.responseText);
+							var access_token = response.access_token;
+
+							// Use o token de acesso para obter informações do usuário
+							var xhr2 = new XMLHttpRequest();
+							xhr2.open('GET', 'https://api.twitch.tv/helix/users', true);
+							xhr2.setRequestHeader('Authorization', 'Bearer ' + access_token);
+							xhr2.setRequestHeader('Client-ID', client_id);
+							xhr2.onreadystatechange = function() {
+								if (xhr2.readyState === XMLHttpRequest.DONE) {
+									if (xhr2.status === 200) {
+										var response2 = JSON.parse(xhr2.responseText);
+										var username = response2.data[0].display_name;
+										document.getElementById('username').innerHTML = username;
+									}
+								}
+							};
+							xhr2.send();
+						}
+					}
+				};
+				xhr.send('client_id=' + client_id +
+					'&client_secret=' + client_secret +
+					'&code=' + code +
+					'&grant_type=authorization_code' +
+					'&redirect_uri=' + redirect_uri);
+			}
+		}
+
+		// Chame a função handleRedirect quando a página for carregada
+		handleRedirect();
+	</script>
 </body>
 </html>
