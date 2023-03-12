@@ -6,6 +6,8 @@
         parent: ["rockeydoggy.github.io"]
       });
 
+var displayName;
+
       twitch.addEventListener(Twitch.Embed.AUTHENTICATE, function(auth) {
         var token = auth.token;
         var xhr = new XMLHttpRequest();
@@ -24,3 +26,8 @@
         };
         xhr.send();
       });
+
+setTimeout(()=>{
+    var usuario = document.getElementById('user-info');
+      usuario.innerHTML = displayName;
+},1500);
