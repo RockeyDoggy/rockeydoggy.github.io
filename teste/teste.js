@@ -1,6 +1,6 @@
 enviarA.addEventListener('click', ()=>{
    window.load('https://id.twitch.tv/oauth2/authorize?client_id=wmvc2pcoaa2g2cno4ldyackeh3l8t7&redirect_uri=https://rockeydoggy.github.io/test.html&response_type=token&scope=user:read:email', '_self');
-}
+});
                          
 function authenticate() {
   window.load('https://id.twitch.tv/oauth2/authorize?client_id=wmvc2pcoaa2g2cno4ldyackeh3l8t7&redirect_uri=https://rockeydoggy.github.io/test.html&response_type=token&scope=user:read:email', '_self');
