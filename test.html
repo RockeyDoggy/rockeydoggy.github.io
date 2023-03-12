@@ -1,7 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Autenticação Twitch</title>
+	<script src="https://embed.twitch.tv/embed/v1.js"></script>
+	<script>
+		// Credenciais do cliente Twitch
+		var client_id = 'SEU_ID_DE_CLIENTE';
+		var redirect_uri = 'SUA_URL_DE_REDIRRECIONAMENTO';
 
-  
-<button id="enviarA" onclick="authenticate()">Autenticar pela Twitch</button>
+		// Função de autenticação da Twitch
+		function authenticate() {
+			Twitch.authenticate({
+				client_id: client_id,
+				redirect_uri: redirect_uri,
+				scope: ['user_read'],
+				response_type: 'token'
+			});
+		}
 
-<p>O usuário autenticado é: <span id="username"></span></p>
+		// Função de tratamento do redirecionamento da Twitch
+		function handleRedirect() {
+			if (window.location.hash) {
+				var hash = window.location.hash.substring(1);
+				var accessToken = hash.split('&')[0].split('=')[1];
 
-<script src="teste/teste.js"></script>
+				Twitch.api({method: 'user'}, function(error, user) {
+					if (error) {
+						console.log(error);
+					} else {
+						var username = user.display_name;
+						document.getElementById('username').innerHTML = username;
+					}
+				});
+			}
+		}
+	</script>
+</head>
+<body onload="handleRedirect()">
+	<h1>Autenticação Twitch</h1>
+	<p>Clique no botão abaixo para autenticar pela Twitch:</p>
+	<button onclick="authenticate()">Autenticar pela Twitch</button>
+	<p>O usuário autenticado é: <span id="username"></span></p>
+</body>
+</html>
