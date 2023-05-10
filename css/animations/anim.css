@@ -1,9 +1,9 @@
 #EdDisplay{
-  animation:rodaroda 0.5s linear 8;
+  animation:rodaroda 0.2s linear 8;
 }
 
 @keyframes rodaroda{
-  0%{transform:rotatez(0deg);}
-  50%{transform:rotatez(180deg);}
-  100%{transform:rotatez(360deg);}
+  0%{transform:rotateY(0deg);}
+  50%{transform:rotateY(180deg);}
+  100%{transform:rotateY(360deg);}
 }
