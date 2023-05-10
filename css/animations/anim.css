@@ -1,0 +1,9 @@
+#EdDisplay{
+  animation:rodaroda 0.5s ease-in-out 8;
+}
+
+@keyframes rodaroda{
+  0%{transform:rotatez(0deg);}
+  50%{transform:rotatez(180deg);}
+  100%{transform:rotatez(360deg);}
+}
