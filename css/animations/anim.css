@@ -1,5 +1,5 @@
 #EdDisplay{
-  animation:rodaroda 0.5s ease-in-out 8;
+  animation:rodaroda 0.5s linear 8;
 }
 
 @keyframes rodaroda{
