@@ -2,8 +2,30 @@
   animation:rodaroda 0.2s linear 8;
 }
 
+#MetaName{
+  animation:NameView 20s ease-in-out infinite;
+}
+
+#MetaNumbers{
+  animation:MetaView 20s ease-in-out infinite;
+}
+
 @keyframes rodaroda{
   0%{transform:rotateY(0deg);}
   50%{transform:rotateY(180deg);}
   100%{transform:rotateY(360deg);}
+}
+
+@keyframes NameView{
+  0%{opacity:0;}
+  1%{opacity:1;}
+  50%{opacity:1;}
+  51%{opacity:0;}
+  100%{opacity:0;}
+}
+@keyframes MetaView{
+  50%{opacity:0;}
+  51%{opacity:1;}
+  99%{opacity:1;}
+  100%{opacity:0;}
 }
