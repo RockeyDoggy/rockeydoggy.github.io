@@ -3,11 +3,11 @@
 }
 
 #MetaName{
-  animation:NameView 20s ease-in-out infinite;
+  animation:NameView 10s ease-in-out infinite;
 }
 
 #MetaNumbers{
-  animation:MetaView 20s ease-in-out infinite;
+  animation:MetaView 10s ease-in-out infinite;
 }
 
 @keyframes rodaroda{
