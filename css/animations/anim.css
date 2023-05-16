@@ -17,15 +17,15 @@
 }
 
 @keyframes NameView{
-  0%{opacity:0;}
-  1%{opacity:1;}
-  50%{opacity:1;}
-  51%{opacity:0;}
-  100%{opacity:0;}
+  0%{opacity:0; z-index:10;}
+  1%{opacity:1; z-index:100;}
+  50%{opacity:1; z-index:100;}
+  51%{opacity:0; z-index:10;}
+  100%{opacity:0; z-index:10;}
 }
 @keyframes MetaView{
-  50%{opacity:0;}
-  51%{opacity:1;}
-  99%{opacity:1;}
-  100%{opacity:0;}
+  50%{opacity:0; z-index:10;}
+  51%{opacity:1; z-index:100;}
+  99%{opacity:1; z-index:100;}
+  100%{opacity:0; z-index:10;}
 }
