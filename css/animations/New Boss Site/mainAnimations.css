@@ -1,0 +1,9 @@
+#XPDinamico{
+  animation:barExplore ease-in-out 0.3s;
+  animation-iteration-count:var(--UpTimes);
+}
+
+@keyframes barExplore{
+  0%{width:0%;}
+  100%{100%}
+}
