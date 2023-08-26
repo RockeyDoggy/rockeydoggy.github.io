@@ -4,7 +4,7 @@
 <script>
 const clientId = 'wmvc2pcoaa2g2cno4ldyackeh3l8t7';
 const redirectUri = 'https://rockeydoggy.github.io/testes.html';
-const scope = 'user:read:email user:read:follows';
+const scope = 'user:read:email';
 
 const loginButton = document.getElementById('login-button');
 const userInfo = document.getElementById('user-info');
@@ -26,8 +26,7 @@ if (accessToken) {
   .then(response => response.json())
   .then(data => {
     const user = data.data[0];
-    const follows = data.total;
-    userInfo.innerHTML = `Nome de usuário: ${user.login}<br/>Display Name: ${user.display_name}<br/>ID do Canal: ${follows > 0 ? followsData.data[0].to_id : 'Não segue nenhum canal'}`;
+    userInfo.innerHTML = `Nome de usuário: ${user.login}<br/>Display Name: ${user.display_name}<br/>ID do Canal: ${user.id}`;
   });
 }
 </script>
