@@ -26,6 +26,7 @@ if (accessToken) {
   .then(response => response.json())
   .then(data => {
     const user = data.data[0];
+    const follows = data.total;
     userInfo.innerHTML = `Nome de usuário: ${user.login}<br/>Display Name: ${user.display_name}<br/>ID do Canal: ${follows > 0 ? followsData.data[0].to_id : 'Não segue nenhum canal'}`;
   });
 }
