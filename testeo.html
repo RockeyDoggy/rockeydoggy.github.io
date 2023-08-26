@@ -8,7 +8,6 @@
   <div id="user-info"></div>
   <div id="chat"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/tmi.js"></script>
   <script>
     const clientId = 'aeokv71t4icy8xlltwctqyncyge315';
     const redirectUri = 'https://rockeydoggy.github.io/testeo.html';
@@ -17,6 +16,8 @@
     const loginButton = document.getElementById('login-button');
     const userInfo = document.getElementById('user-info');
     const chatDisplay = document.getElementById('chat');
+    
+    let chatWebSocket = null;
 
     loginButton.addEventListener('click', () => {
       window.location = `https://id.twitch.tv/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=token&scope=${scope}`;
@@ -38,23 +39,37 @@
         userInfo.innerHTML = `Nome de usuário: ${user.login}<br/>Display Name: ${user.display_name}<br/>ID do Canal: ${user.id}`;
         
         // Connect to Twitch Chat
-        const chatClient = new tmi.Client({
-          connection: {
-            secure: true,
-            reconnect: true
-          },
-          channels: [user.login] // Replace with the desired channel
+        chatWebSocket = new WebSocket('wss://irc-ws.chat.twitch.tv:443');
+        
+        chatWebSocket.addEventListener('open', () => {
+          chatWebSocket.send('PASS oauth:' + accessToken);
+          chatWebSocket.send('NICK ' + user.login);
+          chatWebSocket.send('JOIN #' + user.login);
         });
-
-        chatClient.connect().catch(console.error);
-
-        chatClient.on('message', (channel, userstate, message, self) => {
-          if (self) return;
-          chatDisplay.innerHTML += `<p><strong>${userstate['display-name']}:</strong> ${message}</p>`;
+        
+        chatWebSocket.addEventListener('message', event => {
+          const message = event.data;
+          const messageParts = message.split(' ');
+          if (messageParts[1] === 'PRIVMSG') {
+            const username = messageParts[0].split('!')[0].slice(1);
+            const channel = messageParts[2];
+            const chatMessage = message.substring(message.indexOf(':', 1) + 1);
+            if (channel === '#' + user.login) {
+              chatDisplay.innerHTML += `<p><strong>${username}:</strong> ${chatMessage}</p>`;
+            }
+          }
         });
       });
     }
+    
+    // Clean up the chatWebSocket connection when leaving the page
+    window.addEventListener('beforeunload', () => {
+      if (chatWebSocket !== null) {
+        chatWebSocket.close();
+      }
+    });
   </script>
 </body>
 </html>
+
 
