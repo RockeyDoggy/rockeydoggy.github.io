@@ -1,45 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Twitch Chat Example</title>
+  <title>Twitch Chat Reader</title>
 </head>
 <body>
-    <div id="messages"></div>
-    <script>
-        const clientId = 'aeokv71t4icy8xlltwctqyncyge315';
-        const channel = 'RockeyDoggy';
-        const accessToken = 'tk2y9uio5f58fq1tpm1hjg6nponmp7'; // Obtained after OAuth authorization
+  <button id="login-button">Autenticar na Twitch</button>
+  <div id="user-info"></div>
+  <div id="chat"></div>
 
-        const socket = new WebSocket('wss://irc-ws.chat.twitch.tv:443');
+  <script>
+    const clientId = 'wmvc2pcoaa2g2cno4ldyackeh3l8t7';
+    const redirectUri = 'https://rockeydoggy.github.io/testes.html';
+    const scope = 'user:read:email';
+
+    const loginButton = document.getElementById('login-button');
+    const userInfo = document.getElementById('user-info');
+    const chatDisplay = document.getElementById('chat');
+
+    loginButton.addEventListener('click', () => {
+      window.location = `https://id.twitch.tv/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=token&scope=${scope}`;
+    });
+
+    const params = new URLSearchParams(window.location.hash.substring(1));
+    const accessToken = params.get('access_token');
+
+    if (accessToken) {
+      fetch('https://api.twitch.tv/helix/users', {
+        headers: {
+          'Authorization': `Bearer ${accessToken}`,
+          'Client-Id': clientId
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        const user = data.data[0];
+        userInfo.innerHTML = `Nome de usuário: ${user.login}<br/>Display Name: ${user.display_name}<br/>ID do Canal: ${user.id}`;
         
-        socket.addEventListener('open', () => {
-            // Authenticate and join the channel's chat
-            socket.send(`PASS oauth:${accessToken}`);
-            socket.send(`NICK ${channel}`);
-            socket.send(`JOIN #${channel}`);
+        // Connect to Twitch Chat
+        const chatClient = new tmi.Client({
+          connection: {
+            secure: true,
+            reconnect: true
+          },
+          channels: [user.login] // Replace with the desired channel
         });
 
-        socket.addEventListener('message', event => {
-            const message = event.data;
-            // Parse message to identify point redemption messages
-            if (message.match(pointRedemptionRegex)) {
-                // Extract nick and message content
-                const [, nick, content] = message.match(/^:([^!]+).*PRIVMSG #[^ ]+ :(.+)$/);
-                
-                // Fetch user avatar using Twitch API or use a cached version
-                
-                // Display the message and user details in the HTML
-                const messagesDiv = document.getElementById('messages');
-                const messageDiv = document.createElement('div');
-                messageDiv.innerHTML = `
-                    <img src="USER_AVATAR_URL" alt="${nick}'s Avatar">
-                    <strong>${nick}:</strong> ${content}
-                `;
-                messagesDiv.appendChild(messageDiv);
-                
-                // Save the message and user details in your database or storage
-            }
+        chatClient.connect().catch(console.error);
+
+        chatClient.on('message', (channel, userstate, message, self) => {
+          if (self) return;
+          chatDisplay.innerHTML += `<p><strong>${userstate['display-name']}:</strong> ${message}</p>`;
         });
-    </script>
+      });
+    }
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/tmi.js"></script>
 </body>
 </html>
