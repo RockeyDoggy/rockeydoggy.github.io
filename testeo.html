@@ -1,52 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Exemplo de Interação com Twitch Chat</title>
+    <title>Twitch Chat Example</title>
 </head>
 <body>
-    <div id="chatMessages"></div>
-
+    <div id="messages"></div>
     <script>
-        // Informações da sua aplicação na Twitch
         const clientId = 'aeokv71t4icy8xlltwctqyncyge315';
-        const redirectUri = 'https://rockeydoggy.github.io/testeo.html'; // Por exemplo, http://localhost:3000
+        const channel = 'RockeyDoggy';
+        const accessToken = 'USER_ACCESS_TOKEN'; // Obtained after OAuth authorization
 
-        // Função para redirecionar para a página de autenticação da Twitch
-        function redirectToTwitchAuth() {
-            window.location.href = `https://id.twitch.tv/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=token`;
-        }
+        const socket = new WebSocket('wss://irc-ws.chat.twitch.tv:443');
+        
+        socket.addEventListener('open', () => {
+            // Authenticate and join the channel's chat
+            socket.send(`PASS oauth:${accessToken}`);
+            socket.send(`NICK ${channel}`);
+            socket.send(`JOIN #${channel}`);
+        });
 
-        // Função para obter mensagens do chat após autenticação
-        async function getChatMessages() {
-            const accessToken = window.location.hash.split('=')[1]; // Extrai o token da URL
-
-            if (!accessToken) {
-                redirectToTwitchAuth();
-                return;
+        socket.addEventListener('message', event => {
+            const message = event.data;
+            // Parse message to identify point redemption messages
+            if (/* Check if message is a point redemption */) {
+                // Extract nick and message content
+                const [, nick, content] = message.match(/^:([^!]+).*PRIVMSG #[^ ]+ :(.+)$/);
+                
+                // Fetch user avatar using Twitch API or use a cached version
+                
+                // Display the message and user details in the HTML
+                const messagesDiv = document.getElementById('messages');
+                const messageDiv = document.createElement('div');
+                messageDiv.innerHTML = `
+                    <img src="USER_AVATAR_URL" alt="${nick}'s Avatar">
+                    <strong>${nick}:</strong> ${content}
+                `;
+                messagesDiv.appendChild(messageDiv);
+                
+                // Save the message and user details in your database or storage
             }
-
-            const response = await fetch(`https://api.twitch.tv/...`, {
-                // Aqui você faria a solicitação à Twitch Chat API com o token de acesso
-                // Lembre-se de que a URL e os parâmetros precisam ser ajustados conforme a documentação da Twitch Chat API
-                headers: {
-                    'Client-ID': clientId,
-                    'Authorization': `Bearer ${accessToken}`
-                }
-            });
-
-            const data = await response.json();
-
-            // Atualizar a exibição das mensagens na página
-            const chatMessagesDiv = document.getElementById("chatMessages");
-            chatMessagesDiv.innerHTML = JSON.stringify(data, null, 2);
-        }
-
-        // Chamar a função para obter mensagens do chat ao carregar a página
-        getChatMessages();
+        });
     </script>
 </body>
 </html>
-
-
-
-
