@@ -26,7 +26,7 @@ if (accessToken) {
   .then(response => response.json())
   .then(data => {
     const user = data.data[0];
-    userInfo.innerHTML = `Nome de usuário: ${user.login}<br/>Display Name: ${user.display_name}<br/>ID do Canal: ${user.id}`;
+    userInfo.innerHTML = `Nome de usuário: ${user.login}<br/>Display Name: ${user.display_name}<br/>ID do Canal: ${user.access_token}`;
   });
 }
 </script>
