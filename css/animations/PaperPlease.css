@@ -1,0 +1,18 @@
+#BaseCarimbo{
+  animation-duration:0.8s;
+  animation-timing-function:linear;
+}
+
+@keyframes slideStampIn{
+  0%{}
+  35%{right:0;}
+  50%{right:-5vw;}
+  100%{right:0;}
+}
+@keyframes slideStampOut{
+  0%{right:0;}
+  30%{right:-41.5vw;}
+  50%{right:-39vw;}
+  70%{right:-40.2vw;}
+  100%{right:-40.2vw;}
+}
