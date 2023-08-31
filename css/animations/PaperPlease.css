@@ -1,6 +1,6 @@
 #BaseCarimbo{
   animation-duration:0.8s;
-  animation-timing-function:ease-in-out;
+  animation-timing-function:ease-in;
 }
 
 @keyframes slideStampIn{
