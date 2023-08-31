@@ -7,7 +7,7 @@
   0%{}
   30%{right:0;}
   45%{right:-5vw;}
-  90%{right:0;}
+/*   90%{right:0;} */
   100%{right:0;}
 }
 @keyframes slideStampOut{
