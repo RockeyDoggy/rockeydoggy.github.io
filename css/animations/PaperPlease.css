@@ -6,7 +6,7 @@
 @keyframes slideStampIn{
   0%{}
   30%{right:0;}
-  45%{right:-5vw;}
+  45%{right:-4vw;}
 /*   90%{right:0;} */
   100%{right:0;}
 }
