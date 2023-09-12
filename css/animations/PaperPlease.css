@@ -3,6 +3,11 @@
   animation-timing-function:ease-in;
 }
 
+#gaveta{
+  animation-duration:1s;
+  animation-timing-function:ease-in;
+}
+
 @keyframes slideStampIn{
   0%{}
   30%{right:0;}
@@ -16,4 +21,25 @@
   45%{right:-39vw;}
   65%{right:-40.2vw;}
   100%{right:-40.2vw;}
+}
+
+
+
+@keyframes gavetaAbre{
+  0%{}
+  20%{bottom:-30vw;}
+  30%{bottom:-31vw;}
+  40%{bottom:-30.5vw;}
+  60%{bottom:0;}
+  70%{bottom:-5vw;}
+  100%{bottom:0vw;}
+}
+
+@keyframes gavetaFecha{
+  0%{bottom:0vw;}
+  20%{bottom:-33.5vw;}
+  30%{bottom:-32vw;}
+  40%{bottom:-30.5vw;}
+  70%{bottom:-33.5vw;}
+  100%{bottom:-33.5vw;}
 }
