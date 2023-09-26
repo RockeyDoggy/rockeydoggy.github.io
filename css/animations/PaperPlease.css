@@ -9,11 +9,11 @@
 }
 
 #PassDrop{
-  animation:passIn ease-in-out 1s;
+/*   animation:passIn ease-in-out 1s; */
 }
 
 #DocDrop{
-  animation:docIn ease-in-out 1s;
+/*   animation:docIn ease-in-out 1s; */
 }
 
 @keyframes slideStampIn{
