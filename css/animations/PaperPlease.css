@@ -8,6 +8,14 @@
   animation-timing-function:ease-in;
 }
 
+#PassDrop{
+  animation:passIn ease-in-out 1s;
+}
+
+#DocDrop{
+  animation:docIn ease-in-out 1s;
+}
+
 @keyframes slideStampIn{
   0%{}
   30%{right:0;}
@@ -42,4 +50,14 @@
   40%{top:-27.5vw;}
   70%{top:-28.8vw;}
   100%{top:-28.8vw;}
+}
+
+
+@keyframes passIn{
+  0%{bottom:-100%;}
+  100%{bottom:110%;}
+}
+@keyframes docIn{
+  0%{bottom:-100%;}
+  100%{bottom:110%;}
 }
