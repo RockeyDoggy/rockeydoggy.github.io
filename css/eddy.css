@@ -922,6 +922,7 @@ body{
   cursor:pointer;
   user-select:none;
   poiter-events:var(--BTNFalse, auto);
+  display:var(--LoginActivated, flex);
   transition:ease-in-out 0.3s all;
 }
 #login input{
