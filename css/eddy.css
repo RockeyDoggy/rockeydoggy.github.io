@@ -1,0 +1,1053 @@
+@font-face{
+  font-family:BMmini;
+  src:url(https://rockeydoggy.github.io/cssfonts/pixel/BMmini.TTF);
+}
+@font-face{
+  font-family:PassportPixel;
+  src:url(https://rockeydoggy.github.io/cssfonts/pixel/uni05_53.ttf);
+}
+@font-face{
+  font-family:EnterCommand;
+  src:url(https://rockeydoggy.github.io/cssfonts/pixel/EnterCommand.ttf);
+}
+@font-face{
+  font-family:"ModernDos 16";
+  src:url(https://rockeydoggy.github.io/cssfonts/pixel/ModernDOS9x16.ttf);
+}
+@font-face{
+  font-family:"ModernDos 8";
+  src:url(https://rockeydoggy.github.io/cssfonts/pixel/ModernDOS8x8.ttf);
+}
+@font-face{
+  font-family:'scriptBit';
+  src:url(https://rockeydoggy.github.io/cssfonts/pixelated/Minecraftia-Regular.ttf)
+}
+@font-face{
+  font-family:'Military1';
+  src:url(https://rockeydoggy.github.io/cssfonts/Rustic/ARMY%20RUST.ttf);
+}
+
+body{
+  overflow:hidden;
+  background:#080808;
+  padding:0;
+  margin:0;
+}
+#table{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-image:url(https://i.imgur.com/ZRRCViP.png);
+  background-size:60% auto;
+  background-color:#10100E;
+}
+
+#book{
+  width:60vw;
+  height:40vw;
+  margin:0;
+  padding:1vw 0 0 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:relative;
+  background-image:url(https://i.imgur.com/Ajx32zu.png);
+  image-rendering: pixelated;
+  background-size:100% auto;
+  background-repeat:no-repeat;
+  background-position:center;
+/*   border:solid 2px #F95; */
+  box-sizing:border-box;
+  user-select:none;
+}
+
+/****************************
+|||||||LADO ESQUERDO|||||||||
+****************************/
+#RightSide{
+  width:42%;
+  height:95%;
+  position:relative;
+  margin:0 0% 0 4%;
+/*   display: flex; */
+/*   flex-direction: column; */
+/*   background:#A1A199; */
+/*   border:dashed 2px #95F; */
+  box-sizing:border-box;
+  display:var(--Page1);
+}
+#RightSide input::selection{
+  background:#FF1;
+  color:#311D;
+}
+
+#RightSide > div:nth-child(2){
+  width:30%;
+  float:left;
+  margin:0 0 0 1%;
+}
+
+#RightSide > div:nth-child(3){
+  width:65%;
+  float:right;
+  margin:0 0 0 1%;
+}
+#RightSide > div:nth-child(4){
+  width:100%;
+  float:left;
+}
+#RightSide > div:nth-child(5){
+  width:96%;
+  height:45%;
+  margin:5% 1% 0;
+  float:left;
+  border:solid 1px #977;
+  border-radius:0.3vw;
+/*   display:flex;
+  align-items:center;
+  justify-content:center; */
+}
+#RightSide div:nth-child(5) span{
+  font-weight:bold;
+  font-size:2vw;
+  color:#7795;
+}
+
+#RightSide div{
+  font-family:EnterCommand;
+  font-weight:lighter;
+/*   border:dotted 1px #48F; */
+}
+#RightSide div h2{
+  margin:0vw 0 0.2vw;
+  float:right;
+  border-radius:0.5vw;
+  font-size:2.3vw;
+  color:#433B;
+  font-weight:bold;
+  text-align:right;
+}
+#RightSide h1{
+  width:100%;
+/*   display:block; */
+  float:left;
+  margin:0 0 1vw;
+/*   border:dashed 1px #489; */
+  font-size:3vw;
+  font-family:EnterCommand;
+  font-weight:bold;
+  color:#3115;
+  text-align:center;
+}
+
+#RightSide div h2::after{
+  content:'.';
+  position:absolute;
+  margin:-1.13vw 0vw 0vw 0.2vw;
+  font-size:4vw;
+}
+#RightSide div span{
+  position:relative;
+  top:0.8vw;
+  padding:0.2vw;
+  margin:0 0vw 0 1vw;
+  background-color:#e4e7bc;
+  color:#877;
+  font-weight:bold;
+  font-size:2vw;
+  text-align:left;
+}
+
+#RightSide input{
+  width:100%;
+  height:1.9vw;
+  margin:0vw 0 0.5vw;
+  padding:0.25vw 0 0;
+  background:none;
+  border:none;
+  border-bottom:solid 0.1vw #977;
+  box-sizing:border-box;
+  color:#4228;
+  font-family:EnterCommand;
+  font-weight:lighter;
+  font-size:2.3vw;
+}
+#RightSide input:focus{
+  outline:none;
+}
+
+#RightSide input:nth-child(1){
+/*   margin-top:0.48vw; */
+}
+#RightSide div:nth-child(4) input{
+  width:98%;
+  height:3vw;
+  padding:1.3vw 0.3vw 0;
+  margin:0vw 0.2vw 0;
+  border:solid 0.13vw #977;
+  border-radius:0.2vw;
+  font-size:1.7vw;
+}
+
+#RightSide textarea{
+  width:100%;
+  height:100%;
+  border:none;
+/*   background:linear-gradient(0deg, #A1A199 95%, #505090); */
+  background-color:#0000;
+  background-size:auto 2.16vw;
+  color:#422;
+  font-family:PassportPixel;
+  font-size:1.56vw;
+  font-weight:lighter;
+}
+#RightSide textarea::-webkit-scrollbar{
+  width:0.3vw;
+  background:#AAA;
+}
+#RightSide textarea::-webkit-scrollbar-thumb{
+  background:#000;
+}
+.PassportList h4{
+  position:absolute;
+  top:-4%;
+  left:5%;
+  margin:0;
+  padding:0 0.6vw;
+  background-color:#e4e7bc;
+  font-size:1.8vw;
+  font-weight:lighter;
+  font-family:'PassportPixel';
+  line-height:1vw;
+/*   letter-spacing:-0.15vw; */
+  color:#2217;
+}
+
+.PassportList{
+  position:relative;
+}
+
+.PassportList div{
+  width:21%;
+  height:40%;
+  margin:4% 0vw 0 0.5vw;
+  display:inline-flex;
+  position:relative;
+  align-items:center;
+/*   border:dotted 1px #D48; */
+  background-size:100% auto;
+  background-position:top left;
+  background-repeat:no-repeat;
+  filter:saturate(30%) sepia(60%) opacity(0.6);
+  cursor:pointer;
+}
+.PassportList div > div{
+  width:55%;
+  height:55%;
+  position:absolute;
+  top:35%;
+  left:25%;
+  image-rendering: pixelated;
+/*   transform:rotate(-25deg); */
+  background-image:url(https://i.imgur.com/R0RaCfO.png);
+  background-size:100% auto;
+  background-repeat:no-repeat;
+  background-position:center center;
+/*   mix-blend-mode:multiply; */
+  filter:saturate(100%) /*hue-rotate(260deg)*/;
+  pointer-events:none;
+  opacity:0;
+}
+
+.sele{
+  filter:saturate(100%) contrast(100%) !important;
+}
+.sele > div{
+  opacity:0.8 !important;
+}
+/***********************************
+|||||||||||Paper Form|||||||||||||||
+************************************/
+#FormPaper{
+  width:124%;
+  height:113%;
+  position:absolute;
+  right:0;
+  top:-7%;
+/*   border:dashed 1px #812; */
+/*   background-image:url(https://i.imgur.com/zLiqFMZ.png); */
+  background-image:url(https://i.imgur.com/xNg813B.png);
+  background-size:100% auto;
+  background-repeat:no-repeat;
+  background-position:center top;
+}
+
+/***********************************
+|||||||||||LADO DIREITO|||||||||||||
+***********************************/
+#LeftSide{
+  width:43%;
+  height:97%;
+  margin:0% 4% 1.4% 0;
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+/*   background:#9002; */
+/*   border:dashed 1px #5F9; */
+  box-sizing:border-box;
+  font-size:2.5vw;
+  display:var(--Page1);
+}
+
+#LeftSide > button:nth-of-type(1){
+  position:absolute;
+  top:1vw;
+  right:1vw;
+  border:none;
+  padding:0 0.8vw;
+  background:none;
+  letter-spacing:0.1vw;
+  color:#e4e7bc;
+  font-family:EnterCommand;
+  font-size:2.5vw;
+  font-weight:bold;
+  z-index:5;
+  cursor:pointer;
+}
+#LeftSide > button:nth-of-type(1)::before{
+  content:'';
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background:url(https://i.imgur.com/WzC2isE.png) center center;
+  background-size:1900% 1900%;
+  background-repeat:no-repeat;
+  filter:sepia(100%) brightness(30%) contrast(150%) opacity(0.7);
+  z-index:-1;
+}
+
+#PassCountry{
+  width:100%;
+  height:30%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+/*   position:absolute; */
+/*   border:dashed 1px #5FF; */
+  box-sizing:border-box;
+  font-family:Impact;
+  color:#CCA;
+}
+
+/*************************************
+||||||||||PASSPORT PREVIEW||||||||||||
+**************************************/
+#PassPreview{
+  width:100%;
+  height:100%;
+  display:flex;
+  margin:1vw 0 0vw 0;
+  align-items:center;
+  justify-content:center;
+/*   border:dashed 1px #F2F; */
+  box-sizing:border-box;
+  font-family:Impact;
+  color:#CCA;
+}
+
+#PassPreview > div{
+  width:20vw;
+  height:25vw;
+  position:relative;
+  image-rendering: pixelated;
+  transform:rotate(-2deg);
+  box-shadow:0.15vw 0.15vw 0.01vw #0005;
+  background-color:var(--PassPreviewColor, #314d21);
+  background-size:96% auto;
+  background-repeat:no-repeat;
+  background-position:center center;
+  filter:saturate(95%) sepia(30%);
+}
+
+/**************PASSPORT DEFAULTS***************/
+#PassPreview > div > div:nth-child(1){
+  width:6.2vw;
+  height:7.5vw;
+  position:absolute;
+  background-image:var(--PassAvatar);
+  background-color:#b4a091;
+/*   border:solid 1px #489; */
+  background-size: auto 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  mix-blend-mode:lighten;
+  filter:saturate(0%) contrast(300%) brightness(125%) sepia(100%) hue-rotate(5deg) contrast(90%) saturate(130%);
+}
+
+#PassPreview > div > div:nth-child(2){
+  width:43%;
+  position:absolute;
+/*   border:dotted 1px #12F; */
+}
+#PassPreview > div > div:nth-child(2) input{
+  padding:0;
+  margin:0;
+  background:none;
+  border:none;
+/*   border-bottom:solid 0.1vw #422; */
+  font-size:1.1vw;
+  color:#100B;
+  font-family:PassportPixel;
+}
+#PassPreview > div > div:nth-child(2) input:nth-child(-n+4){
+  width:100%;
+  display:block;
+}
+#PassPreview > div > div:nth-child(2) input:nth-child(5){
+  width:199%;
+  position:absolute;
+  font-size:1vw;
+}
+
+/*******************************
+||||||Passaportes Classes|||||||
+*******************************/
+.Antegria{
+  background-image:url(https://i.imgur.com/8SnGne2.png);
+  background-color:#314d21;
+}
+.Antegria div:nth-child(1){
+  right:5%;
+  bottom:15.5%;
+}
+.Antegria div:nth-child(2){
+  top:61.6%;
+  left:20.5%;
+}
+.Antegria div:nth-child(2) input{
+  height:1.4vw;
+}
+.Antegria > div:nth-child(2) input:nth-child(5){
+  left:-31%;
+  bottom:-31%;
+}
+
+.Arstotzka{
+  background-image:url(https://i.imgur.com/rq9bvHG.png);
+  background-color:#3b483b;
+}
+.Arstotzka div:nth-child(1){
+  left:5.2%;
+  bottom:9.6%;
+}
+.Arstotzka div:nth-child(2){
+  top:59.8%;
+  right:3.8%;
+}
+.Arstotzka div:nth-child(2) input{
+  height:1.27vw;
+}
+.Arstotzka > div:nth-child(2) input:nth-child(5){
+  left:-108.5%;
+  top:-29.8%;
+}
+
+.Impor{
+  background-image:url(https://i.imgur.com/7JStF27.png);
+  background-color:#661f09;
+}
+.Impor div:nth-child(1){
+  left:6.2%;
+  bottom:10.6%;
+}
+.Impor div:nth-child(2){
+  width:41% !important;
+  top:59.2%;
+  right:4.1%;
+}
+.Impor div:nth-child(2) input{
+  letter-spacing:-0.05vw;
+}
+.Impor div:nth-child(2) input{
+  height:1.27vw;
+}
+.Impor > div:nth-child(2) input:nth-child(5){
+  left:-117%;
+  top:-33%;
+}
+
+.Kolechia{
+  background-image:url(https://i.imgur.com/kgzgedU.png);
+  background-color:#55253f;
+}
+.Kolechia div:nth-child(1){
+  left:5.4%;
+  bottom:3.8%;
+}
+.Kolechia div:nth-child(2){
+  top:65%;
+  right:3%;
+}
+.Kolechia div:nth-child(2) input{
+  height:1.27vw;
+}
+.Kolechia > div:nth-child(2) input:nth-child(5){
+  left:-111%;
+  top:-26%;
+}
+
+.Obristan{
+  background-image:url(https://i.imgur.com/qtWnPYv.png);
+  background-color:#8a0c0c;
+}
+.Obristan div:nth-child(1){
+  height:7.6vw !important;
+  right:4.2%;
+  bottom:4.1%;
+}
+.Obristan div:nth-child(2){
+  top:67.5%;
+  left:21.5%;
+}
+.Obristan div:nth-child(2) input{
+  height:1.27vw;
+}
+.Obristan > div:nth-child(2) input:nth-child(5){
+  left:-36%;
+  top:-38%;
+}
+
+.Republica{
+  background-image:url(https://i.imgur.com/SaXPEVe.png);
+  background-color:#4c2a1b;
+}
+.Republica div:nth-child(1){
+  right:3.5%;
+  bottom:10.5%;
+}
+.Republica div:nth-child(2){
+  top:59.3%;
+  left:21.1%;
+}
+.Republica div:nth-child(2) input{
+  height:1.27vw;
+}
+.Republica > div:nth-child(2) input:nth-child(5){
+  left:-33%;
+  top:-31%;
+}
+
+.UnitedFed{
+  background-image:url(https://i.imgur.com/0cjz1jO.png);
+  background-color:#231e55;
+}
+.UnitedFed div:nth-child(1){
+  left:5.4%;
+  bottom:4.2%;
+}
+.UnitedFed div:nth-child(2){
+  top:64.8%;
+  right:2.1%;
+}
+.UnitedFed div:nth-child(2) input{
+  height:1.24vw;
+}
+.UnitedFed > div:nth-child(2) input:nth-child(5){
+  left:-111%;
+  top:-26%;
+}
+
+.Pezpert{
+  background-image:url(https://i.imgur.com/8SnGne2.png);
+  background-color:#8a0c0c;
+}
+.Pezpert div:nth-child(1){
+  right:5%;
+  bottom:15.5%;
+}
+.Pezpert div:nth-child(2){
+  top:61.8%;
+  left:20.5%;
+}
+.Pezpert div:nth-child(2) input{
+  height:1.4vw;
+}
+.Pezpert > div:nth-child(2) input:nth-child(5){
+  left:-32%;
+  bottom:-30%;
+}
+
+#PageMarksR{
+  right:-1.2%;
+}
+#PageMarksR div{
+  left:var(--HorMarkPos);
+  border-radius:0vw 0.5vw 0.5vw 0;
+  box-shadow:0.2vw 0.15vw 1px #0005;
+  background:#e4e7bc;
+}
+#PageMarksR div h4{
+  transform:rotate(90deg);
+  color:#3215;
+}
+
+#PageMarksL{
+  left:-1.2%;
+}
+#PageMarksL div{
+  right:calc(var(--HorMarkPos) + 5%);
+  border-radius:0.5vw 0vw 0vw 0.5vw;
+  box-shadow:-0.2vw 0.1vw 1px #0005;
+  background:#594743;
+}
+#PageMarksL div h4{
+  transform:rotate(-90deg);
+  color:#e4e7bca1;
+}
+.marks{
+  width:5.2%;
+  height:98%;
+  position:absolute;
+  top:0%;
+  display: flex;
+  flex-direction: column;
+/*   border:dotted 1px #F8F; */
+}
+.marks div{
+  width:70%;
+  min-height:17%;
+  position:absolute;
+  margin:1vw 0 0 0;
+  padding:0 0vw;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+.marks div h4{
+  margin:0;
+  padding:0;
+  line-height:0.5vw;
+  font-family:EnterCommand;
+  letter-spacing:0.1vw;
+  font-size:2.2vw;
+  font-weight:bold;
+  text-align:center;
+}
+
+/*||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||PAGINA 2||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||*/
+
+#RightSide2{
+  width:42%;
+  height:95%;
+  position:relative;
+  margin:0 0% 0 4%;
+/*   border:dashed 2px #95F; */
+  box-sizing:border-box;
+  display:var(--Page2, none);
+}
+#LeftSide2{
+  width:43%;
+  height:97%;
+  margin:0% 4% 1.4% 0;
+  position:relative;
+  display: flex;
+/*   flex-direction: column; */
+  justify-content:center;
+  align-items:center;
+/*   border:dashed 1px #5F9; */
+  box-sizing:border-box;
+  display:var(--Page2, none);
+  font-size:2.5vw;
+  font-family:Impact;
+  color:#0005;
+}
+#PassPreview > div:nth-child(1){
+/*   background:#58F; */
+}
+
+#LeftSide2 > button:nth-of-type(1){
+  position:absolute;
+  bottom:2%;
+  right:5%;
+  background:none;
+  border:none;
+  font-family:EnterCommand;
+  font-size:2.5vw;
+  letter-spacing:0.1vw;
+  color:#e4e7bc;
+  font-weight:bold;
+  z-index:20;
+  cursor:pointer;
+}
+#LeftSide2 > button:nth-of-type(1)::before{
+  content:' ';
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background:url(https://i.imgur.com/WzC2isE.png) center center;
+  background-size:1900% 1900%;
+  background-repeat:no-repeat;
+  filter:sepia(100%) brightness(30%) contrast(150%) opacity(0.7);
+  z-index:-1;
+}
+
+/*/////////Right Side//////////*/
+#RightSide2 > div{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:flex-start;
+}
+
+#RightSide2 h1{
+  width:90%;
+  margin:0;
+  font-family:'EnterCommand';
+/*   font-weight:lighter; */
+  font-size:3vw;
+  text-align:center;
+  color:#3326;
+}
+
+#RightSide2 > div > textarea{
+  width:98%;
+  height:100%;
+  margin:0 0% 0 2%;
+  position:relative;
+  overflow:hidden;
+  background:none;
+  border:none;
+  font-family:'EnterCommand';
+  font-size:1.7vw;
+/*   line-height:1.7vw; */
+  font-weight:lighter;
+  color:#4318;
+  resize: none;
+  z-index:10;
+}
+#RightSide2 > div > textarea:focus{
+  outline:none;
+  color:#431E;
+}
+#RightSide2 > div > textarea::selection{
+  background:#FF2;
+  color:#431;
+}
+#RightSide2 > div > div{
+  width:100%;
+  height:100%;
+  position:absolute;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:none;
+  z-index:5;
+  font-family:PassportPixel;
+  font-weight:bold;
+  font-size:2.2vw;
+  color:#40301015;
+}
+
+/*Pagina 2 Direita*/
+#LeftSide2 > div{
+  width:100%;
+  height:100%;
+/*   border:solid 1px #F52; */
+  display:flex;
+  justify-content:center;
+}
+#LeftSide2 > div > div{
+  width:22vw;
+  height:29vw;
+  display:flex;
+  margin:6% 0 0 0;
+  transform:rotate(1.5deg);
+  justify-content:center;
+  align-items:flex-start;
+/*   border:dotted 1px #F814; */
+  image-rendering: pixelated;
+  background-image:url(https://i.imgur.com/YApWkCh.png);
+  background-size:99% auto;
+  background-repeat:no-repeat;
+  background-position:center center;
+}
+
+#LeftSide2 > div > div > div{
+  width:82%;
+  max-height:80%;
+  margin:15% 0 0 0;
+  overflow:hidden;
+/*   border:1px solid #429; */
+  line-height:1.01vw;
+  overflow-wrap: break-word;
+  font-family:EnterCommand;
+  font-weight:lighter;
+  font-size:1.35vw;
+  color:#533A;
+}
+
+/***********************************
+||||||||||Rules Pages|||||||||||||||
+***********************************/
+#RightSide0{
+  width:42.5%;
+  height:97.5%;
+  margin:0 0% 2% 4%;
+  display:var(--rulesView, none);
+/*   border:solid 1px #F86; */
+}
+#LeftSide0{
+  width:42%;
+  height:97.5%;
+  margin:0% 4% 2% 0%;
+  display:var(--rulesView, none);
+/*   border:solid 1px #98F; */
+}
+
+/********************************
+|||||||||PAGINA DE REGRAS|||||||||
+*********************************/
+#RightSide0 h1, #LeftSide0 h1{
+  margin:1.3vw 0 1vw;
+  font-family:BMmini;
+  font-weight:bold;
+  font-size:1.8vw;
+  text-align:center;
+  color:#5335;
+}
+#RightSide0{
+  
+}
+#LeftSide0{
+  
+}
+
+.RuleBox{
+  width:91%;
+  height:3em;
+  overflow:hidden;
+  position:relative;
+/*   background:#5555; */
+  margin:4% 0 0 0vw;
+  padding:0 0% 0 9%;
+  font-family:EnterCommand;
+  font-size:1.9vw;
+  font-weight:100;
+  color:#4229;
+}
+.RuleBox::before{
+  content:'';
+  width:3%;
+  height:100%;
+  position:absolute;
+  left:4%;
+  background:#4225;
+}
+
+/*******************************
+|||||||||NEXT/PREV PAGE|||||||||
+*******************************/
+.BookEars{
+  width:2vw;
+  height:2vw;
+  position:absolute;
+  image-rendering: pixelated;
+  cursor:pointer;
+  z-index:20;
+}
+#NextPage{
+  bottom:2.6%;
+  right:4%;
+  background-image:url(https://i.imgur.com/qJGkgWC.png);
+  background-size:100% auto;
+  display:var(--WhosNext);
+}
+#PrevPage{
+  bottom:2.6%;
+  left:4%;
+  background-image:url(https://i.imgur.com/IUCw79u.png);
+  background-size:100% auto;
+  display:var(--WhosPrev, none);
+}
+
+
+/********************************
+||||||||||||THE GATES||||||||||||
+********************************/
+#gates{
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  position:fixed;
+  display:var(--TrapClickStatus, flex);
+  align-items:center;
+  justify-content:center;
+  backdrop-filter:var(--TrapClickStyle, blur(0.3vw) contrast(110%) brightness(40%));
+  opacity:var(--TrapClickVisibility);
+  transition:opacity 0.3s 1.6s ease-in-out, backdrop-filter 0.3s 0.4s ease-in-out;
+}
+
+#TheGate{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:var(--GateStatus, 0);
+  left:0;
+  background-image:url(https://i.imgur.com/2TusMbt.png);
+  background-size:auto 100%;
+  background-position:center top;
+  image-rendering:pixelated;
+  filter:var(--GateStyle, blur(0.8vw) drop-shadow(1.5vw 1.5vw 1vw #000A));
+  transition:top 0.4s 1.2s ease-in, filter 0.3s 0.4s ease-in-out;
+}
+
+#login{
+  position:absolute;
+  z-index:;
+  cursor:pointer;
+  user-select:none;
+  transition:ease-in-out 0.3s all;
+}
+#login input{
+  border:none;
+  border-radius:0.5vw;
+  box-shadow:inset 0vw 0vw 0.5vw #000;
+  padding:0vw 0 0.23vw 0vw;
+  text-align:center;
+  font-family:"PassportPixel";
+  font-size:2vw;
+  color:#A9F;
+  opacity:var(--LoginInp, 1);
+  poiter-events:var(--InpFalse, auto);
+  transition:opacity 0.2s 0.2s ease-in-out;
+}
+#login input:focus{
+  outline:none;
+}
+#login button{
+  position:relative;
+  padding:0vw 2vw 0.3vw 4.5vw;
+  border:none;
+  border-radius:0.4vw;
+  background-color:#a970ff;
+  font-size:1.9vw;
+  font-family:"PassportPixel";
+  color:#FFF;
+  text-shadow:/*-0.08vw -0.08vw 0vw #000,*/ 0.08vw 0.08vw 0vw #528;
+  cursor:pointer;
+  opacity:var(--LoginBTN, 1);
+  poiter-events:var(--BTNFalse, auto);
+  transition:opacity 0.2s ease-in-out;
+}
+#login button:before{
+  content: ' ';
+  width:3.8vw;
+  height:100%;
+  position:absolute;
+  left:0;
+  border-radius:0.5vw 0vw 0vw 0.5vw;
+  background-color:#FFF4;
+  background-image:url(https://i.imgur.com/DkLJvBv.png);
+  background-size:auto 75%;
+  background-position:center center;
+  background-repeat:no-repeat;
+  color:#0000;
+  filter:invert(100%);
+}
+
+
+#model1{
+  width:25vw;
+  height:15vw;
+  padding:1vw 0 0;
+  position:relative;
+  background-image:url(https://i.imgur.com/WK4u6nO.png);
+  background-size:100% auto;
+  background-position:center center;
+  background-repeat:no-repeat;
+  color:#FFFB;
+  font-family:Courier New;
+  display:;
+}
+#model1 h1{
+  margin:2vw 0 0;
+  font-size:2.5vw;
+  text-align:center;
+}
+#model1 h2{
+  margin:1.9vw 0 0;
+  font-size:1.1vw;
+  text-align:center;
+  font-weight:lighter;
+}
+#model1 p{
+  width:100%;
+  position:absolute;
+  bottom:1vw;
+  margin:0;
+  text-align:center;
+  font-size:3vw;
+  font-family:Military1;
+  font-weight:lighter;
+}
+
+
+#model2{
+  width:30vw;
+  height:10vw;
+  padding:1vw 0 0;
+  position:relative;
+  background-image:url(https://i.imgur.com/ibIeVA3.png);
+  background-size:100% auto;
+  background-position:center center;
+  background-repeat:no-repeat;
+  color:#000C;
+  font-family:Courier New;
+  display:none;
+}
+#model2 h1{
+  width:70%;
+  margin:10% 0 0;
+  font-size:2.5vw;
+  text-align:center;
+}
+#model2 h2{
+  width:65%;
+  margin:0vw 0% 0 3%;
+  font-size:1.1vw;
+  text-align:center;
+  font-weight:lighter;
+}
+#model2 p{
+  position:absolute;
+  bottom:;
+  left:75%;
+  top:38%;
+  margin:0;
+  text-align:center;
+  font-size:3vw;
+  font-family:Military1;
+  font-weight:lighter;
+  color:#FFFA;
+}
+
+#RightSide2 div:nth-child(1) textarea{
+}
+
+#LeftSide2 > div:nth-child(1) > div:nth-child(1) > div{
+}
