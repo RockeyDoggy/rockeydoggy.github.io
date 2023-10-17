@@ -982,7 +982,7 @@ body{
   background-repeat:no-repeat;
   color:#FFFB;
   font-family:Courier New;
-  display:;
+  display:none;
 }
 #model1 h1{
   margin:2vw 0 0;
@@ -1018,7 +1018,7 @@ body{
   background-repeat:no-repeat;
   color:#000C;
   font-family:Courier New;
-  display:none;
+  display:;
 }
 #model2 h1{
   width:70%;
