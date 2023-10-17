@@ -467,6 +467,7 @@ function closeGate(){
   setTimeout(()=>{
     document.documentElement.style.setProperty('--BTNFalse', 'none');
     document.documentElement.style.setProperty('--InpFalse', 'none');
+    document.documentElement.style.setProperty('--LoginActivated', 'none');
     document.documentElement.style.setProperty('--LoginBTN', '0');
     document.documentElement.style.setProperty('--LoginInp', '0');
     document.documentElement.style.setProperty('--GateStyle', '');
