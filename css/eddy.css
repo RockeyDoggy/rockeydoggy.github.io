@@ -921,6 +921,7 @@ body{
   z-index:;
   cursor:pointer;
   user-select:none;
+  poiter-events:var(--BTNFalse, auto);
   transition:ease-in-out 0.3s all;
 }
 #login input{
@@ -1020,7 +1021,6 @@ body{
   background-repeat:no-repeat;
   color:#000C;
   font-family:Courier New;
-  display:;
   opacity:var(--LoginBTN, 1);
   poiter-events:var(--BTNFalse, auto);
 }
