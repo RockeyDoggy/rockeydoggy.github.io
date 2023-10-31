@@ -21,13 +21,16 @@ const getRules  = documento.collection('ArtotzkaDatas');
 ///////////////////////////////////////////
 let userLoggedNow;
 let userAvatar;
+let newAvatar;
 let caminho;
-let registred;
+let registred = 0;
 let passCountry;
 let nationSelect;
+let needaPaper = 0;
+let giftIs = '';
 
 const clientId = 'vc9m669jig0ibshss8l25dj7bzv0n3';
-const redirectUri = 'https://rockeydoggy.github.io/eddy';
+const redirectUri = 'https://codepen.io/pen/debug/abPYMKw';
 const scope = 'user:read:email';
 const userInfo = document.getElementById('user-info');
 
@@ -57,9 +60,10 @@ if (accessToken) {
 ////////////////////////////////////////////
 /////Lista De Paginas/////////
 const pagesInfo = [
+  {nome: 'Presente', numero: 3, abrev: "GIFT", top: '49%', left:'16%'},
   {nome: 'Documentação', numero: 2, abrev: "DOC", top: '35%', left:'9%'},
   {nome: 'Registro De Passaporte', numero: 1, abrev: "PASS", top: '20%', left:'0%'},
-  {nome: 'Regras', numero: 0, abrev: "RULE", top: '2%', left:'8%'}
+  {nome: 'Regras', numero: 0, abrev: "RULES", top: '2%', left:'3%'}
 ]
 
 //////Lista de Passaporte////////
@@ -158,11 +162,11 @@ function PASS(){
   // origInp.placeholder  = 'Origem';
   // info4Inp.placeholder = 'Informação 4';
   // extraInp.placeholder = 'Informação Extra';
-  nameDesc  .innerHTML = 'NOME';
+  nameDesc  .innerHTML = 'INFO1';
   sexDesc   .innerHTML = 'GENERO';
   origDesc  .innerHTML = 'ORIGEM';
   info4Desc .innerHTML = 'INFO4';
-  extraInfo .innerHTML = 'ExtraInfo'
+  extraInfo .innerHTML = 'NOME COMPLETO'
   docDesc   .innerHTML = 'DocInfo';
   passDesc  .innerHTML = 'List Passport Country Style'
   pageTitle .innerHTML = 'Registro de Passaporte';
@@ -254,6 +258,7 @@ function pageCount(){
     }
     marks.addEventListener('click', ()=>{
       pagIs      = PageList.numero;
+      console.log(PageList.numero)
       actualPage = PageList.abrev;
       pagesNavigation();
       pageCount();
@@ -266,9 +271,10 @@ function pagesNavigation(){
     document.documentElement.style.setProperty('--rulesView', 'block');
     document.documentElement.style.setProperty('--Page1', 'none');
     document.documentElement.style.setProperty('--Page2', 'none');
+    document.documentElement.style.setProperty('--Page3', 'none');
     pagesInfo[0].left = '20%';
     pagesInfo[1].left = '15%';
-    // pagesInfo[2].left = '0%';
+    pagesInfo[2].left = '9%';
     document.documentElement.style.setProperty('--WhosNext', 'none');
     document.documentElement.style.setProperty('--WhosPrev', 'none');
   }
@@ -276,9 +282,11 @@ function pagesNavigation(){
     document.documentElement.style.setProperty('--rulesView', 'none');
     document.documentElement.style.setProperty('--Page1', '');
     document.documentElement.style.setProperty('--Page2', 'none');
-    pagesInfo[0].left = '9%';
-    // pagesInfo[1].left = '15%';
-    pagesInfo[2].left = '8%';
+    document.documentElement.style.setProperty('--Page3', 'none');
+    pagesInfo[0].left = '16%';
+    pagesInfo[1].left = '9%';
+    pagesInfo[2].left = '10%';
+    pagesInfo[3].left = '3%';
     document.documentElement.style.setProperty('--WhosNext', 'block');
     document.documentElement.style.setProperty('--WhosPrev', 'none');
   }
@@ -286,9 +294,23 @@ function pagesNavigation(){
     document.documentElement.style.setProperty('--rulesView', 'none');
     document.documentElement.style.setProperty('--Page1', 'none');
     document.documentElement.style.setProperty('--Page2', 'flex');
-    // pagesInfo[0].left = '20%';
-    pagesInfo[1].left = '2%';
-    pagesInfo[2].left = '16%';
+    document.documentElement.style.setProperty('--Page3', 'none');
+    pagesInfo[0].left = '8%';
+    pagesInfo[1].left = '6%';
+    pagesInfo[2].left = '0%';
+    pagesInfo[3].left = '6%';
+    document.documentElement.style.setProperty('--WhosNext', 'block');
+    document.documentElement.style.setProperty('--WhosPrev', 'block');
+  }
+  else if(pagIs === 3){
+    document.documentElement.style.setProperty('--rulesView', 'none');
+    document.documentElement.style.setProperty('--Page1', 'none');
+    document.documentElement.style.setProperty('--Page2', 'none');
+    document.documentElement.style.setProperty('--Page3', 'flex');
+    // pagesInfo[0].left = '10%';
+    pagesInfo[1].left = '1%';
+    pagesInfo[2].left = '8%';
+    pagesInfo[3].left = '13%';
     document.documentElement.style.setProperty('--WhosNext', 'none');
     document.documentElement.style.setProperty('--WhosPrev', 'block');
   }
@@ -310,6 +332,7 @@ function arrayPassports(){
     //Text Name
     passName.innerHMTL = passport.nome;
     passBox.style.backgroundImage = `url(${passport.icon})`;
+    passBox.value = passport.id;
     passBox.append(selected);
     passList.append(passBox);
     
@@ -334,6 +357,53 @@ function arrayPassports(){
       selected.style.transform = `rotate(${rotate}deg)`;
       selPrev.style.transform = `rotate(${prevPass}deg)`;
     });
+  });
+}
+
+/////////////////////////////////////
+////////Pass Preview Avatar/////////
+////////////////////////////////////
+function passAvatarChoose(){
+  const avatarPreview = document.createElement('div');
+  const avatarLink    = document.createElement('input');
+  const avatarButton  = document.createElement('button');
+  const avatarBox     = document.createElement('div');
+  const rAvatarEdit   = document.querySelector('#LeftSide > div:nth-of-type(2)');
+  if(rAvatarEdit){
+    rAvatarEdit.remove();
+  }
+  
+  avatarLink.placeholder = userAvatar;
+  avatarPreview.style.backgroundImage = `url(${userAvatar})`;
+  avatarBox.append(avatarPreview, avatarLink, avatarButton);
+  LeftSide.append(avatarBox);
+  
+  avatarLink.addEventListener('input', ()=>{
+    const clearLink = avatarLink.value.replace(/\.(png|jpeg|jpg|gif).*/i, '.$1');
+    avatarLink.value = clearLink;
+    if(avatarLink.value.search(/.(jpg|jpeg|png|gif)/) == -1){
+      avatarPreview.style.backgroundImage = `url(${userAvatar})`;
+      newAvatar = userAvatar;
+    }else{
+      avatarPreview.style.backgroundImage = `url(${avatarLink.value})`;
+      newAvatar = avatarLink.value;
+    }
+  });
+  avatarLink.addEventListener('focusout', ()=>{
+    if(avatarLink.value.search(/.(jpg|jpeg|png|gif)/) == -1){
+      avatarLink.value = '';
+      newAvatar = userAvatar;
+      document.documentElement.style.setProperty('--PassAvatar', `url(${userAvatar})`);
+    }else if(avatarLink.value === '' || avatarLink.value === ' '){
+      newAvatar = userAvatar;
+      document.documentElement.style.setProperty('--PassAvatar', `url(${userAvatar})`);
+    }else{
+      document.documentElement.style.setProperty('--PassAvatar', `url(${newAvatar})`);
+    }
+  });
+  
+  avatarPreview.addEventListener('click', ()=>{
+    avatarLink.focus();
   });
 }
 
@@ -363,7 +433,7 @@ function DOC(){
   const docTextArea= document.createElement('div');
   const sendButton = document.createElement('button');
   //Text
-  sendButton.innerHTML= 'Enviar';
+  sendButton.innerHTML= 'PRONTO';
   
   docPreview.append(docTextArea);
   actArea.append(docPreview);
@@ -375,7 +445,10 @@ function DOC(){
   });
   
   sendButton.addEventListener('click', ()=>{
-    sendPassport();
+    // sendPassport();
+    pagIs = 3;
+    pagesNavigation();
+    pageCount();
   })
 }
 
@@ -447,6 +520,8 @@ function autorizeToPass(){
   if(userLoggedNow === '' || userLoggedNow === ' ' || userLoggedNow === ' '){
     
   }else{
+    document.documentElement.style.setProperty('--GateTrans', '');
+    document.documentElement.style.setProperty('--GateStyleTrans', '');
     document.documentElement.style.setProperty('--BTNFalse', 'none');
     document.documentElement.style.setProperty('--InpFalse', 'none');
     document.documentElement.style.setProperty('--LoginBTN', '0');
@@ -465,18 +540,28 @@ function autorizeToPass(){
 function closeGate(){
   document.documentElement.style.setProperty('--TrapClickStatus', '');
   setTimeout(()=>{
+    document.documentElement.style.setProperty('--GateTrans', 'opacity 0.3s 0s ease-in-out, backdrop-filter 0.3s 0.4s ease-in-out');
+    document.documentElement.style.setProperty('--GateStyleTrans', 'top 0.4s 0s ease-in, filter 0.3s 0s ease-in-out');
     document.documentElement.style.setProperty('--BTNFalse', 'none');
     document.documentElement.style.setProperty('--InpFalse', 'none');
-    document.documentElement.style.setProperty('--LoginActivated', 'none');
     document.documentElement.style.setProperty('--LoginBTN', '0');
     document.documentElement.style.setProperty('--LoginInp', '0');
-    document.documentElement.style.setProperty('--GateStyle', '');
     document.documentElement.style.setProperty('--GateStatus', '');
     document.documentElement.style.setProperty('--TrapClickVisibility', '');
     document.documentElement.style.setProperty('--TrapClickStyle', '');
     document.documentElement.style.setProperty('--PassAvatar', ``);
+    setTimeout(()=>{
+      document.documentElement.style.setProperty('--GateStyle', '');
+    }, 1500)
   }, 100)
 }
+
+// PassPreview.addEventListener('click', ()=>{
+//   closeGate();
+//   setTimeout(()=>{
+//     autorizeToPass();
+//   }, 3000)
+// });
 
 function loginSequence(){
   getDocs.doc(caminho).onSnapshot((doc) =>{
@@ -531,9 +616,6 @@ function setProfile(){
     nacao:   'Antegria',
     Ncolor:  '#314d21'
   });
-  getRules.doc('RegionDatas').update({
-    quantos: parseInt(registred)
-  });
   // loginSequence();
 }
 
@@ -542,18 +624,20 @@ function sendPassport(){
   const infosExte   = document.querySelectorAll('#RightSide > div:nth-child(4) input');
   const docEdit     = document.querySelectorAll('#RightSide2 div:nth-child(1) textarea');
   getDocs.doc(caminho).update({
-    nome:    userLoggedNow,
-    avatar:  userAvatar,
+    nome:    infosExte[0].value,
+    avatar:  newAvatar,
     num:     parseInt(registred),
     status:  'Pendente',
     extra:   '',
     info4:   infosEdit[3].value,
-    info5:   infosExte[0].value,
+    info5:   infosEdit[0].value,
     sex:     infosEdit[1].value,
     mensagem:docEdit[0].value,
     orig:    infosEdit[2].value,
     nacao:   nationSelect,
-    Ncolor:  ''
+    Ncolor:  '',
+    gift:    giftIs,
+    paper:   needaPaper
   }).then(()=>{
     closeGate();
     pagIs = 0;
@@ -568,19 +652,27 @@ function sendPassport(){
 function getPassport(){
   getDocs.doc(caminho).onSnapshot((passport)=>{
     const data = passport.data();
+    const avatarPrev  = document.querySelector('#LeftSide > div:nth-of-type(2) > div:nth-of-type(1)');
+    const avatarLink  = document.querySelector('#LeftSide > div:nth-of-type(2) > input:nth-of-type(1)');
     const infosEdit   = document.querySelectorAll('#RightSide > div:nth-child(3) input');
     const infosExte   = document.querySelectorAll('#RightSide > div:nth-child(4) input');
     const docEdit     = document.querySelectorAll('#RightSide2 div:nth-child(1) textarea');
     const docPreview  = document.querySelectorAll('#LeftSide2 > div:nth-child(1) > div:nth-child(1) > div');
+    const giftGetLink = document.querySelector('#RightSide3 > div > input:nth-of-type(1)');
+    const giftPaper   = document.querySelector('#RightSide3 > div > div > button:nth-of-type(1)');
+    const giftIMGPrev = document.querySelector('#RightSide3 > div > div:nth-of-type(2) > img:nth-of-type(1)');
+    const giftImage   = document.querySelector('#LeftSide3 > div > div:nth-of-type(1) > img:nth-of-type(1)');
     const passTypeClass=document.querySelector('#PassPreview > div:nth-child(1)');
     const passPreview = document.querySelector('#PassPreview > div:nth-child(1)');
-    infosEdit[0].value      = data.nome;
+    const passPavatar = document.querySelector('#PassPreview > div:nth-child(1) > div:nth-of-type(1)');
+    infosEdit[0].value      = data.info5;
     infosEdit[1].value      = data.sex;
     infosEdit[2].value      = data.orig;
     infosEdit[3].value      = data.info4;
-    infosExte[0].value      = data.info5;
+    infosExte[0].value      = data.nome;
     docEdit  [0].value      = data.mensagem;
     docPreview[0].innerHTML = data.mensagem;
+    giftGetLink.value       = data.gift;
     
     if(data.nacao === '' || data.nacao == undefined || data.nacao == null){
       passCountry = 'Antegria';
@@ -592,6 +684,33 @@ function getPassport(){
       passCountry = data.nacao;
       nationSelect= data.nacao;
     }
+    
+    if(data.paper === 1){
+      giftPaper.click();
+    }
+    if(data.gift !== '' || data.gift !== ' ' || data.gift !== undefined){
+      giftImage.src = data.gift;
+      giftIMGPrev.src = data.gift;
+      giftIs = data.gift;
+    }
+    
+    if(data.avatar !== '' || data.avata !== ' ' || data.avatar !== undefined){
+      avatarPrev.style.backgroundImage = `url(${data.avatar})`;
+      avatarLink.value = data.avatar;
+      document.documentElement.style.setProperty('--PassAvatar', `url(${data.avatar})`);
+      newAvatar = data.avatar;
+    }
+    
+    const getPassIcons = document.querySelectorAll('#RightSide > div:nth-child(5) > div');
+    setTimeout(()=>{
+      for(let i = 0; i < getPassIcons.length; i++){
+        getPassIcons[i].removeAttribute('class');
+        if(getPassIcons[i].value === data.nacao){
+          getPassIcons[i].click();
+        }
+      }
+    }, 1000)
+    
     mirrorInformations();
   });
 }
@@ -640,6 +759,126 @@ function rulesLocale(){
   rightSideTags[4].innerHTML = rulesBook[0].regras.rule10;
 }
 
+//////////////////////////////////////////////////////////////
+/////////////////////Pagina De Presentes//////////////////////
+/////////////////////////////////////////////////////////////
+function giftPage(){
+  RightSide3.innerHTML = '';
+  LeftSide3.innerHTML = '';
+  const pageTitle   = document.createElement('h2');
+  const leftTitle   = document.createElement('h2');
+  const giftSpec    = document.createElement('h3');
+  const giftObse    = document.createElement('h4');
+  const giftBox     = document.createElement('div');
+  const onePagePrev = document.createElement('div');
+  const gift        = document.createElement('img');
+  const giftIMG     = document.createElement('img');
+  const giftPaper   = document.createElement('div');
+  const giftUpload  = document.createElement('input');
+  const giftPreview = document.createElement('div');
+  const giftButtons = document.createElement('div');
+  const giftSwitcher= document.createElement('button');
+  const contentIn   = document.createElement('div');
+  const contentLIn  = document.createElement('div');
+  const paperDesign = document.createElement('div');
+  const paperTitle  = document.createElement('p');
+  const passExample = document.createElement('div');
+  const sendPass    = document.createElement('button');
+  
+  //Textos
+  pageTitle.innerHTML    = 'Enviar Presente';
+  giftSpec.innerHTML     = 'Escolha uma Imagem';
+  giftObse.innerHTML     = 'Você pode usar os chats do discord para fazer upload da imagem, copiar o link da imagem enviada no chat do discord e colar na barra do link.';
+  giftSwitcher.innerHTML = 'PAPER?';
+  giftUpload.placeholder = 'Link de uma imagem PNG, JPEG, JPG ou GIF.';
+  paperTitle.innerHTML   = 'PRESENTE';
+  sendPass.innerHTML     = 'ENVIAR';
+  
+  //Sources
+  giftSwitcher.value = 0;
+  giftSwitcher.classList.add('bdeactive');
+  gift.classList.add('ItemMode');
+  ///////////Junções///////////
+  giftButtons.append(giftSwitcher);
+  contentIn.append(pageTitle, giftSpec, giftUpload, giftButtons, giftObse, onePagePrev);
+  onePagePrev.append(giftIMG);
+  RightSide3.append(contentIn);
+  
+  ///////Left Side////////
+  //Text Areas
+  leftTitle.innerHTML = 'Preview do Presente';
+  //Aplicações
+  contentLIn.append(giftPaper);
+  paperDesign.append(paperTitle)
+  giftPaper.append(paperDesign, gift);
+  LeftSide3.append(leftTitle, contentLIn, passExample, sendPass);
+  
+  //Functions
+  
+  
+  sendPass.addEventListener('click', ()=>{
+    sendPassport();
+  });
+  
+  giftUpload.addEventListener('input', ()=>{
+    const clearLink = giftUpload.value.replace(/\.(png|jpeg|jpg|gif).*/i, '.$1');
+    
+    //Conditions
+    if(giftUpload.value.search(/.(jpg|jpeg|png|gif)/) == -1){
+      gift.src    = '';
+      giftIMG.src = '';
+      giftIs      = '';
+    }else{
+      giftUpload.value = clearLink;
+      gift.src    = giftUpload.value;
+      giftIMG.src = giftUpload.value;
+      giftIs      = giftUpload.value;
+    }
+  })
+  giftUpload.addEventListener('focusout', ()=>{
+    const clearLink = giftUpload.value.replace(/\.(png|jpeg|jpg|gif).*/i, '.$1');
+    //Conditions
+    if(giftUpload.value.search(/.(jpg|jpeg|png|gif)/) == -1){
+      giftUpload.value = '';
+      gift.src    = '';
+      giftIMG.src = '';
+      giftIs      = '';
+    }else{
+      giftUpload.value = clearLink;
+      gift.src    = giftUpload.value;
+      giftIMG.src = giftUpload.value;
+      giftIs      = giftUpload.value;
+    }
+  });
+  
+  giftSwitcher.addEventListener('click', ()=>{
+    giftSwitcher.removeAttribute('class');
+    gift.removeAttribute('class');
+    if(giftSwitcher.value === '0'){
+      giftSwitcher.value = 1;
+      needaPaper         = 1;
+      document.documentElement.style.setProperty('--Papers', 'flex');
+      document.documentElement.style.setProperty('--PaperBG', '#e9c7d3');
+      document.documentElement.style.setProperty('--PaperShadow', '0.3vw 0.4vw 0.01vw #0005');
+      giftSwitcher.innerHTML = 'PAPER';
+      giftSwitcher.classList.add('bactive');
+      gift.classList.add('PaperMode');
+    }else{
+      giftSwitcher.value = 0;
+      needaPaper         = 0;
+      document.documentElement.style.setProperty('--Papers', 'none');
+      document.documentElement.style.setProperty('--PaperBG', '');
+      document.documentElement.style.setProperty('--PaperShadow', '');
+      giftSwitcher.innerHTML = 'PAPER?';
+      gift.classList.add('ItemMode');
+      giftSwitcher.classList.add('bdeactive');
+    }
+  });
+}
+
+////////////////////////////////////////////////////
+////////////////Initilize On Opne//////////////////
+///////////////////////////////////////////////////
 function activeAllButtons(){
   const doneButton = document.querySelector('#LeftSide > button:nth-of-type(1)');
   doneButton.addEventListener('click', ()=>{
@@ -648,11 +887,12 @@ function activeAllButtons(){
     pageCount();
   });
 }
-
 function runBook(){
   PASS();
   pageCount();
   DOC();
+  giftPage();
+  passAvatarChoose();
 }
 
 onStart();
@@ -661,6 +901,17 @@ function onStart(){
   const localNum2 = document.querySelector('#model2 p:nth-of-type(1)');
   const guiche   = Math.floor(Math.random() * 315);
   
-  localNum.innerHTML = `N ${guiche}`;
-  localNum2.innerHTML= `N ${guiche}`
+  localNum.innerHTML = `N ${guiche.toString().padStart(3, '0')}`;
+  localNum2.innerHTML= `N ${guiche.toString().padStart(3, '0')}`
 }
+
+NextPage.addEventListener('click', ()=>{
+    pagIs = pagIs + 1;
+    pagesNavigation();
+    pageCount();
+});
+PrevPage.addEventListener('click', ()=>{
+    pagIs = pagIs - 1;
+    pagesNavigation();
+    pageCount();
+});
