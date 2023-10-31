@@ -1038,7 +1038,7 @@ body{
   font-family:Courier New;
   opacity:var(--LoginBTN, 1);
   poiter-events:var(--BTNFalse, auto);
-  display:;
+  display:none;
 }
 #model1 h1{
   margin:2vw 0 0;
@@ -1074,7 +1074,7 @@ body{
   background-repeat:no-repeat;
   color:#000C;
   font-family:Courier New;
-  display:none;
+  display:;
   opacity:var(--LoginBTN, 1);
   poiter-events:var(--BTNFalse, auto);
 }
