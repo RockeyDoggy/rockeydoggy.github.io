@@ -30,7 +30,7 @@ let needaPaper = 0;
 let giftIs = '';
 
 const clientId = 'vc9m669jig0ibshss8l25dj7bzv0n3';
-const redirectUri = 'https://codepen.io/pen/debug/abPYMKw';
+const redirectUri = 'https://rockeydoggy.github.io/eddy';
 const scope = 'user:read:email';
 const userInfo = document.getElementById('user-info');
 
