@@ -978,6 +978,9 @@ body{
   cursor:pointer;
   user-select:none;
   transition:ease-in-out 0.3s all;
+  opacity:var(--LoginVisibility, 0);
+  pointer-events:var(--LoginOn, none);
+  display:var(--LoginButtonState, none);
 }
 #login input{
   border:none;
