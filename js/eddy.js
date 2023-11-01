@@ -53,6 +53,10 @@ if (accessToken) {
     console.log(user.display_name);
     autorizar();
   });
+}else{
+  document.documentElement.style.setProperty('--LoginVisibility', '1');
+  document.documentElement.style.setProperty('--LoginOn', 'auto');
+  document.documentElement.style.setProperty('--LoginButtonState', 'flex');
 }
 
 /////////////////////////////////////////////
