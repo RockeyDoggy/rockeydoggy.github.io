@@ -26,6 +26,7 @@ let caminho;
 let registred = 0;
 let passCountry;
 let nationSelect;
+let nationColor;
 let needaPaper = 0;
 let giftIs = '';
 
@@ -352,6 +353,7 @@ function arrayPassports(){
       passTypeClass.removeAttribute('class');
       passTypeClass.classList.add(passport.id);
       nationSelect = passport.id;
+      nationColor  = passport.color;
       if(document.querySelectorAll('.sele')[0]){
         document.querySelectorAll('.sele')[0].classList.remove('sele');
       }
@@ -639,7 +641,7 @@ function sendPassport(){
     mensagem:docEdit[0].value,
     orig:    infosEdit[2].value,
     nacao:   nationSelect,
-    Ncolor:  '',
+    Ncolor:  nationColor,
     gift:    giftIs,
     paper:   needaPaper
   }).then(()=>{
@@ -681,12 +683,14 @@ function getPassport(){
     if(data.nacao === '' || data.nacao == undefined || data.nacao == null){
       passCountry = 'Antegria';
       nationSelect= 'Antegria';
+      nationColor = '#314d21';
     }else{
       passTypeClass.removeAttribute('class');
       passTypeClass.classList.add(data.nacao);
       // passPreview.style.backgroundColor = data.Ncolor;
       passCountry = data.nacao;
       nationSelect= data.nacao;
+      nationColor = data.Ncolor;
     }
     
     if(data.paper === 1){
