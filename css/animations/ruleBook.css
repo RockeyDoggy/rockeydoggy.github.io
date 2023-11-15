@@ -1,8 +1,10 @@
 #PageMarksL > .newRules{
-  animation:highlighted ease-in-out 30s infinite !important;
+  animation:highlighted ease-in-out 30s;
+  animation-iteration-count:2;
 }
 .Unfocus{
-  animation:protect ease-in-out 30s infinite;
+  animation:protect ease-in-out 30s;
+  animation-iteration-count:2;
 }
 
 @keyframes highlighted{
