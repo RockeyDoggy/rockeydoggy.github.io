@@ -1,9 +1,9 @@
-.newRules{
-  animation:highlighted linear 5s infinite;
-  animation-delay:5s;
+#PageMarksL > .newRules{
+  animation:highlighted linear 10s infinite !important;
+  animation-delay:5s !important;
 }
 .Unfocus{
-  animation:protect linear 5s infinite;
+  animation:protect linear 10s infinite;
   animation-delay:5s;
 }
 
