@@ -1,8 +1,10 @@
 .newRules{
-  animation:notify linear 5s 1s infinite;
+  animation:notify linear 5s infinite;
+  animation-delay:1s;
 }
 .Unfocus{
-  animation:protect linear 5s 1s infinite;
+  animation:protect linear 5s infinite;
+  animation-delay:1s;
 }
 
 @keyframes notify{
