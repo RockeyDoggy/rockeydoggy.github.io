@@ -21,7 +21,7 @@
 }
 
 @keyframes protect{
-  40%{opacity:0;}
+  70%{opacity:0;}
   75%{opacity:1;}
   90%{opacity:1;}
   95%{opacity:0;}
