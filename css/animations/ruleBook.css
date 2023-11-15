@@ -1,13 +1,13 @@
 #PageMarksL > .newRules{
-  animation:highlighted linear 30s infinite !important;
+  animation:highlighted ease-in-out 30s infinite !important;
 }
 .Unfocus{
-  animation:protect linear 30s infinite;
+  animation:protect ease-in-out 30s infinite;
 }
 
 @keyframes highlighted{
   0%{box-shadow:0 0 0.6vw #FF0;}
-  70%{box-shadow:0 0 0.6vw #FF0; background-color:#FF5;}
+  73%{box-shadow:0 0 0.6vw #FF0; background-color:#FF5;}
   75%{box-shadow: 0.2vw 0.2vw 0.6vw #F60, -0.2vw 0.2vw 0.7vw #F28, 0.2vw -0.2vw 0.8vw #F00, -0.2vw -0.2vw 0.9vw #FF0; background-color:#F82;}
   77%{box-shadow: 0.2vw 0.2vw 0.9vw #FF0, -0.2vw 0.2vw 0.6vw #F60, 0.2vw -0.2vw 0.7vw #F28, -0.2vw -0.2vw 0.8vw #F00;}
   79%{box-shadow: 0.2vw 0.2vw 0.8vw #F00, -0.2vw 0.2vw 0.9vw #FF0, 0.2vw -0.2vw 0.6vw #F60, -0.2vw -0.2vw 0.7vw #F28; background-color:#F60;}
@@ -21,8 +21,8 @@
 }
 
 @keyframes protect{
-  70%{opacity:0;}
-  75%{opacity:1;}
+  72%{opacity:0;}
+  74%{opacity:1;}
   90%{opacity:1;}
   95%{opacity:0;}
 }
