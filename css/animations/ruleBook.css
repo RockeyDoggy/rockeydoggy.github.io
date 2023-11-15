@@ -3,7 +3,7 @@
   animation-iteration-count:2;
 }
 .Unfocus{
-  animation:protect ease-in-out 20s;
+  animation:var(--UnfocusRem, protect ease-in-out 20s);
   animation-iteration-count:2;
 }
 
