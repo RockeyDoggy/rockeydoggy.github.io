@@ -1,30 +1,28 @@
 #PageMarksL > .newRules{
-  animation:highlighted linear 10s infinite !important;
-  animation-delay:5s !important;
+  animation:highlighted linear 30s infinite !important;
 }
 .Unfocus{
-  animation:protect linear 10s infinite;
-  animation-delay:5s;
+  animation:protect linear 30s infinite;
 }
 
 @keyframes highlighted{
   0%{box-shadow:0 0 0.6vw #FF0;}
-  40%{box-shadow:0 0 0.6vw #FF0;}
-  50%{box-shadow: 0.2vw 0.2vw 0.6vw #F60, -0.2vw 0.2vw 0.7vw #F28, 0.2vw -0.2vw 0.8vw #F00, -0.2vw -0.2vw 0.9vw #FF0;}
-  55%{box-shadow: 0.2vw 0.2vw 0.9vw #FF0, -0.2vw 0.2vw 0.6vw #F60, 0.2vw -0.2vw 0.7vw #F28, -0.2vw -0.2vw 0.8vw #F00;}
-  60%{box-shadow: 0.2vw 0.2vw 0.8vw #F00, -0.2vw 0.2vw 0.9vw #FF0, 0.2vw -0.2vw 0.6vw #F60, -0.2vw -0.2vw 0.7vw #F28;}
-  65%{box-shadow: 0.2vw 0.2vw 0.7vw #F28, -0.2vw 0.2vw 0.8vw #F00, 0.2vw -0.2vw 0.9vw #FF0, -0.2vw -0.2vw 0.6vw #F60;}
-  70%{box-shadow: 0.2vw 0.2vw 0.6vw #F60, -0.2vw 0.2vw 0.7vw #F28, 0.2vw -0.2vw 0.8vw #F00, -0.2vw -0.2vw 0.9vw #FF0;}
-  75%{box-shadow: 0.2vw 0.2vw 0.9vw #FF0, -0.2vw 0.2vw 0.6vw #F60, 0.2vw -0.2vw 0.7vw #F28, -0.2vw -0.2vw 0.8vw #F00;}
-  80%{box-shadow: 0.2vw 0.2vw 0.8vw #F00, -0.2vw 0.2vw 0.9vw #FF0, 0.2vw -0.2vw 0.6vw #F60, -0.2vw -0.2vw 0.7vw #F28;}
-  85%{box-shadow: 0.2vw 0.2vw 0.7vw #F28, -0.2vw 0.2vw 0.8vw #F00, 0.2vw -0.2vw 0.9vw #FF0, -0.2vw -0.2vw 0.6vw #F60;}
-  90%{box-shadow: 0.2vw 0.2vw 0.6vw #F60, -0.2vw 0.2vw 0.7vw #F28, 0.2vw -0.2vw 0.8vw #F00, -0.2vw -0.2vw 0.9vw #FF0;}
-  100%{box-shadow:0 0 0.6vw #FF0;}
+  70%{box-shadow:0 0 0.6vw #FF0;}
+  75%{box-shadow: 0.2vw 0.2vw 0.6vw #F60, -0.2vw 0.2vw 0.7vw #F28, 0.2vw -0.2vw 0.8vw #F00, -0.2vw -0.2vw 0.9vw #FF0;}
+  77%{box-shadow: 0.2vw 0.2vw 0.9vw #FF0, -0.2vw 0.2vw 0.6vw #F60, 0.2vw -0.2vw 0.7vw #F28, -0.2vw -0.2vw 0.8vw #F00;}
+  79%{box-shadow: 0.2vw 0.2vw 0.8vw #F00, -0.2vw 0.2vw 0.9vw #FF0, 0.2vw -0.2vw 0.6vw #F60, -0.2vw -0.2vw 0.7vw #F28;}
+  81%{box-shadow: 0.2vw 0.2vw 0.7vw #F28, -0.2vw 0.2vw 0.8vw #F00, 0.2vw -0.2vw 0.9vw #FF0, -0.2vw -0.2vw 0.6vw #F60;}
+  83%{box-shadow: 0.2vw 0.2vw 0.6vw #F60, -0.2vw 0.2vw 0.7vw #F28, 0.2vw -0.2vw 0.8vw #F00, -0.2vw -0.2vw 0.9vw #FF0;}
+  85%{box-shadow: 0.2vw 0.2vw 0.9vw #FF0, -0.2vw 0.2vw 0.6vw #F60, 0.2vw -0.2vw 0.7vw #F28, -0.2vw -0.2vw 0.8vw #F00;}
+  87%{box-shadow: 0.2vw 0.2vw 0.8vw #F00, -0.2vw 0.2vw 0.9vw #FF0, 0.2vw -0.2vw 0.6vw #F60, -0.2vw -0.2vw 0.7vw #F28;}
+  89%{box-shadow: 0.2vw 0.2vw 0.7vw #F28, -0.2vw 0.2vw 0.8vw #F00, 0.2vw -0.2vw 0.9vw #FF0, -0.2vw -0.2vw 0.6vw #F60;}
+  91%{box-shadow: 0.2vw 0.2vw 0.6vw #F60, -0.2vw 0.2vw 0.7vw #F28, 0.2vw -0.2vw 0.8vw #F00, -0.2vw -0.2vw 0.9vw #FF0;}
+  95%{box-shadow:0 0 0.6vw #FF0;}
 }
 
 @keyframes protect{
   40%{opacity:0;}
-  50%{opacity:1;}
+  75%{opacity:1;}
   90%{opacity:1;}
-  100%{opacity:0;}
+  95%{opacity:0;}
 }
