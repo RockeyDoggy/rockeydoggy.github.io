@@ -7,7 +7,7 @@
 
 @keyframes highlighted{
   0%{box-shadow:0 0 0.6vw #FF0;}
-  70%{box-shadow:0 0 0.6vw #FF0;}
+  70%{box-shadow:0 0 0.6vw #FF0; background-color:#FF5;}
   75%{box-shadow: 0.2vw 0.2vw 0.6vw #F60, -0.2vw 0.2vw 0.7vw #F28, 0.2vw -0.2vw 0.8vw #F00, -0.2vw -0.2vw 0.9vw #FF0; background-color:#F82;}
   77%{box-shadow: 0.2vw 0.2vw 0.9vw #FF0, -0.2vw 0.2vw 0.6vw #F60, 0.2vw -0.2vw 0.7vw #F28, -0.2vw -0.2vw 0.8vw #F00;}
   79%{box-shadow: 0.2vw 0.2vw 0.8vw #F00, -0.2vw 0.2vw 0.9vw #FF0, 0.2vw -0.2vw 0.6vw #F60, -0.2vw -0.2vw 0.7vw #F28; background-color:#F60;}
@@ -17,7 +17,7 @@
   87%{box-shadow: 0.2vw 0.2vw 0.8vw #F00, -0.2vw 0.2vw 0.9vw #FF0, 0.2vw -0.2vw 0.6vw #F60, -0.2vw -0.2vw 0.7vw #F28; background-color:#F92;}
   89%{box-shadow: 0.2vw 0.2vw 0.7vw #F28, -0.2vw 0.2vw 0.8vw #F00, 0.2vw -0.2vw 0.9vw #FF0, -0.2vw -0.2vw 0.6vw #F60;}
   91%{box-shadow: 0.2vw 0.2vw 0.6vw #F60, -0.2vw 0.2vw 0.7vw #F28, 0.2vw -0.2vw 0.8vw #F00, -0.2vw -0.2vw 0.9vw #FF0; background-color:#F61;}
-  95%{box-shadow:0 0 0.6vw #FF0;}
+  95%{box-shadow:0 0 0.6vw #FF0; background-color:#FF5;}
 }
 
 @keyframes protect{
