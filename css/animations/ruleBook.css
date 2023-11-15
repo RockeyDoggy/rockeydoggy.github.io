@@ -7,7 +7,7 @@
 
 @keyframes highlighted{
   0%{box-shadow:0 0 0.6vw #FF0;}
-  73%{box-shadow:0 0 0.6vw #FF0; background-color:#FF5;}
+  74%{box-shadow:0 0 0.6vw #FF0; background-color:#FF5;}
   75%{box-shadow: 0.2vw 0.2vw 0.6vw #F60, -0.2vw 0.2vw 0.7vw #F28, 0.2vw -0.2vw 0.8vw #F00, -0.2vw -0.2vw 0.9vw #FF0; background-color:#F82;}
   77%{box-shadow: 0.2vw 0.2vw 0.9vw #FF0, -0.2vw 0.2vw 0.6vw #F60, 0.2vw -0.2vw 0.7vw #F28, -0.2vw -0.2vw 0.8vw #F00;}
   79%{box-shadow: 0.2vw 0.2vw 0.8vw #F00, -0.2vw 0.2vw 0.9vw #FF0, 0.2vw -0.2vw 0.6vw #F60, -0.2vw -0.2vw 0.7vw #F28; background-color:#F60;}
@@ -21,7 +21,7 @@
 }
 
 @keyframes protect{
-  72%{opacity:0;}
+  73%{opacity:0;}
   74%{opacity:1;}
   90%{opacity:1;}
   95%{opacity:0;}
