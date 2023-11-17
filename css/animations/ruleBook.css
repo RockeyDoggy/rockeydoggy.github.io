@@ -6,6 +6,10 @@
   animation:var(--UnfocusRem, protect ease-in-out 20s);
   animation-iteration-count:2;
 }
+#alignmentClose > div:nth-of-type(2){
+  animation:slideIn ease-in-out 4s;
+}
+
 
 @keyframes highlighted{
   0%{box-shadow:0 0 0.6vw #FF0;}
@@ -27,4 +31,21 @@
   1%{opacity:1;}
   19%{opacity:1;}
   20%{opacity:0;}
+}
+
+/*Papel Imprimindo*/
+@keyframes slideIn{
+  0%{transform:translate(0, 75vh);}
+  10%{transform:translate(0, 65vh);}
+  30%{transform:translate(0, 65vh);}
+  40%{transform:translate(0, 55vh);}
+  45%{transform:translate(0, 54vh);}
+  50%{transform:translate(0, 53vh);}
+  55%{transform:translate(0, 52vh);}
+  60%{transform:translate(0, 50vh);}
+  70%{transform:translate(0, 40vh);}
+  80%{transform:translate(0, 40vh);}
+  85%{transform:translate(0, 35vh);}
+  90%{transform:translate(0, 35vh);}
+  100%{}
 }
