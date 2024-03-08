@@ -1,0 +1,84 @@
+:root{
+  /*Tamanho Das Fonts*/
+  --TamanhoDaFontePadrao:24px;
+  --FontPontosPadrao:20px;
+  --TamanhoFontPrincipal:34px;
+  --TamanhoObjetivoPrincipal:30px;
+  --FontMissaoMono:26px;
+  /*Quais Fonts*/
+  --FontPadrao:EnterCommand;
+}
+
+body{
+  background:#080808;
+  color:#FFF;
+}
+#screen{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+#ContentList{
+  width:90%;
+  position:absolute;
+  right:10px;
+  top:0;
+  font-family:var(--FontPadrao);
+/*   border:dotted 1px #486; */
+  transition:all ease-in-out 0.5s;
+}
+
+#ContentList h1{
+  width:100%;
+  margin:7px 0vw 0;
+  font-size:var(--TamanhoDaFontePadrao);
+  float:left;
+  text-align:right;
+  font-weight:lighter;
+/*   font-style:italic; */
+  color:#FFA;
+  transition:all ease-in-out 0.5s;
+}
+
+#ContentList > div:nth-of-type(1){
+  background:linear-gradient(60deg,  #0000 50%, #C942) !important;
+}
+
+#ContentList > div:nth-of-type(1) > h1{
+  font-size:var(--TamanhoFontPrincipal);
+  text-shadow:1px 1px 1px #FF0;
+}
+#ContentList > div:nth-of-type(1) > div{
+  font-size:var(--TamanhoObjetivoPrincipal);
+}
+
+#ContentList > div{
+  width:100%;
+  max-height:20vh;
+  float:left;
+  padding:0 5px;
+  transform:translate(75vw, 0);
+  transition:all ease-in-out 0.5s;
+}
+#ContentList > div:nth-of-type(2n+1){
+  background:linear-gradient(60deg, #0000 50%, #59F2);
+  box-shadow:-2px 5px 7px #0002;
+/*   border:double 3px #88F2; */
+}
+
+#ContentList > div > div{
+  margin:0vw 1.5vw 0;
+  float:right;
+  font-size:var(--FontPontosPadrao);
+  color:#FF8;
+  text-shadow:0 0 1vw #FF0;
+  transition:all ease-in-out 0.5s;
+}
+.unic{
+/*   background:#55F2; */
+  font-size:var(--FontMissaoMono) !important;
+  padding:18px 0 !important;
+}
