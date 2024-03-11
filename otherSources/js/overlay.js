@@ -1,4 +1,11 @@
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
     apiKey: "AIzaSyCVK_krSf90A23j6jnXL2OGgjd79iBXNWc",
     authDomain: "micellas.firebaseapp.com",
@@ -7,9 +14,12 @@
     messagingSenderId: "758076595036",
     appId: "1:758076595036:web:084b13906d2228a5397f99",
     measurementId: "G-8XNDWQK9TJ"
-};
+  };
 
   // Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 firebase.initializeApp(firebaseConfig);
 const display = firebase.firestore();
 
@@ -112,6 +122,13 @@ function shootDisplay(){
         missionTitle.style.color          = '';
         missionTitle.style.textShadow     = '';
       }
+    }
+    if(mission.title === '' || mission.title === ' '){
+      missionTitle.style.display = 'none';
+      missionScore.classList.add('scoreUp');
+    }else{
+      missionTitle.style.display = '';
+      missionScore.classList.remove('scoreUp');
     }
     
     ContentList.append(missionBlock);
