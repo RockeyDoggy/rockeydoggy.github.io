@@ -3,6 +3,11 @@
   src:url(https://rockeydoggy.github.io/cssfonts/pixel/ModernDOS9x16.ttf);
 }
 
+@font-face{
+  font-family:"DefaultFont";
+  src:url(https://rockeydoggy.github.io/cssfonts/custom/neometric-black.ttf);
+}
+
 body{
   background:#080808;
   color:#FFF;
@@ -43,13 +48,13 @@ body{
 #ContentList h1{
   width:100%;
   margin:1vw 0vw 0;
-  font-size:22px;
+  font-size:16px;
   float:right;
   text-align:right;
-  font-family:EnterCommand;
+  font-family:DefaultFont;
   font-weight:lighter;
 /*   font-style:italic; */
-  color:#FFA;
+  color:#FFF;
   transition:all ease-in-out 0.5s;
 }
 #ContentList > div{
@@ -93,10 +98,10 @@ body{
 #ContentList > div > div{
   margin:0vw 1.5vw 0;
   float:right;
-  font-family:EnterCommand;
-  font-size:22px;
-  color:#FF8;
-  text-shadow:0 0 1vw #FF0;
+  font-family:DefaultFont;
+  font-size:15px;
+  color:#FFF;
+  text-shadow:0 0 1vw #FFF;
   transition:all ease-in-out 0.5s;
 }
 
@@ -105,7 +110,7 @@ body{
   height:100%;
   position:absolute;
   background:#385;
-  font-size:32px;
+  font-size:20px;
   font-weight:bold;
   margin:0 0vw 0 405px;
   display:flex;
@@ -142,9 +147,9 @@ body{
   border:none;
   border-bottom:dashed 1px #0000;
   color:#fff;
-  font-size:38px;
+  font-size:24px;
   font-weight:lighter;
-  font-family:EnterCommand;
+  font-family:DefaultFont;
   text-align:center;
 }
 #changeWindow > input:nth-of-type(1):focus{
@@ -159,8 +164,8 @@ body{
 }
 #changeWindow h3{
   margin:3vw 0 1vw;
-  font-size:32px;
-  font-family:EnterCommand;
+  font-size:22px;
+  font-family:DefaultFont;
   font-weight:lighter;
   text-align:center;
 }
@@ -192,8 +197,8 @@ body{
 #changeWindow > div:nth-of-type(2) button{
   margin:0 0.5vw;
   padding:0.2pc 0.6pc;
-  font-size:24px;
-  font-family:EnterCommand;
+  font-size:18px;
+  font-family:DefaultFont;
   border:none;
   cursor:pointer;
 }
@@ -218,8 +223,8 @@ body{
   background:none;
   border:none;
   text-align:center;
-  font-size:38px;
-  font-family:EnterCommand;
+  font-size:22px;
+  font-family:DefaultFont;
   color:#FFF;
 }
 #changeWindow > input:nth-of-type(2)::-webkit-outer-spin-button, #changeWindow > input:nth-of-type(2)::-webkit-inner-spin-button{
@@ -237,9 +242,9 @@ body{
 }
 #changeWindow > h4{
   text-align:center;
-  font-family:EnterCommand;
+  font-family:DefaultFont;
   font-weight:lighter;
-  font-size:22px;
+  font-size:15px;
 }
 
 #changeWindow > p{
@@ -269,7 +274,7 @@ body{
   border:1px dashed #55F9;
   border-bottom:dashed 1px transparent;
   border-top:dashed 1px transparent;
-  font-family:EnterCommand;
+  font-family:DefaultFont;
   color:#FFF;
 }
 #addMission input:focus{
@@ -304,7 +309,7 @@ body{
   text-shadow:0 0 8px #FF03;
 }
 #addMission > div:nth-of-type(1) input:nth-of-type(2){
-  font-size:26px !important;
+  font-size:20px !important;
 }
 
 #addMission > div:nth-of-type(2){
@@ -312,10 +317,10 @@ body{
   margin:5px 0px 0 45px;
   display:flex;
   justify-content:center;
-  font-size:28px;
+  font-size:20px;
   font-weight:bold;
   color:#000;
-  font-family:EnterCommand;
+  font-family:DefaultFont;
 }
 #addMission > div:nth-of-type(2) > input{
   width:7%;
@@ -324,7 +329,7 @@ body{
   background-color:#151515;
   box-shadow:inset -3px 3px 5px #000;
   border:none;
-  font-size:28px;
+  font-size:20px;
   text-shadow:1px 1px 5px #000;
 }
 #addMission > div:nth-of-type(2) > input:nth-of-type(1){
@@ -333,7 +338,7 @@ body{
 
 #addMission > div:nth-of-type(1) > input:nth-of-type(1){
   width:9%;
-  font-size:28px;
+  font-size:20px;
   text-align:center;
 }
 #addMission > div:nth-of-type(1) > input:nth-of-type(2){
@@ -347,7 +352,7 @@ body{
   margin:0 0px 0 45px;
   border:none;
   text-align:center;
-  font-size:32px;
+  font-size:18px;
   text-shadow:-1px -1px 1px #555, 1px 1px 1px #000;
   color:#222;
 }
@@ -359,9 +364,9 @@ body{
   margin:0 5px;
   background:none;
   border:none;
-  font-size:24px;
+  font-size:20px;
   font-weight:bold;
-  font-family:EnterCommand;
+  font-family:DefaultFont;
   cursor:pointer;
 }
 #addMission > div:nth-of-type(3) button:nth-of-type(1){
