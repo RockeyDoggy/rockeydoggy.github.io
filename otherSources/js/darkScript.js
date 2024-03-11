@@ -97,7 +97,7 @@ function shootDisplay(){
     }
     
     if(mission.max <= '0'){
-        missionTitle.style.fontSize = '28px';
+        missionTitle.style.fontSize = '18px';
         missionTitle.style.padding = '8px 0';
       if(mission.total < "0"){
         missionTitle.style.textDecoration = 'line-through';
@@ -113,7 +113,7 @@ function shootDisplay(){
         missionScore.innerHTML            = '';
       }else{
         missionScore.innerHTML = '';
-        missionTitle.style.fontSize = '28px';
+        missionTitle.style.fontSize = '18px';
         missionTitle.style.padding = '8px 0';
         missionTitle.style.fontStyle      = '';
         missionTitle.style.textDecoration = '';
