@@ -19,6 +19,7 @@
   --FontPadrao:DefaultFont;
   /*Cores Padrões*/
   --CorPadrao:#FFF;
+  --OnlyScore:25px;
 }
 
 body{
@@ -93,4 +94,8 @@ body{
 /*   background:#55F2; */
   font-size:var(--FontMissaoMono) !important;
   padding:18px 0 !important;
+}
+
+.scoreUp{
+  font-size:var(--OnlyScore) !important;
 }
