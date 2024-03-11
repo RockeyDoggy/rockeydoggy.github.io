@@ -84,6 +84,7 @@ body{
 
 #ContentList > div > div{
   margin:0vw 1.5vw 0;
+  padding:4px 0 0 0;
   float:right;
   font-size:var(--FontPontosPadrao);
   color:var(--CorPadrao);
