@@ -122,6 +122,14 @@ function shootDisplay(){
       }
     }
     
+    if(mission.title === '' || mission.title === ' '){
+      missionTitle.style.display = 'none';
+      missionScore.classList.add('scoreUp');
+    }else{
+      missionTitle.style.display = '';
+      missionScore.classList.remove('scoreUp');
+    }
+    
     ContentList.append(missionBlock);
     
     //Funcionalidades
@@ -203,6 +211,7 @@ function shootDisplay(){
       windowDeny.innerHTML    = 'Cancelar';
       windowConfirm.innerHTML = 'Salvar';
       missionCode.innerHTML   = `Missão ${mission.path}`;
+      windowTitle.placeholder = 'No Mission Name';
       
       //Propriedades
       windowTitle.setAttribute('contenteditable', 'true');
@@ -217,6 +226,20 @@ function shootDisplay(){
       subtractTotal.innerHTML = '-'
       plusMaximum.innerHTML   = '+'
       subtractMax.innerHTML   = '-'
+      
+      //Security Function
+      
+      function illegalCount(){
+        if(windowTitle.value === '' || windowTitle.value === ' '){
+          if(missionGoal <= 0){
+            windowConfirm.disabled = true;
+          }else{
+            windowConfirm.disabled = false;
+          }
+        }else{
+          windowConfirm.disabled = false;
+        }
+      }
       
       //Window Buttons Function
       windowDeny.addEventListener('click', ()=>{
@@ -242,22 +265,30 @@ function shootDisplay(){
         missionNow = parseInt(missionNow) + 1;
 
         windowValue.innerHTML = `<span>${missionNow}</span>/<span>${missionGoal}</span>`;
+        illegalCount();
         confirmStatus();
       });
       subtractTotal.addEventListener('click', ()=>{
         missionNow = missionNow - 1;
         windowValue.innerHTML = `<span>${missionNow}</span>/<span>${missionGoal}</span>`;
+        illegalCount();
         confirmStatus();
       });
       plusMaximum.addEventListener('click', ()=>{
         missionGoal = parseInt(missionGoal) + 1;
         windowValue.innerHTML = `<span>${missionNow}</span>/<span>${missionGoal}</span>`;
+        illegalCount();
         confirmStatus();
       });
       subtractMax.addEventListener('click', ()=>{
         missionGoal = missionGoal - 1;
         windowValue.innerHTML = `<span>${missionNow}</span>/<span>${missionGoal}</span>`;
+        illegalCount();
         confirmStatus();
+      });
+      
+      windowTitle.addEventListener('input', ()=>{
+        illegalCount();
       });
       //////////////////////////////////////////
       confirmStatus();
@@ -357,6 +388,7 @@ function createCreations(){
   missionCountGoal.value = '0';
   missionNameField.placeholder = 'Nome Da Nova Missão';
   missionCountNow.setAttribute('onkeypress', 'return /[0-9]/i.test(event.key)');
+  addButton.disabled = true;
   missionCountGoal.setAttribute('onkeypress', 'return /[0-9]/i.test(event.key)');
   missionPathField.disabled = 'true';
   missionPathField.value = `Mission ${randomName}`;
@@ -372,7 +404,8 @@ function createCreations(){
     }
   });
   missionCountGoal.addEventListener('focusout', ()=>{
-    if(missionCountGoal.value === '' || missionCountGoal.value === ' '){
+    if(missionCountGoal.value === '' || missionCountGoal.value === ' ')
+    {
       missionCountGoal.value = 0
     }
   });
@@ -396,5 +429,25 @@ function createCreations(){
     }).then(()=>{
       createCreations();
     });
+  });
+  
+  //Security Functions
+  function illegalCount(){
+    if(missionNameField.value === '' || missionNameField.value === ' '){
+      if(missionCountGoal.value <= 0){
+        addButton.disabled = true;
+      }else{
+        addButton.disabled = false;
+      }
+    }else{
+      addButton.disabled = false;
+    }
+  }
+  
+  missionNameField.addEventListener('input', ()=>{
+    illegalCount();
+  });
+  missionCountGoal.addEventListener('input', ()=>{
+    illegalCount();
   });
 }
