@@ -3,15 +3,22 @@
   src:url(https://breadcrumbsrockeydoggy.github.io/cssfonts/EnterCommand/EnterCommand.ttf);
 }
 
+@font-face{
+  font-family:"DefaultFont";
+  src:url(https://rockeydoggy.github.io/cssfonts/custom/neometric-black.ttf);
+}
+
 :root{
   /*Tamanho Das Fonts*/
-  --TamanhoDaFontePadrao:24px;
-  --FontPontosPadrao:20px;
-  --TamanhoFontPrincipal:34px;
-  --TamanhoObjetivoPrincipal:30px;
-  --FontMissaoMono:26px;
+  --TamanhoDaFontePadrao:17px;
+  --FontPontosPadrao:16px;
+  --TamanhoFontPrincipal:23px;
+  --TamanhoObjetivoPrincipal:19px;
+  --FontMissaoMono:19px;
   /*Quais Fonts*/
-  --FontPadrao:EnterCommand;
+  --FontPadrao:DefaultFont;
+  /*Cores Padrões*/
+  --CorPadrao:#FFF;
 }
 
 body{
@@ -44,7 +51,7 @@ body{
   text-align:right;
   font-weight:lighter;
 /*   font-style:italic; */
-  color:#FFA;
+  color:var(--CorPadrao);
   transition:all ease-in-out 0.5s;
 }
 
@@ -78,8 +85,8 @@ body{
   margin:0vw 1.5vw 0;
   float:right;
   font-size:var(--FontPontosPadrao);
-  color:#FF8;
-  text-shadow:0 0 1vw #FF0;
+  color:var(--CorPadrao);
+  text-shadow:0 0 1vw var(--CorPadrao);
   transition:all ease-in-out 0.5s;
 }
 .unic{
