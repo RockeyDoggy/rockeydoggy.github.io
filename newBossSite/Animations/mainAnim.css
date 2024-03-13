@@ -2,7 +2,7 @@
   --lightSize:0.35vw;
 }
 .Rainbow{
-  animation:rainbow 2s linear;
+  animation:rainbow 2s linear infinite;
 }
 
 @keyframes rainbow{
