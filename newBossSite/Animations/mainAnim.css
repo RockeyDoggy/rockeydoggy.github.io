@@ -1,5 +1,5 @@
 :root{
-  --lightSize:0.2vw;
+  --lightSize:0.15vw;
 }
 .Rainbow{
   animation:rainbow 3s linear infinite;
