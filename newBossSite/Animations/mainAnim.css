@@ -1,3 +1,6 @@
+:root{
+  --lightSize:0.35vw;
+}
 .Rainbow{
   animation:rainbow 2s linear;
 }
