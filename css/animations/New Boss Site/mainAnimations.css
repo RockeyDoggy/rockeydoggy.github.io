@@ -4,6 +4,11 @@
   animation-timing-function:ease-in-out;
   animation-iteration-count:var(--UpTimes);
 }
+#LeftMenus div, #RightMenus div{
+  animation-name:var(--MenuAnim);
+  animation-duration:1s;
+  animation-timing-function:ease-in-out;
+}
 
 @keyframes barExplore{
   0%{width:0%;}
@@ -13,4 +18,26 @@
 @keyframes BarFillAnimation{
   0%{width:0%;}
   100%{width:100%;}
+}
+
+@keyframes normalAppear{
+  0%{display:none; opacity:0; color:#555;}
+  2%{display:initial;}
+  5%{opacity:0; color:#555;}
+  10%{opacity:1; color:#555; text-shadow:0 0 0.4vw #FFF0;}
+  15%{opacity:1; color:#FFF; text-shadow:0 0 0.4vw #FFF; pointer-events:auto;}
+  65%{opacity:1; color:#FFF; text-shadow:0 0 0.5vw #FFF;}
+  70%{opacity:1; color:#555; text-shadow:0 0 0.4vw #FFF0;}
+  100%{opacity:1; color:#555; text-shadow:0 0 0.4vw #FFF0; pointer-events:auto;}  
+}
+@keyframes blinkingAppear{
+  0%{display:none; opacity:0; color:#555;}
+  2%{display:initial;}
+  20%{opacity:0; color:#555;}
+  30%{opacity:1; color:#FFF; text-shadow:0 0 0.4vw #FFF;}
+  60%{color:#FFF; text-shadow:0 0 0.4vw #FFF;}
+  70%{color:#555; text-shadow:0 0 0.4vw #FFF0;}
+  75%{color:#FFF; text-shadow:0 0 0.4vw #FFF;}
+  80%{color:#555; text-shadow:0 0 0.4vw #FFF0;}
+  100%{opacity:1; color:#555; text-shadow:0 0 0.4vw #FFF0;}
 }
