@@ -35,10 +35,10 @@
   0%{display:none; opacity:0; color:#555;}
   2%{display:initial;}
   20%{opacity:0; color:#555;}
-  30%{opacity:1; color:#FFF; text-shadow:0 0 0.4vw #FFF;}
+  30%{opacity:1; color:#FFF; text-shadow:0 0 0.4vw #FFF; pointer-events:auto;}
   60%{color:#FFF; text-shadow:0 0 0.4vw #FFF;}
   70%{color:#555; text-shadow:0 0 0.4vw #FFF0;}
   75%{color:#FFF; text-shadow:0 0 0.4vw #FFF;}
   80%{color:#555; text-shadow:0 0 0.4vw #FFF0;}
-  100%{opacity:1; color:#555; text-shadow:0 0 0.4vw #FFF0;}
+  100%{opacity:1; color:#555; text-shadow:0 0 0.4vw #FFF0; pointer-events:auto;}
 }
