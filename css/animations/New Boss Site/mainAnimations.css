@@ -8,6 +8,7 @@
   animation-name:var(--MenuAnim);
   animation-duration:1s;
   animation-timing-function:ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes barExplore{
