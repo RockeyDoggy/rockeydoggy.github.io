@@ -42,3 +42,8 @@
   80%{color:#555; text-shadow:0 0 0.4vw #FFF0;}
   100%{opacity:1; pointer-events:auto;}
 }
+@keyframes turnOffButtons{
+  0%{opacity:1; color:#555; text-shadow:0 0 0.4vw #FFF0;}
+  5%{opacity:0; color:#555; text-shadow:0 0 0.4vw #FFF0;}
+  100%{opacity:0; color:#555; text-shadow:0 0 0.4vw #FFF0;}
+}
