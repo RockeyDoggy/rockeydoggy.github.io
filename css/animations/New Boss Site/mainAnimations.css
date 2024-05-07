@@ -26,7 +26,7 @@
   2%{display:initial;}
   5%{opacity:0; color:#555;}
   10%{opacity:1; color:#555; text-shadow:0 0 0.4vw #FFF0;}
-  15%{opacity:1; color:#FFF; text-shadow:0 0 0.4vw #FFF; pointer-events:auto;}
+  15%{opacity:1; color:#FFF; text-shadow:0 0 0.5vw #FFF; pointer-events:auto;}
   65%{opacity:1; color:#FFF; text-shadow:0 0 0.5vw #FFF;}
   70%{opacity:1; color:#555; text-shadow:0 0 0.4vw #FFF0;}
   100%{opacity:1; pointer-events:auto;}  
@@ -36,9 +36,9 @@
   2%{display:initial;}
   20%{opacity:0; color:#555;}
   30%{opacity:1; color:#FFF; text-shadow:0 0 0.4vw #FFF; pointer-events:auto;}
-  60%{color:#FFF; text-shadow:0 0 0.4vw #FFF;}
+  60%{color:#FFF; text-shadow:0 0 0.5vw #FFF;}
   70%{color:#555; text-shadow:0 0 0.4vw #FFF0;}
-  75%{color:#FFF; text-shadow:0 0 0.4vw #FFF;}
+  75%{color:#FFF; text-shadow:0 0 0.6vw #FFF;}
   80%{color:#555; text-shadow:0 0 0.4vw #FFF0;}
   100%{opacity:1; pointer-events:auto;}
 }
