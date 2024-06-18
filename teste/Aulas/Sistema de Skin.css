@@ -1,0 +1,643 @@
+@font-face{
+  font-family:Vilaka;
+  src:url(https://rockeydoggy.github.io/cssfonts/Modern/Vilaka%20Modern%20Serif%20Font.ttf);
+}
+
+body{
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  background-color:#080808;
+  color:#FFF;
+}
+
+.Corpo{
+  width:70vw;
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  background-color:#2225;
+}
+
+.Corpo > div:nth-of-type(1){
+  width:70%;
+  position:relative;
+  background:#222;
+  border-radius:0.4vw;
+}
+
+.Corpo > div:nth-of-type(1) > h1{
+  width:50%;
+  margin:0;
+  text-align:center;
+  font-family:Calibri;
+/*   font-weight:lighter; */
+}
+
+.Corpo > div:nth-of-type(1) > input{
+  width:50%;
+  margin-top:1vw;
+  margin-left:0.9vw;
+  padding:0.4vw 0.6vw;
+  display:block;
+  background-color:#080808;
+  box-shadow:inset 0.1vw 0.1vw 0.4vw #000;
+  border:none;
+  border-radius:0.3vw;
+  font-size:1.5vw;
+  font-family:Trebuchet MS;
+  color:#FFF;
+}
+
+.Corpo > div:nth-of-type(1) > input:nth-of-type(2){
+  font-size:1vw;
+}
+
+.Corpo > div:nth-of-type(1) > input:nth-of-type(3){
+  font-size:0.8vw;
+  text-align:center;
+  font-family:Courier New;
+  letter-spacing:-0.05vw;
+}
+
+.Corpo > div:nth-of-type(1) > div{
+  width:55%;
+  margin-top:4vw;
+  margin-bottom:1vw;
+  text-align:right;
+}
+
+.Corpo > div:nth-of-type(1) > div > button{
+  border:none;
+  border-radius:0.3vw;
+  margin:0 0.5vw;
+  background:;
+  font-family:Calibri;
+  font-size:1.3vw;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.Corpo > div:nth-of-type(1) > div > button:nth-of-type(1){
+  background:#FFF;
+  box-shadow:0 0 0.5vw #FFF;
+  color:#333;
+}
+.Corpo > div:nth-of-type(1) > div > button:nth-of-type(1):hover{
+  background:#222;
+  box-shadow:inset 0.1vw 0.1vw 0.4vw #000;
+  color:#FFF;
+  text-shadow:0 0 0.4vw #FFF;
+  font-weight:lighter;
+}
+
+.Corpo > div:nth-of-type(1) > div > button:nth-of-type(2){
+  background:#5F5;
+  box-shadow:0 0 0.5vw #0F0, inset 0 0 0.5vw #0F0;
+  color:#030;
+  text-shadow:0 0 0.5vw #0F0;
+}
+.Corpo > div:nth-of-type(1) > div > button:nth-of-type(2):hover{
+  background:#040;
+  box-shadow:inset 0.1vw 0.1vw 0.4vw #000;
+  color:#5F5;
+  text-shadow:0 0 0.4vw #0F0;
+  font-weight:lighter;
+}
+
+.Corpo > div:nth-of-type(1) > img{
+  width:38%;
+  max-height:96%;
+  min-height:75%;
+  object-fit:cover;
+  object-position:0% 20%;
+  top:0;
+  right:2%;
+  position:absolute;
+  border:solid 0.3vw #FFF;
+}
+
+.Corpo > div:nth-of-type(2){
+  width:90%;
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+}
+.Corpo > div:nth-of-type(2) > div{
+  width:18.7%;
+  height:8.3vw;
+  position:relative;
+  margin:0.5vw 0.2vw;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  border:dashed 1px #58F;
+  cursor:pointer;
+}
+
+.Corpo > div:nth-of-type(2) > div:before{
+  content:'';
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background-image:var(--Foto);
+  background-size:100% auto;
+  background-repeat:no-repeat;
+  background-position:center center;
+  filter:blur(3px) brightness(80%);
+}
+.Corpo > div:nth-of-type(2) > div:after{
+  content:'';
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background-image:var(--Foto);
+  background-size:auto 100%;
+  background-repeat:no-repeat;
+  background-position:center center;
+  filter:drop-shadow(0.2vw 0.2vw 0.6vw #000);
+}
+
+.Corpo > div:nth-of-type(2) > div > p{
+  width:100%;
+  margin:0;
+  position:relative;
+  background:#FFF;
+  color:#000;
+  text-align:center;
+  font-size:1.2vw;
+  z-index:10;
+}
+
+.Corpo > div:nth-of-type(2) > div:hover > button{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.Corpo > div:nth-of-type(2) > div > button{
+  position:absolute;
+  top:0;
+  right:0;
+  padding:0.2vw 0.5vw;
+  box-shadow:inset 0 0 0.4vw #F00, 0 0 0.4vw #F00;
+  background-color:#F55;
+  border:none;
+  color:#400;
+  text-shadow:0 0 0.4vw #F00;
+  font-weight:bold;
+  font-size:1.3vw;
+  opacity:0;
+  pointer-events:none;
+  cursor:not-allowed;
+  z-index:10;
+}
+.Corpo > div:nth-of-type(2) > div > button:before{
+  content:'X';
+}
+
+.Modificar{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:#0009;
+  backdrop-filter:blur(4px);
+  pointer-events:none;
+}
+.Fechar{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  cursor:pointer;
+}
+.Modificar > div:nth-of-type(1){
+  width:50vw;
+  max-height:99%;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  flex-wrap:wrap;
+  position:relative;
+  overflow-y:auto;
+  border:solid 2px #FFF;
+  background-color:#111;
+  pointer-events:auto;
+}
+
+.Modificar > div:nth-of-type(1)::-webkit-scrollbar{
+  width:0.3vw;
+  background:#FFF;
+}
+.Modificar > div:nth-of-type(1)::-webkit-scrollbar-thumb{
+  background:#111;
+}
+
+.Modificar > div:nth-of-type(1) > input:nth-of-type(1){
+  width:100%;
+  padding:0;
+  background:#EEE;
+  border:none;
+  color:#000;
+  text-align:center;
+  font-size:2.7vw;
+  font-family:Vilaka;
+  font-weight:bold;
+}
+.Modificar > div:nth-of-type(1) > img{
+  min-width:40%;
+  max-width:65%;
+  min-height:5vw;
+  margin-top:1vw;
+  margin-bottom:0.8vw;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  border:solid 0.2vw #FFF;
+}
+
+.Modificar > div:nth-of-type(1) > input:nth-of-type(2){
+  width:30vw;
+  margin-top:-2.3vw;
+  background:none;
+  border:2px solid transparent;
+  color:#FFF;
+  text-align:center;
+  font-size:0.8vw;
+  font-family:courier new;
+/*   backdrop-filter:blur(4px) brightness(70%); */
+}
+.Modificar > div:nth-of-type(1) > input:nth-of-type(2):focus{
+  outline:none;
+  border:2px solid;
+  border-image:linear-gradient(90deg, #0000 20%, #FFF, #0000 80%) 1;
+  background:linear-gradient(90deg, #0000 30%, #080808, #0000 70%)
+}
+
+.Modificar > div:nth-of-type(1) > textarea{
+  width:90%;
+  height:3rem;
+  resize:none;
+  background:none;
+  border:none;
+  color:#FFF;
+  font-size:1.2vw;
+  font-family:Calibri;
+}
+.Modificar > div:nth-of-type(1) > div:nth-of-type(1){
+  width:100%;
+  margin-top:1.5vw;
+  padding-right:1.5vw;
+  padding-top:0.7vw;
+  padding-bottom:0.3vw;
+  border-top:groove 0.1vw #333;
+  text-align:right;
+}
+.Modificar > div:nth-of-type(1) > div:nth-of-type(1) > button{
+  margin-left:0.7vw;
+  padding:0.2vw 0.3vw;
+  border:none;
+  border-radius:0.3vw;
+  font-size:1.3vw;
+  font-family:Courier New;
+  letter-spacing:-0.05vw;
+  cursor:pointer;
+}
+.Modificar > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1){
+  background:#FFF;
+  color:#000;
+  font-weight:bold;
+}
+.Modificar > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1):hover{
+  box-shadow:0 0 0.6vw #FF0, 0 0 0.5vw #FF0;
+  background:#FF5;
+  color:#440;
+  text-shadow:0 0 0.5vw #FF0;
+}
+
+.Modificar > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2){
+  box-shadow:0 0 0.6vw #0F0, inset 0 0 0.5vw #0F0;
+  background:#5F5;
+  color:#040;
+  font-weight:bold;
+  text-shadow:0 0 0.4vw #0F0;
+}
+.Modificar > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2):hover{
+  box-shadow:0 0 0.6vw #030, inset 0.1vw 0.1vw 0.4vw #030;
+  background:#040;
+  color:#5F5;
+  text-shadow:0 0 0.7vw #0F0;
+}
+
+.Modificar > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1):before{
+  content:'VOLTAR';
+}
+.Modificar > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2):before{
+  content:'SALVAR';
+}
+
+
+/*Skin 2*/
+
+
+.skin1{
+  width:70vw;
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  background-color:#2235;
+}
+
+.skin1 > div:nth-of-type(1){
+  width:90%;
+  position:relative;
+  background:#202530;
+  border-radius:0.4vw;
+}
+
+.skin1 > div:nth-of-type(1) > h1{
+  width:50%;
+  margin:0;
+  text-align:center;
+  font-family:Courier New;
+  font-size:3vw;
+  letter-spacing:-0.1vw;
+}
+
+.skin1 > div:nth-of-type(1) > input{
+  width:50%;
+  margin-top:1vw;
+  margin-left:0.9vw;
+  padding:0.4vw 0.6vw;
+  display:block;
+  background-color:#305570;
+  box-shadow:0.2vw 0.2vw 0.5vw #0008;
+  border:none;
+  border-radius:0.3vw;
+  font-size:1.5vw;
+  font-family:Trebuchet MS;
+  color:#DEF;
+  text-shadow:-0.5px -0.5px 1px #000, 0.2px 0.2px 0.5px #FFF5;
+}
+
+.skin1 > div:nth-of-type(1) > input:nth-of-type(2){
+  font-size:1.2vw;
+}
+
+.skin1 > div:nth-of-type(1) > input:nth-of-type(3){
+  font-size:1vw;
+  text-align:center;
+  font-family:calibri;
+}
+
+.skin1 > div:nth-of-type(1) > div{
+  width:55%;
+  margin-top:4vw;
+  margin-bottom:1vw;
+  text-align:right;
+}
+
+.skin1 > div:nth-of-type(1) > div > button{
+  border:none;
+  border-radius:0.3vw;
+  margin:0 0.5vw;
+  background:;
+  font-family:Calibri;
+  font-size:1.3vw;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.skin1 > div:nth-of-type(1) > div > button:nth-of-type(1){
+  background:#111;
+  box-shadow:0 0 0.3vw #FFF, inset 0 0 0.3vw #FFF;
+  color:#FFF;
+  font-weight:lighter;
+  text-shadow:0 0 0.3vw #FFF;
+}
+.skin1 > div:nth-of-type(1) > div > button:nth-of-type(1):hover{
+  background:#FFF;
+  box-shadow:0 0 0.5vw #FFF, inset 0 0 0.5vw #FFF;
+  color:#000;
+  text-shadow:0 0 0.4vw #FFF;
+  font-weight:lighter;
+}
+
+.skin1 > div:nth-of-type(1) > div > button:nth-of-type(2){
+  background:#010;
+  box-shadow:0 0 0.4vw #0F0, inset 0 0 0.3vw #0F0;
+  color:#5F5;
+  text-shadow:0 0 0.5vw #0F0;
+  font-weight:lighter;
+}
+.skin1 > div:nth-of-type(1) > div > button:nth-of-type(2):hover{
+  background:#5F5;
+  box-shadow:0vw 0vw 0.4vw #0F0, inset 0 0 0.4vw #0F0;
+  color:#030;
+  text-shadow:0 0 0.4vw #0F0;
+  font-weight:lighter;
+}
+
+.skin1 > div:nth-of-type(1) > img{
+  width:38%;
+  max-height:96%;
+  min-height:75%;
+  object-fit:cover;
+  object-position:0% 20%;
+  top:0;
+  right:2%;
+  position:absolute;
+  box-shadow:0.1vw 0.1vw 0.5vw #000;
+  border:dashed 0.3vw #DEF;
+}
+
+.skin1 > div:nth-of-type(2){
+  width:90%;
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+}
+.skin1 > div:nth-of-type(2) > div{
+  width:18.7%;
+  height:8.3vw;
+  position:relative;
+  margin:0.5vw 0.2vw;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  border:solid 2px #8F5;
+  border-radius:0.4vw;
+  cursor:pointer;
+}
+
+.skin1 > div:nth-of-type(2) > div:before{
+  content:'';
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background-image:var(--Foto);
+  background-size:100% auto;
+  background-repeat:no-repeat;
+  background-position:center center;
+  filter:blur(3px) brightness(80%);
+}
+.skin1 > div:nth-of-type(2) > div:after{
+  content:'';
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background-image:var(--Foto);
+  background-size:auto 100%;
+  background-repeat:no-repeat;
+  background-position:center center;
+  filter:drop-shadow(0.2vw 0.2vw 0.6vw #000);
+}
+
+.skin1 > div:nth-of-type(2) > div > p{
+  width:100%;
+  margin:0;
+  position:relative;
+  background:#8F5;
+  color:#000;
+  text-align:center;
+  font-size:1.2vw;
+  font-family:Verdana;
+  z-index:10;
+}
+
+.skin1 > div:nth-of-type(2) > div:hover > button{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.skin1 > div:nth-of-type(2) > div > button{
+  position:absolute;
+  top:0;
+  right:0;
+  padding:0.2vw 0.5vw;
+  box-shadow:inset 0 0 0.4vw #0F0, 0 0 0.4vw #0F0;
+  background-color:#8F5;
+  border:none;
+  color:#040;
+  text-shadow:0 0 0.4vw #0F0;
+  font-weight:bold;
+  font-size:1.3vw;
+  opacity:0;
+  pointer-events:none;
+  cursor:not-allowed;
+  z-index:10;
+}
+.skin1 > div:nth-of-type(2) > div > button:before{
+  content:'X';
+}
+
+/*O CSS deve estar todo preparado para tudo estar fechado e compactado, do jeito que deve estar na hora que a pagina abrir*/
+.SchemeChange{ /*Janela principal Escura que da blur no fundo*/
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  pointer-events:none;
+  transition:all ease-in-out 0.2s;
+}
+.SchemeChange > div:nth-of-type(1){ /*Tab Dentro da Principal*/
+  width:25vw;
+  height:100%;
+  position:absolute;
+  right:-25vw;
+  top:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:#111;
+  box-shadow:-0.2vw -0.2vw 0.4vw #000;
+  pointer-events:auto;
+  transition:right ease-in-out 0.2s;
+}
+/*Tab de Conteudo, presente pra alinhar o conteudo ao centro vertical*/
+.SchemeChange > div:nth-of-type(1) > div:nth-of-type(1){ 
+  width:100%;
+}
+
+.SchemeChange > div:nth-of-type(1) > div:nth-of-type(1) > h1{/*Titulo da Tab*/
+  margin:0;
+  background-color:#223;
+  text-align:center;
+  font-family:Calibri;
+  font-size:1.5vw;
+  font-weight:;
+}
+.SchemeChange > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1){/*Onde fica a lista de Skins*/
+  width:98.7%;
+  padding-bottom:0.2vw;
+  border:solid 0.2vw #223;
+}
+
+.SchemeChange > div:nth-of-type(1) > div:nth-of-type(2){ /*Botão de abrir e fechar a Tab*/
+  height:3.6vw;
+  padding:0 0.2vw;
+  position:absolute;
+  left:-2vw;
+  display:flex;
+  align-items:center;
+  border-radius:0.5vw 0vw 0vw 0.5vw;
+  background-color:#223;
+  box-shadow:-0.1vw 0.2vw 0.5vw #000;
+  font-family:Verdana;
+  font-size:1vw;
+  cursor:pointer;
+}
+.SchemeChange > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div{ /*Caixa com nome das skins*/
+  margin-top:0.5vw;
+  user-select:none;
+  cursor:pointer;
+}
+/*uma class predefinida pra quando a skin for selecionada*/
+.SchemeChange > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > .checked{ 
+  margin-top:0.5vw;
+  border:0.2vw solid #494;
+}
+
+/*Pra mudar a cor do before da caixa selecionada */
+.SchemeChange > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > .checked > p:before{ 
+  background:#494;
+}
+
+/*Texto que recebe o nome das skins*/
+.SchemeChange > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div > p{
+  margin:0;
+  font-size:1.5vw;
+  font-family:Calibri;
+}
+
+/*O before faz o quadrado do lado do nome da Skin*/
+.SchemeChange > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div > p:before{
+  content:'';
+  padding-left:1vw;
+  padding-bottom:0.1vw;
+  margin-right:0.3vw;
+  background:#333;
+}
