@@ -78,7 +78,7 @@ body{
 }
 #ContentList > div:nth-of-type(2n+1){
   /*background:linear-gradient(60deg, #0000 50%, #59F2);*/
-  box-shadow:-2px 5px 7px #0002;
+  /*box-shadow:-2px 5px 7px #0002;*/
 /*   border:double 3px #88F2; */
 }
 
