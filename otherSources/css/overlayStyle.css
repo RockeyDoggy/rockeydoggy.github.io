@@ -16,7 +16,7 @@
   --TamanhoObjetivoPrincipal:19px;
   --FontMissaoMono:19px;
   /*Quais Fonts*/
-  --FontPadrao:DefaultFont;
+  --FontPadrao:Times New Roman;
   /*Cores Padrões*/
   --CorPadrao:#FFF;
   --OnlyScore:25px;
@@ -57,12 +57,12 @@ body{
 }
 
 #ContentList > div:nth-of-type(1){
-  background:linear-gradient(60deg,  #0000 50%, #C942) !important;
+  /*background:linear-gradient(60deg,  #0000 50%, #C942) !important;*/
 }
 
 #ContentList > div:nth-of-type(1) > h1{
   font-size:var(--TamanhoFontPrincipal);
-  text-shadow:1px 1px 1px #FF0;
+  text-shadow:1px 1px 1px #FFF;
 }
 #ContentList > div:nth-of-type(1) > div{
   font-size:var(--TamanhoObjetivoPrincipal);
@@ -77,7 +77,7 @@ body{
   transition:all ease-in-out 0.5s;
 }
 #ContentList > div:nth-of-type(2n+1){
-  background:linear-gradient(60deg, #0000 50%, #59F2);
+  /*background:linear-gradient(60deg, #0000 50%, #59F2);*/
   box-shadow:-2px 5px 7px #0002;
 /*   border:double 3px #88F2; */
 }
