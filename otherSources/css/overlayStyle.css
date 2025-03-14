@@ -50,7 +50,7 @@ body{
   font-size:var(--TamanhoDaFontePadrao);
   float:left;
   text-align:right;
-  font-weight:lighter;
+  font-weight:Bold;
 /*   font-style:italic; */
   color:var(--CorPadrao);
   transition:all ease-in-out 0.5s;
