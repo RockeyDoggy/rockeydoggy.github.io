@@ -20,6 +20,7 @@
   --TamanhoFontPrincipal:23px;
   --TamanhoObjetivoPrincipal:19px;
   --FontMissaoMono:19px;
+  --PesoDaFonte:lighter;
   /*Quais Fonts*/
   --FontPadrao:'Retro Gaming';
   /*Cores Padrões*/
@@ -67,6 +68,7 @@ body{
 
 #ContentList > div:nth-of-type(1) > h1{
   font-size:var(--TamanhoFontPrincipal);
+  font-weight:var(--PesoDaFonte);
   text-shadow:1px 1px 1px #FFF;
 }
 #ContentList > div:nth-of-type(1) > div{
