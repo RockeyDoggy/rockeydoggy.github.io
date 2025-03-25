@@ -9,8 +9,8 @@
 }
 
 @font-face{
-  font-family:Isaac;
-  src:url(https://rockeydoggy.github.io/cssfonts/pixel/upheavtt.ttf);
+  font-family:Retro;
+  src:url(http://rockeydoggy.github.io/cssfonts/pixel/Retro%20Gaming.ttf);
 }
 
 :root{
@@ -21,7 +21,7 @@
   --TamanhoObjetivoPrincipal:19px;
   --FontMissaoMono:19px;
   /*Quais Fonts*/
-  --FontPadrao:Isaac;
+  --FontPadrao:Retro;
   /*Cores Padrões*/
   --CorPadrao:#FFF;
   --OnlyScore:25px;
