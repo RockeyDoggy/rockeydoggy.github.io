@@ -9,7 +9,7 @@
 }
 
 @font-face{
-  font-family:Retro;
+  font-family:'Retro Gaming';
   src:url(http://rockeydoggy.github.io/cssfonts/pixel/Retro%20Gaming.ttf);
 }
 
@@ -21,7 +21,7 @@
   --TamanhoObjetivoPrincipal:19px;
   --FontMissaoMono:19px;
   /*Quais Fonts*/
-  --FontPadrao:Retro;
+  --FontPadrao:'Retro Gaming';
   /*Cores Padrões*/
   --CorPadrao:#FFF;
   --OnlyScore:25px;
