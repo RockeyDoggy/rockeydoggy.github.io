@@ -24,5 +24,6 @@ const shoot = firebase.initializeApp(nosBoss, 'shoot');
 
 const rain = firebase.firestore(init1);
 const suns = firebase.firestore(init2);
-const sky  = firebase.database(init1);
-const gun  = firebase.database(shoot);
+const {sky, gun}  = firebase.database(init1);
+// const gun  = firebase.database(init1);
+const real = firebase.database(init2);
